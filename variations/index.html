@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log N Labs · Variaciones del sitio</title>
+<meta name="description" content="Seis variaciones de diseño para el sitio de Log N Labs, de la más fiel a la más audaz.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #17120F; --surface: #241C17; --line: #3A2F28;
+    --fg: #F4EFE7; --muted: #9A8F85; --detail: #E2582A; --rust: #B83A0E;
+    --pad: clamp(16px, 4vw, 56px);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { background: var(--bg); color: var(--fg); }
+  body { font: 400 16px/1.6 "Space Grotesk", system-ui, sans-serif; min-height: 100svh; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--detail); outline-offset: 3px; }
+
+  header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 28px var(--pad); border-bottom: 1px solid var(--line); }
+  header img { height: 24px; width: auto; display: block; }
+  .mono { font: 400 12px/1.5 "JetBrains Mono", monospace; color: var(--muted); letter-spacing: .02em; }
+
+  .intro { padding: clamp(48px, 9vw, 120px) var(--pad) clamp(40px, 6vw, 72px); display: grid; grid-template-columns: repeat(12, 1fr); gap: 0 24px; }
+  .intro h1 { grid-column: 1 / span 8; font: 500 clamp(36px, 6.4vw, 92px)/1.02 "Unbounded", sans-serif; letter-spacing: -.035em; }
+  .intro h1 em { font-style: normal; color: var(--detail); }
+  .intro p { grid-column: 1 / span 6; margin-top: 28px; color: var(--muted); font-size: clamp(16px, 1.3vw, 19px); max-width: 56ch; }
+  .intro p strong { color: var(--fg); font-weight: 500; }
+
+  /* The list: one row per variation, 1px "cut" lines between rows */
+  ol { list-style: none; padding: 0; border-top: 1px solid var(--line); }
+  li { border-bottom: 1px solid var(--line); }
+  .row { display: grid; grid-template-columns: 72px minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(220px, 360px); gap: 24px; align-items: center; padding: 28px var(--pad); text-decoration: none; position: relative; isolation: isolate; }
+  .row::before { content: ""; position: absolute; inset: 0; background: var(--surface); transform: scaleY(0); transform-origin: bottom; transition: transform .45s cubic-bezier(.7,0,.2,1); z-index: -1; }
+  .row:hover::before, .row:focus-visible::before { transform: scaleY(1); }
+  .row:focus-visible { outline-offset: -2px; }
+  .num { font: 500 13px/1 "JetBrains Mono", monospace; color: var(--detail); }
+  .name { font: 600 clamp(22px, 2.4vw, 34px)/1.1 "Unbounded", sans-serif; letter-spacing: -.02em; }
+  .name small { display: block; margin-top: 10px; font: 400 12px/1.5 "JetBrains Mono", monospace; color: var(--muted); letter-spacing: .02em; }
+  .desc { color: var(--muted); max-width: 52ch; }
+  .desc b { color: var(--fg); font-weight: 500; }
+  .meter { display: flex; gap: 4px; margin-top: 14px; }
+  .meter i { height: 2px; flex: 1; background: var(--line); }
+  .meter i.on { background: var(--detail); }
+  .thumb { aspect-ratio: 16 / 10; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; transition: transform .7s cubic-bezier(.16,1,.3,1); }
+  .row:hover .thumb img { transform: scale(1.03); }
+  .extra { display: inline-block; margin-top: 12px; font: 400 12px/1.5 "JetBrains Mono", monospace; color: var(--fg); text-underline-offset: 4px; }
+
+  @media (max-width: 520px) { header .mono { display: none; } }
+  footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 32px var(--pad) 48px; }
+
+  @media (max-width: 960px) {
+    .row { grid-template-columns: 40px 1fr; gap: 12px 16px; }
+    .desc, .thumb { grid-column: 2; }
+    .intro h1, .intro p { grid-column: 1 / -1; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header>
+  <img src="../logos/log-n-labs_on-ink.svg" alt="Log N Labs" width="168" height="24">
+  <span class="mono">variaciones · home · 2026</span>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Seis maneras de cortar el mismo problema <em>a la mitad.</em></h1>
+    <p>La <strong>v0</strong> es la propuesta del socio, tal cual. De la <strong>v1</strong> a la <strong>v5</strong> usan su mismo contenido, y cada una se anima un paso más que la anterior. Abrí cada una en pantalla completa y probala también en el celular.</p>
+  </section>
+
+  <ol>
+    <li>
+      <a class="row" href="v0-socio/">
+        <span class="num">v0</span>
+        <span class="name">Socio<small>propuesta original · referencia de contenido</small></span>
+        <span class="desc">El diseño de referencia que define el contenido: Visión, Soluciones, Trabajos, Equipo y el formulario que arma el mensaje solo.<span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></span>
+        <span class="thumb"><img src="_thumbs/v0.png" alt="" loading="lazy"></span>
+      </a>
+    </li>
+    <li>
+      <a class="row" href="v1-preciso/">
+        <span class="num">v1</span>
+        <span class="name">Preciso<small>fiel · oscuro</small></span>
+        <span class="desc">El hero de los <b>seis cortes</b>, hecho con máxima precisión: escala tipográfica, ritmo y tiempos de animación afinados.<span class="meter" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></span></span>
+        <span class="thumb"><img src="_thumbs/v1.png" alt="" loading="lazy"></span>
+      </a>
+    </li>
+    <li>
+      <a class="row" href="v2-afilado/">
+        <span class="num">v2</span>
+        <span class="name">Afilado<small>tipográfico · oscuro</small></span>
+        <span class="desc">La tipografía manda. Los nombres de servicio <b>se cortan al pasar el mouse</b> y una sección entera va en óxido.<span class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span>
+        <span class="thumb"><img src="_thumbs/v2.png" alt="" loading="lazy"></span>
+      </a>
+    </li>
+    <li>
+      <a class="row" href="v3-editorial/">
+        <span class="num">v3</span>
+        <span class="name">Editorial<small>revista técnica · claro</small></span>
+        <span class="desc">Una publicación de ingeniería: grilla asimétrica, <b>fracciones como numeración</b> y la curva como figura anotada.<span class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></span>
+        <span class="thumb"><img src="_thumbs/v3.png" alt="" loading="lazy"></span>
+      </a>
+    </li>
+    <li>
+      <a class="row" href="v4-inmersivo/">
+        <span class="num">v4</span>
+        <span class="name">Inmersivo<small>scroll como algoritmo · oscuro</small></span>
+        <span class="desc">Bajar es buscar: cada sección es <b>el siguiente corte</b> y contacto es la celda encontrada. Incluye una búsqueda binaria interactiva.<span class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span>
+        <span class="thumb"><img src="_thumbs/v4.png" alt="" loading="lazy"></span>
+      </a>
+    </li>
+    <li>
+      <a class="row" href="v5-radical/">
+        <span class="num">v5</span>
+        <span class="name">Radical<small>titulares cortados · campos de óxido</small></span>
+        <span class="desc">La regla del logo (cortes a ½, ¼ y ⅛) aplicada a la <b>tipografía gigante</b>, con el O(n²) → O(log n) tipeado de entrada.<span class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span>
+        <span class="thumb"><img src="_thumbs/v5.png" alt="" loading="lazy"></span>
+      </a>
+    </li>
+  </ol>
+  <p class="mono" style="padding: 20px var(--pad) 0">La v0 también tiene su landing de tecnología: <a class="extra" href="v0-socio/tecnologia.html">v0-socio/tecnologia.html →</a></p>
+</main>
+
+<footer>
+  <span class="mono">Prototipos estáticos. Los formularios no envían nada.</span>
+  <span class="mono">Asunción, Paraguay · GMT−3</span>
+</footer>
+</body>
+</html>

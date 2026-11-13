@@ -1,0 +1,444 @@
+<!doctype html>
+<!--
+  Direction contract · V3 Editorial (round 2: partner copy deck)
+  THESIS: the home page reads as a printed engineering journal whose sections halve like a binary search
+    (1 → 1/2 → 1/4 → 1/8 → 1/16 → 1/32 → 1/64). It refuses the centered SaaS hero and the card-row page.
+  OWN-WORLD: brand White paper, Ink type and hairline rules, Paper figure plates, Rust only where something is
+    "found" (CTA, final hero cell, the contact spread). Unbounded display, STIX Two Text (scientific-publishing
+    face) for running text, JetBrains Mono for notation, figures, tables and margin notes.
+  STORY: the screen halves itself → Visión as an annotated Fig. 1 + Tabla 1 → Soluciones as a halving plate →
+    Trabajos as pending plates → Cómo trabajamos in halving bars → Equipo as a masthead → Hablemos.
+  FIRST VIEWPORT: 6-cut spiral on paper; each cell is a front-page column tagged with its area fraction.
+  FORM: code-led; seed: none (pinned by lead brief "V3 · Editorial").
+-->
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log N Labs | Marketing y tecnología para negocios que crecen</title>
+<meta name="description" content="Log N Labs reúne marketing y tecnología en un solo equipo: marca, sistemas y acompañamiento para que tu negocio se vea mejor, venda más y funcione sin trabas. Asunción, Paraguay.">
+<meta property="og:title" content="Log N Labs | Marketing y tecnología para negocios que crecen">
+<meta property="og:description" content="Marketing y tecnología en un solo equipo, para negocios que crecen.">
+<meta property="og:image" content="../../logos/log-n-labs_on-white.svg">
+<meta name="theme-color" content="#F4EFE7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#vision">Saltar al contenido</a>
+
+<!-- ============ HERO · the screen halves itself ============ -->
+<header class="hero" id="inicio" data-step="0">
+  <div class="cuts" aria-hidden="true">
+    <span class="cut"></span><span class="cut"></span><span class="cut"></span>
+    <span class="cut"></span><span class="cut"></span><span class="cut"></span>
+  </div>
+
+  <div class="cell c1">
+    <div class="c1-top">
+      <a href="#inicio" class="logo" aria-label="Log N Labs, inicio"><img src="../../logos/log-n-labs_on-white.svg" alt="" width="182" height="26"></a>
+      <p class="dateline mono">Marketing + Tecnología<br>Asunción, Paraguay</p>
+    </div>
+    <div class="c1-body">
+      <h1><span class="w-strong">Negocios</span> <span class="w-light">que</span> <span class="w-strong">crecen.</span></h1>
+      <p class="lede">Marketing y tecnología en un solo equipo, para que tu empresa se vea mejor, venda más y funcione sin trabas.</p>
+      <div class="ctas">
+        <a class="btn btn-rust" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
+        <a class="btn btn-line" href="#soluciones">Ver soluciones</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell c2">
+    <div class="c2-top">
+      <span class="tag" aria-hidden="true">1/4 · soluciones</span>
+      <nav aria-label="Principal">
+        <a href="#vision">Visión</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="rotator" aria-roledescription="carrusel" aria-label="Soluciones">
+      <div class="groups">
+        <div class="group is-on" data-i="0">
+          <p class="g-name">Tecnología</p>
+          <p class="g-desc">Sistemas y aplicaciones que funcionan, se prueban antes de salir y no frenan tu operación.</p>
+          <ul class="g-items"><li>Desarrollo</li><li>QA</li><li>Análisis funcional</li></ul>
+        </div>
+        <div class="group" data-i="1" aria-hidden="true">
+          <p class="g-name">Marketing y marca</p>
+          <p class="g-desc">Una marca clara y presencia en los lugares donde tus clientes te buscan.</p>
+          <ul class="g-items"><li>Identidad</li><li>Redes</li><li>Posicionamiento web</li></ul>
+        </div>
+        <div class="group" data-i="2" aria-hidden="true">
+          <p class="g-name"><mark class="todo todo-lg">[Otra línea]</mark></p>
+          <p class="g-desc"><mark class="todo">[Una frase sobre lo que logra esta línea para el cliente.]</mark></p>
+          <ul class="g-items"><li>[Servicios de esta línea]</li></ul>
+        </div>
+      </div>
+      <div class="stepper">
+        <span class="counter" aria-live="polite"><b>1</b>/3</span>
+        <div class="bars">
+          <button type="button" aria-label="Ver Tecnología" aria-current="true"><span><i></i></span></button>
+          <button type="button" aria-label="Ver Marketing y marca"><span><i></i></span></button>
+          <button type="button" aria-label="Ver otra línea (por definir)"><span><i></i></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell c3">
+    <span class="tag" aria-hidden="true">1/8 · contacto</span>
+    <div>
+      <p class="cell-title">Hablemos.</p>
+      <ul class="rows">
+        <li><a class="wa" href="https://wa.me/"><span>[NÚMERO WHATSAPP]</span><span class="mono">whatsapp</span></a></li>
+        <li><a class="mail" href="mailto:"><span>[CORREO]</span><span class="mono">correo</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cell c4">
+    <span class="tag" aria-hidden="true">1/16 · cómo trabajamos</span>
+    <ol class="mini-steps">
+      <li><span class="mono">01</span>Escuchamos</li>
+      <li><span class="mono">02</span>Diseñamos</li>
+      <li><span class="mono">03</span>Hacemos</li>
+      <li><span class="mono">04</span>Entregamos</li>
+    </ol>
+  </div>
+
+  <div class="cell c5">
+    <span class="tag" aria-hidden="true">1/32</span>
+    <p class="place"><b>Asunción</b><span>Paraguay</span><span class="mono">GMT−3 · <time class="clock">--:--</time></span></p>
+  </div>
+
+  <div class="cell c6">
+    <span class="tag" aria-hidden="true">1/64</span>
+    <p class="olog">O(log n)</p>
+  </div>
+
+  <button type="button" class="cell c7" aria-label="Bajar al contenido">
+    <span class="fill" aria-hidden="true"></span>
+    <span class="c7-in" aria-hidden="true">
+      <img src="../../logos/log-n-labs_on-rust.svg" alt="" width="124" height="18">
+      <span class="scroll"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M12 3v17M5 13l7 7 7-7"/></svg>SCROLL</span>
+    </span>
+  </button>
+</header>
+
+<main>
+
+<!-- ============ 1/2 · VISIÓN ============ -->
+<section class="sec" id="vision" aria-labelledby="h-vision">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>2</i></span>
+        <p class="rail-label">visión</p>
+        <p class="note">Cada sección de esta página es la mitad de la anterior: 1/2, 1/4, 1/8… Así trabaja una búsqueda binaria, el origen de O(log n).</p>
+      </div>
+    </aside>
+    <h2 id="h-vision" class="statement">Tu marca, tus sistemas y tu equipo tienen que crecer juntos. <span class="st-2">Lo que armamos hoy sigue funcionando cuando tu negocio sea el doble.</span></h2>
+
+    <ul class="principles">
+      <li><span class="ok mono" aria-hidden="true">[ ok ]</span><h3>Estrategia</h3><p>Antes de hacer, entendemos tu negocio y qué querés lograr.</p></li>
+      <li><span class="ok mono" aria-hidden="true">[ ok ]</span><h3>Ejecución</h3><p>Cada entrega se revisa antes de salir. Nada queda a medias.</p></li>
+      <li><span class="ok mono" aria-hidden="true">[ ok ]</span><h3>Acompañamiento</h3><p>Te explicamos cada decisión en simple, para que decidas con confianza.</p></li>
+    </ul>
+
+    <figure class="fig" id="fig1">
+      <figcaption class="fig-head"><span class="mono">Fig. 1</span> Esfuerzo a medida que tu negocio crece</figcaption>
+      <div class="plate">
+        <svg viewBox="-70 -34 640 356" role="img" aria-label="Gráfico ilustrativo: sin plan, el esfuerzo crece al mismo ritmo que el negocio; con Log N Labs, el negocio crece y el esfuerzo se aplana.">
+          <g stroke="#D6CBBB" stroke-width="1"><path d="M120 0V260M240 0V260M360 0V260M0 65H480M0 130H480M0 195H480"/></g>
+          <path d="M0 0 L0 260 L480 260" fill="none" stroke="#17120F" stroke-width="1.5"/>
+          <path d="M0 260 L480 20" fill="none" stroke="#6B625A" stroke-width="2" stroke-dasharray="6 6"/>
+          <path id="logPath" fill="none" stroke="#B83A0E" stroke-width="3"/>
+          <rect class="curtain" x="-2" y="-30" width="580" height="296" fill="#E9E1D4"/>
+          <g class="marks" font-family="JetBrains Mono, monospace">
+            <circle cx="420" cy="50" r="4" fill="#E9E1D4" stroke="#6B625A" stroke-width="1.5"/>
+            <text x="404" y="44" font-size="13" fill="#6B625A">a</text>
+            <circle cx="420" cy="88" r="4" fill="#E9E1D4" stroke="#B83A0E" stroke-width="2"/>
+            <text x="416" y="110" font-size="13" fill="#B83A0E">b</text>
+          </g>
+          <text x="488" y="24" fill="#6B625A" font-family="JetBrains Mono, monospace" font-size="13">sin plan</text>
+          <text x="488" y="86" fill="#B83A0E" font-family="JetBrains Mono, monospace" font-size="13">con Log N</text>
+          <text x="488" y="102" fill="#B83A0E" font-family="JetBrains Mono, monospace" font-size="13">Labs</text>
+          <text x="480" y="292" text-anchor="end" fill="#6B625A" font-family="JetBrains Mono, monospace" font-size="12">tu negocio crece →</text>
+          <text x="-12" y="6" text-anchor="end" fill="#6B625A" font-family="JetBrains Mono, monospace" font-size="12">esfuerzo</text>
+        </svg>
+      </div>
+      <ol class="fig-notes">
+        <li><span class="mono">a</span>Sin plan: el esfuerzo crece al mismo ritmo que el negocio.</li>
+        <li><span class="mono rust">b</span>Con Log N Labs: el negocio crece y el esfuerzo se aplana.</li>
+      </ol>
+    </figure>
+
+    <div class="table-wrap">
+      <table class="tbl">
+        <caption><span class="mono">Tabla 1</span> Pasos para encontrar un dato entre <i>n</i> registros</caption>
+        <thead><tr><th scope="col">n</th><th scope="col">O(n)</th><th scope="col">O(log n)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">1.000</th><td>1.000 pasos</td><td>10 pasos</td></tr>
+          <tr><th scope="row">250.000</th><td>250.000 pasos</td><td>18 pasos</td></tr>
+          <tr><th scope="row">500.000</th><td>500.000 pasos</td><td>19 pasos</td></tr>
+          <tr><th scope="row">750.000</th><td>750.000 pasos</td><td>20 pasos</td></tr>
+          <tr><th scope="row">1.000.000</th><td>1.000.000 pasos</td><td>20 pasos</td></tr>
+        </tbody>
+      </table>
+      <p class="tbl-note">Cada paso descarta la mitad de lo que queda.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/4 · SOLUCIONES ============ -->
+<section class="sec" id="soluciones" aria-labelledby="h-soluciones">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>4</i></span>
+        <p class="rail-label">soluciones</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-soluciones">Lo que hacemos por tu negocio.</h2>
+    </div>
+    <div class="halving">
+      <article class="h-cell h-half">
+        <span class="h-frac mono" aria-hidden="true">1/2</span>
+        <div class="h-intro">
+          <p class="h-num mono">01</p>
+          <h3>Tecnología</h3>
+          <p class="h-tags mono">Desarrollo · QA · Análisis funcional</p>
+          <p>Sistemas y aplicaciones que funcionan, se prueban antes de salir y no frenan tu operación.</p>
+        </div>
+        <dl class="h-list">
+          <div><dt>Desarrollo web y apps</dt><dd>Tu producto en línea, hecho para durar.</dd></div>
+          <div><dt>Testing y QA automatizado</dt><dd>Menos riesgos en producción.</dd></div>
+          <div><dt>Automatización de procesos</dt><dd>Eficiencia operativa y conectividad.</dd></div>
+          <div><dt>Análisis y diseño de producto</dt><dd>Requerimientos claros antes de programar.</dd></div>
+          <div><dt>Revisión de calidad / auditoría</dt><dd>Auditoría técnica sobre software existente.</dd></div>
+        </dl>
+        <a class="arrow-link" href="#">Ver Tecnología <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="h-cell">
+        <span class="h-frac mono" aria-hidden="true">1/4</span>
+        <p class="h-num mono">02</p>
+        <h3>Marketing y marca</h3>
+        <p class="h-tags mono">Identidad · Redes · Posicionamiento web</p>
+        <p>Una marca clara y presencia en los lugares donde tus clientes te buscan.</p>
+        <a class="arrow-link" href="#">Ver Marketing y marca <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="h-cell h-pending">
+        <span class="h-frac mono" aria-hidden="true">1/4</span>
+        <p class="h-num mono">03</p>
+        <h3><mark class="todo todo-lg">[Otra línea]</mark></h3>
+        <p class="h-tags mono">[Servicios de esta línea]</p>
+        <p><mark class="todo">[Una frase sobre lo que logra esta línea para el cliente.]</mark></p>
+        <a class="arrow-link" href="#">[Ver landing] <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/8 · TRABAJOS ============ -->
+<section class="sec" id="trabajos" aria-labelledby="h-trabajos">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>8</i></span>
+        <p class="rail-label">trabajos</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-trabajos">Trabajos que nos representan.</h2>
+      <p class="sec-sub"><mark class="todo">[Acá van los casos reales: un proyecto, un rubro, un resultado.]</mark></p>
+    </div>
+    <ul class="works" aria-label="Casos (por cargar)">
+      <li class="work">
+        <div class="w-plate" aria-hidden="true"><svg viewBox="0 0 160 100" preserveAspectRatio="none"><path d="M80 0V100M80 50H160M120 50V100M120 75H160M140 75V100" stroke="#D6CBBB" stroke-width="1" vector-effect="non-scaling-stroke" fill="none"/></svg><span class="mono">Lámina A · por cargar</span></div>
+        <h3>[NOMBRE DEL PROYECTO]</h3>
+        <p class="mono w-meta">[RUBRO]</p>
+        <a class="arrow-link" href="#">[VER CASO] <span aria-hidden="true">→</span></a>
+      </li>
+      <li class="work">
+        <div class="w-plate" aria-hidden="true"><svg viewBox="0 0 160 100" preserveAspectRatio="none"><path d="M80 0V100M80 50H160M120 50V100M120 75H160M140 75V100" stroke="#D6CBBB" stroke-width="1" vector-effect="non-scaling-stroke" fill="none"/></svg><span class="mono">Lámina B · por cargar</span></div>
+        <h3>[NOMBRE DEL PROYECTO]</h3>
+        <p class="mono w-meta">[RUBRO]</p>
+        <a class="arrow-link" href="#">[VER CASO] <span aria-hidden="true">→</span></a>
+      </li>
+      <li class="work">
+        <div class="w-plate" aria-hidden="true"><svg viewBox="0 0 160 100" preserveAspectRatio="none"><path d="M80 0V100M80 50H160M120 50V100M120 75H160M140 75V100" stroke="#D6CBBB" stroke-width="1" vector-effect="non-scaling-stroke" fill="none"/></svg><span class="mono">Lámina C · por cargar</span></div>
+        <h3>[NOMBRE DEL PROYECTO]</h3>
+        <p class="mono w-meta">[RUBRO]</p>
+        <a class="arrow-link" href="#">[VER CASO] <span aria-hidden="true">→</span></a>
+      </li>
+    </ul>
+    <p class="swipe mono" aria-hidden="true">Deslizá para ver más →</p>
+  </div>
+</section>
+
+<!-- ============ 1/16 · CÓMO TRABAJAMOS ============ -->
+<section class="sec" id="proceso" aria-labelledby="h-proceso">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>16</i></span>
+        <p class="rail-label">cómo trabajamos</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-proceso">Cómo trabajamos.</h2>
+      <p class="sec-sub mono">Escuchamos · Diseñamos · Hacemos · Entregamos</p>
+    </div>
+    <ol class="steps">
+      <li style="--w:1">
+        <div class="bar" aria-hidden="true"><i></i></div>
+        <span class="mono step-n">01</span>
+        <h3>Escuchamos</h3>
+        <p>Entendemos tu negocio, qué querés lograr y con qué contás, antes de hacer nada.</p>
+        <p class="result"><span class="mono">Resultado</span>Un plan claro, con alcance y fechas.</p>
+      </li>
+      <li style="--w:.5">
+        <div class="bar" aria-hidden="true"><i></i></div>
+        <span class="mono step-n">02</span>
+        <h3>Diseñamos</h3>
+        <p>Armamos la propuesta: cómo se va a ver y cómo va a funcionar, con la marca incluida si el proyecto la necesita.</p>
+        <p class="result"><span class="mono">Resultado</span>Una propuesta que podés ver y aprobar.</p>
+      </li>
+      <li style="--w:.25">
+        <div class="bar" aria-hidden="true"><i></i></div>
+        <span class="mono step-n">03</span>
+        <h3>Hacemos y revisamos</h3>
+        <p>Construimos y revisamos cada entrega antes de que salga, para que llegue lista.</p>
+        <p class="result"><span class="mono">Resultado</span>Entregas probadas y documentadas.</p>
+      </li>
+      <li style="--w:.125">
+        <div class="bar" aria-hidden="true"><i></i></div>
+        <span class="mono step-n">04</span>
+        <h3>Entregamos y acompañamos</h3>
+        <p>Publicamos, te pasamos todo a tu nombre y te acompañamos en los primeros pasos.</p>
+        <p class="result"><span class="mono">Resultado</span>Accesos, archivos y documentación a tu nombre.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 1/32 · EQUIPO (masthead) ============ -->
+<section class="sec" id="equipo" aria-labelledby="h-equipo">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>32</i></span>
+        <p class="rail-label">equipo</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-equipo">Las personas detrás de cada proyecto.</h2>
+      <p class="sec-sub">Equipos que se complementan para cubrir tu proyecto de punta a punta.</p>
+    </div>
+    <dl class="masthead">
+      <div class="mh-row"><dt><span class="mh-verb mono">Entender</span>Análisis y Procesos</dt><dd>Escuchamos, ordenamos cómo funciona tu negocio y definimos qué hace falta para crecer.</dd></div>
+      <div class="mh-row"><dt><span class="mh-verb mono">Construir</span>Desarrollo e Ingeniería</dt><dd>Armamos tus sitios, aplicaciones y conexiones entre sistemas para que funcionen hoy y mañana.</dd></div>
+      <div class="mh-row"><dt><span class="mh-verb mono">Verificar</span>Calidad y Aseguramiento</dt><dd>Probamos cada entrega antes de que llegue a tus clientes, para que nada falle en el momento clave.</dd></div>
+      <div class="mh-row mh-coord"><dt><span class="mh-verb mono">Entender + Construir + Verificar</span>Marca y Marketing</dt><dd>Lo coordinan los otros tres equipos: uno define el brief, otro lo lleva al mundo digital y otro verifica el resultado antes de publicarlo.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ 1/64 · CONTACTO (found: the Rust piece) ============ -->
+<section class="sec contact" id="contacto" aria-labelledby="h-contacto">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>64</i></span>
+        <p class="rail-label">contacto</p>
+      </div>
+    </aside>
+    <div class="contact-text">
+      <h2 id="h-contacto">Hablemos.</h2>
+      <ul class="rows">
+        <li><a class="wa" href="https://wa.me/"><span>[NÚMERO WHATSAPP]</span><span class="mono">whatsapp</span></a></li>
+        <li><a class="mail" href="mailto:"><span>[CORREO]</span><span class="mono">correo</span></a></li>
+        <li><span class="row"><span>Asunción, Paraguay</span><span class="mono">GMT−3</span></span></li>
+      </ul>
+    </div>
+    <form class="form" id="form" aria-label="Formulario de contacto" novalidate>
+      <div class="f-row">
+        <div class="field"><label for="f-nombre">Nombre o empresa</label><input id="f-nombre" name="nombre" type="text" autocomplete="organization" required aria-describedby="e-nombre"><p class="err" id="e-nombre" hidden></p></div>
+        <div class="field"><label for="f-contacto">Correo o contacto</label><input id="f-contacto" name="contacto" type="text" inputmode="email" autocomplete="email" required aria-describedby="e-contacto"><p class="err" id="e-contacto" hidden></p></div>
+      </div>
+      <fieldset class="needs">
+        <legend>¿Qué te interesa?</legend>
+        <div class="chips">
+          <button type="button" aria-pressed="false" data-area="tecnología">Tecnología</button>
+          <button type="button" aria-pressed="false" data-area="marketing y marca">Marketing y marca</button>
+          <button type="button" aria-pressed="false" data-area="[otra línea]">[Otra línea]</button>
+          <button type="button" aria-pressed="false" data-area="que nos orienten sobre por dónde empezar">Quiero que me orienten</button>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="f-mensaje">Contanos un poco más <span class="opt">(opcional)</span></label>
+        <textarea id="f-mensaje" name="mensaje" rows="4" aria-describedby="h-mensaje"></textarea>
+        <p class="hint mono" id="h-mensaje">El mensaje se arma con tus datos. Podés editarlo.</p>
+      </div>
+      <div class="f-foot">
+        <button type="submit" class="btn btn-ink">Enviar consulta</button>
+        <a class="act" id="send-wa" href="https://wa.me/">Enviar por WhatsApp <span aria-hidden="true">→</span></a>
+        <a class="act" id="send-mail" href="mailto:">Enviar por correo <span aria-hidden="true">→</span></a>
+        <button type="button" class="act" id="copy">Copiar mensaje <span aria-hidden="true">→</span></button>
+      </div>
+      <p class="status mono" id="status" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="grid">
+    <div class="foot-brand">
+      <a href="#inicio" class="foot-logo" aria-label="Log N Labs, inicio"><img src="../../logos/log-n-labs_on-ink.svg" alt="" width="196" height="28"></a>
+      <p class="foot-tag">Marketing y tecnología en un solo equipo, para negocios que crecen.</p>
+      <ul class="foot-ok mono">
+        <li><span aria-hidden="true">[ ok ]</span> tecnología</li>
+        <li><span aria-hidden="true">[ ok ]</span> marketing y marca</li>
+        <li><span aria-hidden="true">[ ok ]</span> acompañamiento</li>
+      </ul>
+    </div>
+    <nav class="foot-col fc1" aria-label="Soluciones">
+      <p class="foot-h mono">Soluciones</p>
+      <a href="#soluciones">Tecnología</a>
+      <a href="#soluciones">Marketing y marca</a>
+      <a href="#soluciones"><span class="todo-ink">[Otra línea]</span></a>
+    </nav>
+    <div class="foot-col fc2">
+      <p class="foot-h mono">Contacto</p>
+      <a class="wa" href="https://wa.me/"><span class="todo-ink">[NÚMERO WHATSAPP]</span></a>
+      <a class="mail" href="mailto:"><span class="todo-ink">[CORREO]</span></a>
+      <span>Asunción, Paraguay</span>
+    </div>
+    <nav class="foot-col fc3" aria-label="Navegación">
+      <p class="foot-h mono">Navegación</p>
+      <a href="#vision">Visión</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="foot-bottom mono">
+      <span>Asunción, PY · GMT-3 · Disponibles para proyectos · <time class="clock">--:--</time></span>
+      <span>© 2026 Log N Labs</span>
+    </div>
+    <p class="colophon mono">Compuesto en Unbounded, STIX Two Text y JetBrains Mono. 1 → 1/2 → 1/4 → 1/8 → 1/16 → 1/32 → 1/64.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

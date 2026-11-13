@@ -1,0 +1,46 @@
+# Publishes the design variations to GitHub Pages.
+# Site layout: /            -> redirects to /variations/
+#              /variations/ -> index of all variations
+#              /logos/      -> shared logo SVGs (variations reference ../../logos/)
+name: Deploy variations to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp -R variations logos _site/
+          find _site/variations -type d -name screens -prune -exec rm -rf {} +
+          touch _site/.nojekyll
+          cat > _site/index.html <<'HTML'
+          <!doctype html><html lang="es-PY"><head><meta charset="utf-8">
+          <meta http-equiv="refresh" content="0; url=variations/">
+          <title>Log N Labs · Variaciones</title></head>
+          <body><a href="variations/">Ver variaciones</a></body></html>
+          HTML
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

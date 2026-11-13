@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Home Log N Labs</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&amp;family=Space+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a:hover{opacity:0.72}
+input,textarea,button{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 1440px; min-height: 5600px; display: flex; flex-direction: column; background: {{t.bg}}; color: {{t.fg}}; font-family: 'Space Grotesk', sans-serif">
+
+<div style="height: 900px; flex: none">
+<dc-import name="Main" bg="{{t.bg}}" fg="{{t.fg}}" muted="{{t.muted}}" surface="{{t.surface}}" line="{{t.line}}" accent="{{t.accent}}" on-accent="{{t.onAccent}}" accent-soft="{{t.detail}}" logo="{{t.logo}}" speed="{{speed}}" rotacion="{{rot}}" loop="{{loop}}" hint-size="1440px,900px"></dc-import>
+</div>
+
+<section id="por-que" aria-labelledby="h-por-que" style="box-sizing: border-box; padding: 120px 56px; border-top: 1px solid {{t.line}}; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 80px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">por qué log n</p>
+<h2 id="h-por-que" style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em">Crecer no debería costar el doble.</h2>
+<p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.6; color: {{t.muted}}">En algoritmos, O(log n) describe las soluciones que siguen siendo rápidas aunque el problema crezca. Aplicamos la misma idea a tu negocio: software, procesos y marketing pensados para que más clientes, más ventas y más operaciones no signifiquen más costo en la misma proporción.</p>
+<div style="display: flex; flex-direction: column; border-top: 1px solid {{t.line}}">
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid {{t.line}}"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.detail}}">01</span><span style="font-size: 16px">Medimos antes de construir.</span></div>
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid {{t.line}}"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.detail}}">02</span><span style="font-size: 16px">Automatizamos lo repetitivo.</span></div>
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid {{t.line}}"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.detail}}">03</span><span style="font-size: 16px">Construimos para escalar, no para rehacer.</span></div>
+</div>
+</div>
+<figure style="margin: 0; box-sizing: border-box; padding: 40px; background: {{t.surface}}; border: 1px solid {{t.line}}; display: flex; flex-direction: column; gap: 20px">
+<svg width="100%" viewBox="-60 -30 580 340" role="img" aria-label="Ilustración: el costo lineal crece igual que el negocio; el costo logarítmico se aplana a medida que el negocio crece.">
+<path d="M0 0 L0 260 L480 260" fill="none" stroke="{{t.line}}" stroke-width="1.5"></path>
+<path d="{{linPath}}" fill="none" stroke="{{t.muted}}" stroke-width="2" stroke-dasharray="6 6"></path>
+<path d="{{logPath}}" fill="none" stroke="{{t.detail}}" stroke-width="3"></path>
+<text x="486" y="20" fill="{{t.muted}}" font-family="JetBrains Mono, monospace" font-size="14">O(n)</text>
+<text x="486" y="86" fill="{{t.detail}}" font-family="JetBrains Mono, monospace" font-size="14">O(log n)</text>
+<text x="480" y="292" text-anchor="end" fill="{{t.muted}}" font-family="JetBrains Mono, monospace" font-size="12">crecimiento del negocio →</text>
+<text x="-12" y="4" text-anchor="end" fill="{{t.muted}}" font-family="JetBrains Mono, monospace" font-size="12">costo</text>
+</svg>
+<figcaption style="font-size: 14px; line-height: 1.5; color: {{t.muted}}">Ilustrativo: con un crecimiento lineal, cada cliente nuevo cuesta lo mismo que el anterior. La idea es que cada uno cueste menos.</figcaption>
+</figure>
+</section>
+
+<section id="servicios" aria-labelledby="h-servicios" style="box-sizing: border-box; padding: 120px 56px; border-top: 1px solid {{t.line}}; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">servicios</p>
+<h2 id="h-servicios" style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em">Tres líneas de trabajo, un mismo criterio.</h2>
+</div>
+<a href="#contacto" style="flex: none; font-size: 16px; color: {{t.fg}}">Hablemos de tu proyecto →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 1px; height: 640px; background: {{t.line}}; border: 1px solid {{t.line}}">
+<div style="grid-row: span 2; box-sizing: border-box; padding: 48px; background: {{t.bg}}; display: flex; flex-direction: column; justify-content: space-between">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">1/2</span>
+<div style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 44px; line-height: 1.05; letter-spacing: -0.02em">Software</h3>
+<p style="margin: 0; max-width: 480px; font-size: 17px; line-height: 1.55; color: {{t.muted}}">Software a medida, sitios y herramientas internas, pensados para crecer con tu negocio.</p>
+</div>
+<div style="display: flex; flex-direction: column; border-top: 1px solid {{t.line}}">
+<div style="display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-bottom: 1px solid {{t.line}}"><span style="font-size: 16px; font-weight: 500">Desarrollo a medida</span><span style="font-size: 15px; line-height: 1.5; color: {{t.muted}}">Sistemas y aplicaciones web hechos para tu operación.</span></div>
+<div style="display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-bottom: 1px solid {{t.line}}"><span style="font-size: 16px; font-weight: 500">Sitios web</span><span style="font-size: 15px; line-height: 1.5; color: {{t.muted}}">Rápidos, claros y fáciles de mantener.</span></div>
+<div style="display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-bottom: 1px solid {{t.line}}"><span style="font-size: 16px; font-weight: 500">Herramientas y automatización</span><span style="font-size: 15px; line-height: 1.5; color: {{t.muted}}">Conectamos las herramientas que ya usás y automatizamos tareas repetitivas.</span></div>
+</div>
+</div>
+</div>
+<div style="box-sizing: border-box; padding: 40px; background: {{t.bg}}; display: flex; flex-direction: column; justify-content: space-between">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">1/4</span>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.1">Consultoría</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: {{t.muted}}">Revisamos cómo trabaja tu equipo y diseñamos los procesos y la tecnología que lo acompañan.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6">Ingeniería de procesos · Consultoría tecnológica</p>
+</div>
+</div>
+<div style="box-sizing: border-box; padding: 40px; background: {{t.bg}}; display: flex; flex-direction: column; justify-content: space-between">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">1/4</span>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.1">Marketing</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: {{t.muted}}">Identidad, estrategia y campañas para que tu negocio llegue a la gente correcta.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6">Identidad visual · Estrategia de marketing · Campañas</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="proceso" aria-labelledby="h-proceso" style="box-sizing: border-box; padding: 120px 56px; border-top: 1px solid {{t.line}}; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">cómo trabajamos</p>
+<h2 id="h-proceso" style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em">Un proceso corto, en pasos claros.</h2>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: {{t.line}}; border: 1px solid {{t.line}}">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="3">
+<li style="box-sizing: border-box; padding: 40px; background: {{t.bg}}; display: flex; flex-direction: column; gap: 28px; min-height: 300px">
+<div aria-hidden="true" style="height: 2px; background: {{t.line}}"><div style="height: 2px; {{s.bar}}"></div></div>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: {{t.detail}}">{{s.n}}</span>
+<h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 24px; line-height: 1.15">{{s.title}}</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: {{t.muted}}">{{s.desc}}</p>
+</li>
+</sc-for>
+</ol>
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">El problema se achica a la mitad en cada paso.</p>
+</section>
+
+<section id="para-quien" aria-labelledby="h-para-quien" style="box-sizing: border-box; padding: 120px 56px; border-top: 1px solid {{t.line}}; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">para quién</p>
+<h2 id="h-para-quien" style="margin: 0; max-width: 900px; font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em">Para pymes que quieren crecer sin desordenarse.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: {{t.line}}; border: 1px solid {{t.line}}">
+<sc-for list="{{cases}}" as="c" hint-placeholder-count="4">
+<div style="box-sizing: border-box; padding: 40px; min-height: 220px; background: {{t.bg}}; display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+<p style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 22px; line-height: 1.25">{{c.pain}}</p>
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span aria-hidden="true" style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: {{t.detail}}">→</span>
+<p style="margin: 0; font-size: 16px; line-height: 1.5; color: {{t.muted}}">{{c.fix}}</p>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="preguntas" aria-labelledby="h-preguntas" style="box-sizing: border-box; padding: 120px 56px; border-top: 1px solid {{t.line}}; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">preguntas</p>
+<h2 id="h-preguntas" style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em">Lo que suelen preguntarnos.</h2>
+</div>
+<div style="grid-column: span 2; display: flex; flex-direction: column; border-top: 1px solid {{t.line}}">
+<sc-for list="{{faq}}" as="q" hint-placeholder-count="4">
+<div style="border-bottom: 1px solid {{t.line}}">
+<button onClick="{{q.toggle}}" aria-expanded="{{q.open}}" style="width: 100%; min-height: 72px; padding: 20px 0; border: 0; background: transparent; color: {{t.fg}}; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; text-align: left; font-size: 20px">
+<span>{{q.q}}</span>
+<span aria-hidden="true" style="flex: none; font-family: 'JetBrains Mono', monospace; font-size: 20px; color: {{t.detail}}">{{q.sign}}</span>
+</button>
+<sc-if value="{{q.open}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; padding: 0 0 24px; max-width: 720px; font-size: 16px; line-height: 1.6; color: {{t.muted}}">{{q.a}}</p>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="contacto" aria-labelledby="h-contacto" style="box-sizing: border-box; padding: 120px 56px; border-top: 1px solid {{t.line}}; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 80px">
+<div style="display: flex; flex-direction: column; justify-content: space-between; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">contacto</p>
+<h2 id="h-contacto" style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 64px; line-height: 1.05; letter-spacing: -0.03em">¿Tenés un proyecto? Hablemos.</h2>
+<p style="margin: 0; max-width: 480px; font-size: 18px; line-height: 1.55; color: {{t.muted}}">Contanos qué querés construir y lo vemos juntos. Te respondemos en [plazo de respuesta].</p>
+</div>
+<div style="display: flex; flex-direction: column; border-top: 1px solid {{t.line}}">
+<a href="mailto:[tu@email.com]" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid {{t.line}}; font-size: 17px; color: {{t.fg}}; text-decoration: none"><span>[tu@email.com]</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">email</span></a>
+<a href="#contacto" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid {{t.line}}; font-size: 17px; color: {{t.fg}}; text-decoration: none"><span>[número de WhatsApp]</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">whatsapp</span></a>
+<div style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid {{t.line}}; font-size: 17px"><span>Asunción, Paraguay</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">GMT−3</span></div>
+</div>
+</div>
+<form aria-label="Formulario de contacto" style="box-sizing: border-box; padding: 40px; background: {{t.surface}}; border: 1px solid {{t.line}}; display: flex; flex-direction: column; gap: 20px">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: {{t.muted}}">Nombre<input type="text" name="nombre" style="height: 48px; box-sizing: border-box; padding: 0 14px; border: 1px solid {{t.line}}; background: {{t.bg}}; color: {{t.fg}}; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: {{t.muted}}">Empresa<input type="text" name="empresa" style="height: 48px; box-sizing: border-box; padding: 0 14px; border: 1px solid {{t.line}}; background: {{t.bg}}; color: {{t.fg}}; font-size: 16px"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: {{t.muted}}">Email o WhatsApp<input type="text" name="contacto" style="height: 48px; box-sizing: border-box; padding: 0 14px; border: 1px solid {{t.line}}; background: {{t.bg}}; color: {{t.fg}}; font-size: 16px"></label>
+<fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="padding: 0 0 10px; font-size: 14px; color: {{t.muted}}">¿Qué necesitás?</legend>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{needs}}" as="n" hint-placeholder-count="3">
+<button type="button" onClick="{{n.toggle}}" aria-pressed="{{n.on}}" style="height: 44px; padding: 0 18px; cursor: pointer; font-size: 15px; {{n.s}}">{{n.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: {{t.muted}}">Contanos un poco<textarea name="mensaje" rows="4" style="box-sizing: border-box; padding: 12px 14px; border: 1px solid {{t.line}}; background: {{t.bg}}; color: {{t.fg}}; font-size: 16px; line-height: 1.5; resize: vertical"></textarea></label>
+<button type="button" style="height: 52px; border: 0; background: {{t.accent}}; color: {{t.onAccent}}; font-weight: 600; font-size: 16px; cursor: pointer">Enviar</button>
+</form>
+</section>
+
+<footer style="margin-top: auto; box-sizing: border-box; padding: 48px 56px; border-top: 1px solid {{t.line}}; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap">
+<a href="#" aria-label="Log N Labs, inicio" style="display: inline-flex; text-decoration: none">
+<svg width="154" height="22" viewBox="0 0 1329 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M296.636 100.15C297.323 104.754 298.679 109.037 300.705 113C303.905 118.867 308.505 123.533 314.505 127C320.638 130.333 328.038 132 336.705 132C347.105 132 356.705 128.933 365.505 122.8C372.665 117.81 379.338 110.26 385.527 100.15H407.305V124C407.305 138.667 404.305 150.866 398.305 160.6C392.438 170.333 384.438 177.6 374.305 182.4C364.171 187.2 352.638 189.6 339.705 189.6C329.972 189.6 320.905 188.2 312.505 185.4C304.238 182.734 296.305 178.6 288.705 173V156.8C296.705 163.333 304.905 167.867 313.305 170.4C321.838 172.934 330.305 174.2 338.705 174.2C354.971 174.2 367.371 169.933 375.904 161.4C384.571 153 388.904 141.4 388.904 126.6V114.688C386.056 119.281 382.39 123.719 377.904 128C372.171 133.467 365.371 138 357.505 141.6C349.772 145.066 341.172 146.8 331.705 146.8C321.572 146.8 312.371 144.533 304.104 140C295.971 135.467 289.505 129.2 284.705 121.2C281.026 114.967 278.759 107.95 277.899 100.15H296.636Z" fill="{{logoFg}}"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M927.036 36.7998C937.703 36.7998 947.303 39.3338 955.836 44.4004C964.019 49.1313 970.852 55.702 976.338 64.1113L979.236 40H1017.84L1010.84 97L1017.84 154H979.236L976.326 129.906C970.842 138.313 964.013 144.944 955.836 149.8C947.303 154.733 937.703 157.2 927.036 157.2C915.836 157.2 905.969 154.666 897.436 149.6C889.036 144.533 882.436 137.533 877.636 128.6C872.836 119.533 870.436 109 870.436 97C870.436 85 872.836 74.5329 877.636 65.5996C882.436 56.5332 889.036 49.467 897.436 44.4004C905.969 39.3337 915.836 36.7998 927.036 36.7998ZM937.836 65.4004C931.969 65.4004 926.77 66.7998 922.236 69.5996C917.836 72.2662 914.369 75.9999 911.836 80.7998C909.303 85.4665 908.036 90.8667 908.036 97C908.036 103.133 909.303 108.6 911.836 113.4C914.369 118.067 917.836 121.8 922.236 124.6C926.77 127.266 931.969 128.6 937.836 128.6C943.703 128.6 949.236 127.266 954.436 124.6C959.769 121.8 964.436 118.067 968.436 113.4C972.436 108.6 975.436 103.133 977.436 97C975.436 90.8667 972.436 85.4664 968.436 80.7998C964.436 76 959.769 72.2662 954.436 69.5996C949.236 66.7998 943.702 65.4004 937.836 65.4004Z" fill="{{logoFg}}"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1075.92 63.6514C1081.35 55.4619 1088.08 49.0448 1096.12 44.4004C1104.65 39.3338 1114.25 36.7998 1124.92 36.7998C1136.12 36.7998 1145.92 39.3337 1154.32 44.4004C1162.85 49.467 1169.52 56.5332 1174.32 65.5996C1179.12 74.5329 1181.52 85 1181.52 97C1181.52 109 1179.12 119.533 1174.32 128.6C1169.52 137.533 1162.85 144.533 1154.32 149.6C1145.92 154.666 1136.12 157.2 1124.92 157.2C1114.25 157.2 1104.65 154.733 1096.12 149.8C1088.08 145.03 1081.35 138.546 1075.92 130.349V154H1038.92V0H1075.92V63.6514ZM1114.12 65.4004C1108.25 65.4004 1102.65 66.7997 1097.32 69.5996C1092.12 72.2662 1087.52 75.9999 1083.52 80.7998C1079.65 85.4664 1076.65 90.8667 1074.52 97C1076.65 103.133 1079.65 108.6 1083.52 113.4C1087.52 118.067 1092.12 121.8 1097.32 124.6C1102.65 127.266 1108.25 128.6 1114.12 128.6C1119.98 128.6 1125.12 127.266 1129.52 124.6C1134.05 121.8 1137.58 118.067 1140.12 113.4C1142.65 108.6 1143.92 103.133 1143.92 97C1143.92 90.8667 1142.65 85.4665 1140.12 80.7998C1137.58 75.9999 1134.05 72.2662 1129.52 69.5996C1125.12 66.7996 1119.98 65.4004 1114.12 65.4004Z" fill="{{logoFg}}"></path>
+<path d="M1259.05 36.7998C1271.58 36.7998 1282.72 38.4665 1292.45 41.7998C1302.32 45.1331 1310.18 49.7331 1316.05 55.5996C1322.05 61.4663 1325.45 68.3335 1326.25 76.2002H1288.45C1287.92 73.5335 1286.45 71.0665 1284.05 68.7998C1281.78 66.5332 1278.45 64.7337 1274.05 63.4004C1269.78 61.9337 1264.18 61.2002 1257.25 61.2002C1249.38 61.2002 1243.38 62.0665 1239.25 63.7998C1235.12 65.5331 1233.05 68.0671 1233.05 71.4004C1233.05 73.9334 1234.32 75.9997 1236.85 77.5996C1239.38 79.0663 1244.18 80.0663 1251.25 80.5996L1278.25 82.5996C1291.05 83.6663 1301.05 85.7332 1308.25 88.7998C1315.58 91.7331 1320.78 95.6004 1323.85 100.4C1326.92 105.2 1328.45 110.867 1328.45 117.4C1328.45 125.934 1325.92 133.2 1320.85 139.2C1315.92 145.067 1308.65 149.533 1299.05 152.6C1289.45 155.666 1277.78 157.2 1264.05 157.2C1250.05 157.2 1237.78 155.467 1227.25 152C1216.72 148.533 1208.52 143.667 1202.65 137.4C1196.78 131.134 1193.65 123.866 1193.25 115.6H1231.05C1231.85 118.933 1233.72 121.867 1236.65 124.4C1239.72 126.934 1243.65 128.867 1248.45 130.2C1253.25 131.4 1258.92 132 1265.45 132C1274.25 132 1280.92 131.067 1285.45 129.2C1289.98 127.334 1292.25 124.533 1292.25 120.8C1292.25 118 1290.58 115.867 1287.25 114.4C1284.05 112.934 1278.25 111.867 1269.85 111.2L1249.05 109.6C1235.98 108.533 1225.58 106.467 1217.85 103.4C1210.12 100.2 1204.58 96.1334 1201.25 91.2002C1198.05 86.2669 1196.45 80.7329 1196.45 74.5996C1196.45 66.1998 1199.05 59.2664 1204.25 53.7998C1209.58 48.1999 1216.92 44.0002 1226.25 41.2002C1235.58 38.2669 1246.52 36.7998 1259.05 36.7998Z" fill="{{logoFg}}"></path>
+<path d="M146.158 100.15C146.495 108.013 148.411 114.896 151.904 120.8C155.771 127.333 161.305 132.4 168.505 136C175.838 139.467 184.371 141.2 194.104 141.2C203.971 141.2 212.505 139.467 219.705 136C226.905 132.4 232.438 127.333 236.305 120.8C239.919 114.896 241.9 108.013 242.248 100.15H261.056C260.663 110.71 257.814 120.127 252.505 128.4C246.905 137.334 239.104 144.267 229.104 149.2C219.105 154.133 207.438 156.6 194.104 156.6C180.905 156.6 169.238 154.134 159.104 149.2C149.105 144.267 141.305 137.333 135.705 128.4C130.519 120.127 127.736 110.71 127.353 100.15H146.158Z" fill="{{logoFg}}"></path>
+<path d="M18.7998 137.4H123.8V154H0V4H18.7998V137.4Z" fill="{{logoFg}}"></path>
+<path d="M767.989 120.6H863.389V154H730.189V4H767.989V120.6Z" fill="{{logoFg}}"></path>
+<path d="M194.104 38.7998C207.438 38.7998 219.105 41.2669 229.104 46.2002C239.104 51.1335 246.905 57.9998 252.505 66.7998C257.417 74.3398 260.223 82.9569 260.927 92.6504H242.082C241.461 85.8942 239.536 79.8769 236.305 74.5996C232.438 68.0666 226.905 63.0003 219.705 59.4004C212.505 55.8004 203.971 54 194.104 54C184.371 54 175.838 55.8004 168.505 59.4004C161.305 63.0004 155.771 68.0663 151.904 74.5996C148.781 79.8769 146.92 85.8941 146.319 92.6504H127.479C128.166 82.9569 130.907 74.3398 135.705 66.7998C141.305 58 149.105 51.1335 159.104 46.2002C169.238 41.2669 180.905 38.7998 194.104 38.7998Z" fill="{{logoFg}}"></path>
+<path d="M301.301 71.3496C301.097 71.6951 300.899 72.0456 300.705 72.4004C297.658 78.2292 296.125 84.979 296.105 92.6504H277.506C277.522 84.79 278.781 77.6901 281.284 71.3496H301.301Z" fill="{{logoFg}}"></path>
+<path d="M407.305 92.6504H389.628C385.224 84.0312 380.496 76.9315 375.445 71.3496H407.305V92.6504Z" fill="{{logoFg}}"></path>
+<path d="M331.705 38.7998C339.305 38.7998 346.371 40.0005 352.904 42.4004C359.438 44.6671 365.372 47.7329 370.705 51.5996C375.759 55.2635 380.093 59.3477 383.71 63.8496H367.272C366.687 63.4153 366.098 62.998 365.505 62.5996C356.705 56.4664 347.105 53.4005 336.705 53.4004C328.039 53.4004 320.638 55.1331 314.505 58.5996C311.814 60.0944 309.406 61.8454 307.278 63.8496H285.035C289.8 55.9837 296.156 49.8997 304.104 45.5996C312.371 41.0663 321.572 38.7998 331.705 38.7998Z" fill="{{logoFg}}"></path>
+<path d="M407.305 63.8496H388.904V41.4004H407.305V63.8496Z" fill="{{logoFg}}"></path>
+<path d="M513.122 154H494.921V82.75H513.122V154Z" fill="{{logoN}}"></path>
+<path d="M624.122 133.252V82.75H642.322V154H618.122L560.496 82.75H583.173L624.122 133.252Z" fill="{{logoN}}"></path>
+<path d="M513.122 75.25H494.921V45.25H513.122V75.25Z" fill="{{logoN}}"></path>
+<path d="M577.092 75.25H554.43L530.167 45.25H552.768L577.092 75.25Z" fill="{{logoN}}"></path>
+<path d="M642.322 75.25H624.122V45.25H642.322V75.25Z" fill="{{logoN}}"></path>
+<path d="M513.122 37.75H494.921V26.5H513.122V37.75Z" fill="{{logoN}}"></path>
+<path d="M546.687 37.75H524.101L515.002 26.5H537.565L546.687 37.75Z" fill="{{logoN}}"></path>
+<path d="M642.322 37.75H624.122V26.5H642.322V37.75Z" fill="{{logoN}}"></path>
+<path d="M531.484 19H494.921V4H519.322L531.484 19Z" fill="{{logoN}}"></path>
+<path d="M642.322 19H624.122V4H642.322V19Z" fill="{{logoN}}"></path>
+</svg>
+</a>
+<nav aria-label="Pie de página" style="display: flex; gap: 28px; font-size: 14px">
+<a href="#servicios" style="color: {{t.fg}}; text-decoration: none">Servicios</a>
+<a href="#proceso" style="color: {{t.fg}}; text-decoration: none">Cómo trabajamos</a>
+<a href="#preguntas" style="color: {{t.fg}}; text-decoration: none">Preguntas</a>
+<a href="#contacto" style="color: {{t.fg}}; text-decoration: none">Contacto</a>
+</nav>
+<div style="display: flex; gap: 24px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{t.muted}}">
+<a href="#" style="color: {{t.muted}}">Instagram [link]</a>
+<a href="#" style="color: {{t.muted}}">LinkedIn [link]</a>
+<span>© 2026 Log N Labs · Asunción, Paraguay</span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"tema":{"editor":"enum","default":"oscuro","options":["oscuro","claro"]},"$preview":{"width":1440,"height":5600}}'>
+class Component extends DCLogic {
+  state = { open: 0, needs: { 0: true } };
+  renderVals() {
+    var self = this;
+    var light = (this.props.tema ?? 'oscuro') === 'claro';
+    var t = light
+      ? { bg: '#F4EFE7', surface: '#E9E1D4', line: '#D6CBBB', fg: '#17120F', muted: '#6B625A', accent: '#B83A0E', detail: '#B83A0E', onAccent: '#F4EFE7', logo: 'on-white', logoFg: '#17120F', logoN: '#B83A0E' }
+      : { bg: '#17120F', surface: '#241C17', line: '#3A2F28', fg: '#F4EFE7', muted: '#9A8F85', accent: '#B83A0E', detail: '#E2582A', onAccent: '#F4EFE7', logo: 'on-ink', logoFg: '#F4EFE7', logoN: '#E2582A' };
+
+    var W = 480, H = 260, pts = [];
+    for (var x = 0; x <= W; x += 8) {
+      var y = H - 48 * Math.log(1 + x / 12);
+      pts.push((x === 0 ? 'M' : 'L') + x + ' ' + y.toFixed(1));
+    }
+
+    var steps = [
+      { n: '01', title: 'Diagnóstico', desc: 'Entendemos tu negocio, tus procesos y dónde se pierde tiempo o dinero. Salís con un diagnóstico y una propuesta concreta.', w: 100 },
+      { n: '02', title: 'Construcción', desc: 'Trabajamos en entregas cortas, para que veas avances reales y puedas corregir el rumbo a tiempo.', w: 50 },
+      { n: '03', title: 'Medición y escala', desc: 'Medimos el resultado, ajustamos y escalamos lo que funciona.', w: 25 }
+    ].map(function (s) { s.bar = 'width:' + s.w + '%;background:' + t.detail + ';'; return s; });
+
+    var cases = [
+      { pain: 'Tu operación vive en planillas y chats.', fix: 'Software a medida y automatizaciones que ordenan la información en un solo lugar.' },
+      { pain: 'Tu sitio web no genera consultas.', fix: 'Un sitio nuevo y una estrategia de marketing pensada para convertir visitas en clientes.' },
+      { pain: 'Tu marca no refleja lo que hacés.', fix: 'Identidad visual coherente en todos los puntos de contacto.' },
+      { pain: 'Cada cliente nuevo suma trabajo manual.', fix: 'Ingeniería de procesos para que crecer no signifique contratar al mismo ritmo.' }
+    ];
+
+    var open = this.state.open;
+    var faq = [
+      { q: '¿Cuánto cuesta un proyecto?', a: 'Depende del alcance. Después del diagnóstico te enviamos una propuesta con precio y plazos. [Ajustar a tu esquema de precios.]' },
+      { q: '¿Puedo contratar solo una línea de servicio?', a: 'Sí. Podés empezar por software, consultoría o marketing y sumar las otras cuando las necesites.' },
+      { q: '¿Cuánto tarda?', a: 'Depende del proyecto. El plazo queda definido en la propuesta, junto con las entregas parciales.' },
+      { q: '¿Qué pasa después de la entrega?', a: '[Describí aquí tu esquema de soporte y mantenimiento.]' }
+    ].map(function (item, i) {
+      var isOpen = i === open;
+      return { q: item.q, a: item.a, open: isOpen, sign: isOpen ? '−' : '+', toggle: function () { self.setState({ open: isOpen ? -1 : i }); } };
+    });
+
+    var sel = this.state.needs || {};
+    var needs = ['Software', 'Consultoría', 'Marketing', 'Todavía no sé'].map(function (label, i) {
+      var on = !!sel[i];
+      return {
+        label: label,
+        on: on,
+        s: on
+          ? 'background:' + t.accent + ';color:' + t.onAccent + ';border:1px solid ' + t.accent + ';'
+          : 'background:transparent;color:' + t.fg + ';border:1px solid ' + t.line + ';',
+        toggle: function () {
+          var next = {};
+          for (var k in sel) next[k] = sel[k];
+          next[i] = !on;
+          self.setState({ needs: next });
+        }
+      };
+    });
+
+    return {
+      t: t,
+      logoFg: t.logoFg,
+      logoN: t.logoN,
+      linPath: 'M0 260 L480 20',
+      logPath: pts.join(' '),
+      steps: steps,
+      cases: cases,
+      faq: faq,
+      needs: needs,
+      speed: 700,
+      rot: 4500,
+      loop: true
+    };
+  }
+}
+</script>
+</body>
+</html>
