@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "ceo-advisor": {
+      "source": "alirezarezvani/claude-skills",
+      "sourceType": "github",
+      "skillPath": "c-level-advisor/skills/ceo-advisor/SKILL.md",
+      "computedHash": "bdeae13a2a7af23e56330415ba3217463b0771097c6e0da68be29c9aeeabe983"
+    }
+  }
+}
