@@ -6,9 +6,9 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) doc.classList.add('reduce');
 
-  // TODO(config): both come from env/config in production. Leave empty until the owner provides them.
-  var WHATSAPP_NUMBER = ''; // international format, digits only, e.g. 5959XXXXXXXX
-  var CONTACT_EMAIL = '';
+  // Values injected at build time from config/.env (scripts/build-site.sh).
+  var WHATSAPP_NUMBER = '%%WHATSAPP_NUMBER%%'; // international format, digits only
+  var CONTACT_EMAIL = '%%CONTACT_EMAIL%%';
   if (WHATSAPP_NUMBER) document.querySelectorAll('a.wa').forEach(function (a) { a.href = 'https://wa.me/' + WHATSAPP_NUMBER; });
   if (CONTACT_EMAIL) document.querySelectorAll('a.mail').forEach(function (a) { a.href = 'mailto:' + CONTACT_EMAIL; });
 
@@ -129,7 +129,7 @@
   }
 
   cellEls[6].addEventListener('click', function () {
-    document.getElementById('vision').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+    document.getElementById('enfoque').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
   });
 
   layout();
@@ -185,7 +185,7 @@
     var areas = chips.filter(function (b) { return b.getAttribute('aria-pressed') === 'true'; })
       .map(function (b) { return b.getAttribute('data-area'); });
     var text = 'Hola, soy ' + name + '.';
-    if (areas.length) text += ' Quisiéramos hablar de ' + joinEs(areas) + '.';
+    if (areas.length) text += ' Quisiera consultar sobre ' + joinEs(areas) + '.';
     return text;
   }
   function sync() {
@@ -217,7 +217,7 @@
     var c = contacto.value.trim();
     var okN = setErr(nombre, nombre.value.trim() ? '' : 'Decinos tu nombre o el de tu empresa.');
     var looksOk = /\S+@\S+\.\S+/.test(c) || c.replace(/\D/g, '').length >= 8;
-    var okC = setErr(contacto, !c ? 'Dejanos un correo o un número para responderte.' : (looksOk ? '' : 'Revisá el correo o el número: no parece completo.'));
+    var okC = setErr(contacto, !c ? 'Deja un correo o un número para responderte.' : (looksOk ? '' : 'Revisá el correo o el número: no parece completo.'));
     if (!okN) { nombre.focus(); return; }
     if (!okC) { contacto.focus(); return; }
     // TODO(delivery): pluggable sender (email provider or webhook). Not decided yet.

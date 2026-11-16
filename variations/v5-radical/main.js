@@ -10,8 +10,8 @@
   const GAP = 0.05;
   const EIGHTHS = ['', '1/8', '1/4', '3/8', '1/2', '5/8', '3/4', '7/8'];
   const now = () => performance.now();
-  const WA = '595000000000';           // TODO: número real de WhatsApp (config)
-  const MAIL = '';                      // TODO: correo real (config)
+  const WA = '%%WHATSAPP_NUMBER%%';    // inyectado en el build desde config/.env
+  const MAIL = '%%CONTACT_EMAIL%%';     // inyectado en el build desde config/.env
 
   /* ───────── Sliced display type (CSS mask over one real text node) ───────── */
   const cv = document.createElement('canvas').getContext('2d');
@@ -260,7 +260,7 @@
       else a.removeAttribute('aria-current');
     });
   }), { rootMargin: '-45% 0px -50% 0px' });
-  ['top', 'vision', 'soluciones', 'trabajos', 'proceso', 'equipo', 'contacto']
+  ['top', 'enfoque', 'servicios', 'para-quien', 'proceso', 'equipo', 'contacto']
     .forEach(id => navObs.observe(document.getElementById(id)));
 
   /* ───────── Contact: live message builder ───────── */
@@ -273,7 +273,7 @@
   const build = () => {
     const name = form.nombre.value.trim() || '[Nombre]';
     const areas = chips.filter(c => c.getAttribute('aria-pressed') === 'true').map(c => c.dataset.area);
-    return `Hola, soy ${name}.` + (areas.length ? ` Quisiéramos hablar de ${join(areas)}.` : '');
+    return `Hola, soy ${name}.` + (areas.length ? ` Quisiera consultar sobre ${join(areas)}.` : '');
   };
   const sync = () => {
     if (!edited) msg.value = build();
@@ -296,10 +296,10 @@
   form.addEventListener('submit', e => {
     e.preventDefault();
     const n = form.nombre, c = form.contacto; let first = null;
-    if (!n.value.trim()) { setErr(n, 'Contanos tu nombre o el de tu empresa.'); first = n; } else setErr(n, '');
+    if (!n.value.trim()) { setErr(n, 'Escribe tu nombre o el de tu empresa.'); first = n; } else setErr(n, '');
     const v = c.value.trim();
     const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) || v.replace(/\D/g, '').length >= 8;
-    if (!ok) { setErr(c, v ? 'Revisá el correo o el número: falta algo.' : 'Dejanos un correo o un número para responderte.'); first = first || c; } else setErr(c, '');
+    if (!ok) { setErr(c, v ? 'Revisá el correo o el número: falta algo.' : 'Deja un correo o un número para responderte.'); first = first || c; } else setErr(c, '');
     if (first) { status.textContent = ''; first.focus(); return; }
     // TODO: conectar el envío (proveedor de correo o webhook). Este prototipo no envía datos.
     status.textContent = 'Prototipo: la consulta todavía no se envía.';

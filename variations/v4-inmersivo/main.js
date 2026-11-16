@@ -391,17 +391,17 @@
   }
   tickClock(); setInterval(tickClock, 20000);
 
-  /* ---- Contacto: el mensaje se arma solo mientras completás el formulario ---- */
-  // TODO: completar con los datos reales antes de publicar.
-  var WHATSAPP_NUMBER = ''; // ej. 5959XXXXXXXX, sin + ni espacios
-  var EMAIL = '';
+  /* ---- Contacto: el mensaje se arma solo mientras se completa el formulario ---- */
+  // Valores inyectados en el build desde config/.env (scripts/build-site.sh).
+  var WHATSAPP_NUMBER = '%%WHATSAPP_NUMBER%%'; // sin + ni espacios
+  var EMAIL = '%%CONTACT_EMAIL%%';
   var form = $('#form'), msg = form.mensaje, msgTouched = false, status = $('#fStatus');
   var needBtns = $$('.needs button', form);
   function joinEs(a) { return a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' y ' + a[a.length - 1]; }
   function buildMsg() {
     var name = form.nombre.value.trim() || '[Nombre]';
     var areas = needBtns.filter(function (b) { return b.getAttribute('aria-pressed') === 'true'; }).map(function (b) { return b.dataset.area; });
-    return 'Hola, soy ' + name + '.' + (areas.length ? ' Quisiéramos hablar de ' + joinEs(areas) + '.' : '');
+    return 'Hola, soy ' + name + '.' + (areas.length ? ' Quisiera consultar sobre ' + joinEs(areas) + '.' : '');
   }
   function syncMsg() {
     if (!msgTouched) msg.value = buildMsg();

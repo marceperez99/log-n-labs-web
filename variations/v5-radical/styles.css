@@ -83,6 +83,8 @@ svg{flex:none}
 .h1-l{font-size:clamp(46px,10.2vw,184px);line-height:1;text-transform:uppercase;letter-spacing:-.035em}
 .h1-l + .h1-l{margin-top:.04em}
 .h1-que{text-transform:none;font-weight:400;padding-left:3.2em}
+.h1-l.h1-long{font-size:clamp(40px,6vw,108px)}
+.h1-l.h1-long.h1-que{padding-left:1.6em}
 .hero-side{display:grid;gap:24px}
 .hero-p{font-size:clamp(18px,1.45vw,21px);line-height:1.5;max-width:34ch}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
@@ -158,6 +160,7 @@ svg{flex:none}
 .w-name{font:600 clamp(16px,1.6vw,24px)/1.25 var(--f-disp);letter-spacing:-.01em}
 .w1 .w-name{font-size:clamp(20px,2.6vw,40px)}
 .w-meta{font:400 13px/1.4 var(--f-mono)}
+.w-desc{font-size:16px;line-height:1.5;max-width:40ch}
 .w-link{display:inline-flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;padding:6px 0}
 
 /* Cómo trabajamos: bands at 1, ½, ¼, ⅛ */
@@ -280,6 +283,7 @@ svg{flex:none}
   .legend li:not(.is-on){display:none}
   .hero-answer{padding:28px var(--pad) 32px;align-content:center;gap:28px}
   .h1-l{font-size:clamp(40px,13.4vw,64px)}
+  .h1-l.h1-long{font-size:clamp(30px,8.6vw,48px)}
   .cta-row .btn{flex:1 1 100%}
   .idx{position:static;margin-bottom:28px}
   .sec-flush .idx{padding:0 var(--pad)}

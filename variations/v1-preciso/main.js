@@ -229,8 +229,8 @@
   var status = form.querySelector('[data-status]');
   var msg = form.elements.mensaje;
   var touched = false;
-  var WA = 'https://wa.me/595000000000';   // TODO: número real de WhatsApp (config)
-  var MAIL = '';                           // TODO: correo real
+  var WA = 'https://wa.me/%%WHATSAPP_NUMBER%%';   // inyectado en el build desde config/.env
+  var MAIL = '%%CONTACT_EMAIL%%';                  // inyectado en el build desde config/.env
   function joinEs(list) {
     if (list.length < 2) return list.join('');
     return list.slice(0, -1).join(', ') + ' y ' + list[list.length - 1];
@@ -239,7 +239,7 @@
     var name = form.elements.nombre.value.trim() || '[Nombre]';
     var areas = Array.prototype.slice.call(form.querySelectorAll('input[name=interes]:checked')).map(function (c) { return c.value; });
     var text = 'Hola, soy ' + name + '.';
-    if (areas.length) text += ' Quisiéramos hablar de ' + joinEs(areas) + '.';
+    if (areas.length) text += ' Quisiera consultar sobre ' + joinEs(areas) + '.';
     return text;
   }
   function sync() {

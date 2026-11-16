@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Log N Labs | Marketing y tecnología para negocios que crecen</title>
-<meta name="description" content="Log N Labs reúne marketing y tecnología en un solo equipo: marca, sistemas y acompañamiento para que tu negocio se vea mejor, venda más y funcione sin trabas. Asunción, Paraguay.">
-<meta property="og:title" content="Log N Labs | Marketing y tecnología para negocios que crecen">
-<meta property="og:description" content="Marketing y tecnología en un solo equipo, para que tu empresa se vea mejor, venda más y funcione sin trabas.">
+<title>Log N Labs | Digitalización y marketing para pymes en Paraguay</title>
+<meta name="description" content="Registra cada consulta, pedido y venta de tu negocio. Campañas, identidad visual y software para pymes de Paraguay que venden por WhatsApp, redes sociales y en su local.">
+<meta property="og:title" content="Log N Labs | Digitalización y marketing para pymes en Paraguay">
+<meta property="og:description" content="Mensajes que quedaron sin respuesta, pedidos anotados en un papel, anuncios que nadie sabe si funcionaron. Digitalizamos tu negocio para que cada consulta y cada venta quede registrada, y sepas cuánto te costó conseguirla.">
 <meta property="og:image" content="../../logos/log-n-labs_on-ink.svg">
 <meta name="theme-color" content="#17120F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,8 +68,8 @@ h1,h2,h3,p{margin:0}
 .bar{position:fixed;inset:0 0 auto 0;z-index:50;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 var(--pad);background:var(--ink);border-bottom:1px solid var(--line);transform:translateY(-101%);transition:transform 420ms var(--cut)}
 .bar.show{transform:none}
 .bar img{height:22px;width:auto}
-.bar nav{display:flex;gap:28px;font-size:15px}
-.bar nav a{text-decoration:none}
+.bar nav{display:flex;gap:clamp(16px,2vw,28px);font-size:15px}
+.bar nav a{text-decoration:none;white-space:nowrap}
 .bar nav a:hover{color:var(--rust-bright)}
 .bar .btn{min-height:40px;padding:0 18px;font-size:14px}
 .bar .right{display:flex;align-items:center;gap:32px}
@@ -100,13 +100,14 @@ h1,h2,h3,p{margin:0}
 .c0 h1 .w{display:block}
 .c0 h1 .que{font-weight:400;font-size:max(12px,.3em);letter-spacing:-.01em;margin-right:.5em;vertical-align:.2em}
 .c0 h1 em{font-style:normal;color:var(--rust-bright)}
+.c0 h1.h1-long{font-size:clamp(32px,7.4cqw,64px);line-height:1.04}
 .c0 .lede{max-width:30em;font-size:clamp(16px,2.6cqw,19px);line-height:1.5;color:var(--muted)}
 .c0 .ctas{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
 .c0 .note{font-family:var(--mono);font-size:12px;color:var(--muted)}
 
 .c1 .top{position:absolute;inset:0 0 auto 0;padding:36px 48px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
 .c1 nav{display:flex;gap:24px;font-size:15px;line-height:20px}
-.c1 nav a{text-decoration:none}
+.c1 nav a{text-decoration:none;white-space:nowrap}
 .c1 nav a:hover{color:var(--rust-bright)}
 .c1 .bottom{position:absolute;inset:auto 0 0 0;padding:0 48px 40px;display:flex;flex-direction:column;gap:24px}
 .rot{position:relative}
@@ -169,6 +170,7 @@ h1,h2,h3,p{margin:0}
 .hero.stack .c2,.hero.stack .c3,.hero.stack .c4,.hero.stack .c5,.hero.stack .c1 .top{display:none}
 .hero.stack .c0 .in{padding:0;gap:min(18vh,140px)}
 .hero.stack .c0 h1{font-size:clamp(40px,15cqw,84px)}
+.hero.stack .c0 h1.h1-long{font-size:clamp(28px,8.2cqw,60px)}
 .hero.stack .c0 .logo img{height:22px}
 .hero.stack .c1 .bottom{position:relative;padding:0}
 .hero.stack .grp .name{font-size:clamp(30px,10.5cqw,52px)}
@@ -242,6 +244,7 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.035em;line-height
 .wframe .pend{position:absolute;left:16px;bottom:14px;font-family:var(--mono);font-size:11px;color:var(--muted)}
 .wcard h3{font-family:var(--mono);font-weight:500;font-size:15px;line-height:1.4}
 .wmeta{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.wdesc{color:var(--muted);font-size:16px;line-height:1.5}
 .swipe{display:none;font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:16px}
 
 /* proceso: full-bleed rust */
@@ -389,15 +392,15 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
 </style>
 </head>
 <body>
-<a class="skip" href="#vision">Saltar al contenido</a>
+<a class="skip" href="#enfoque">Saltar al contenido</a>
 
 <header class="bar" id="bar" inert>
   <a href="#inicio" aria-label="Log N Labs, inicio"><img src="../../logos/log-n-labs_on-ink.svg" alt="" width="154" height="22"></a>
   <div class="right">
     <nav aria-label="Secciones">
-      <a href="#vision">Visión</a>
-      <a href="#soluciones">Soluciones</a>
-      <a href="#trabajos">Trabajos</a>
+      <a href="#enfoque">El problema</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#para-quien">Para quién</a>
       <a href="#equipo">Equipo</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -413,23 +416,23 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
   <div class="cell c0"><div class="in">
     <a class="logo" href="#inicio" aria-label="Log N Labs, inicio"><img src="../../logos/log-n-labs_on-ink.svg" alt="" width="182" height="26"></a>
     <div class="main">
-      <h1><span class="w">Negocios</span> <span class="w"><span class="que">que</span><em>crecen.</em></span></h1>
-      <p class="lede">Marketing y tecnología en un solo equipo, para que tu empresa se vea mejor, venda más y funcione sin trabas.</p>
+      <h1 class="h1-long"><span class="w">Que no se te</span> <span class="w">escape ninguna</span> <span class="w"><em>venta.</em></span></h1>
+      <p class="lede">Mensajes que quedaron sin respuesta, pedidos anotados en un papel, anuncios que nadie sabe si funcionaron. Digitalizamos tu negocio para que cada consulta y cada venta quede registrada, y sepas cuánto te costó conseguirla.</p>
       <div class="ctas">
         <a class="btn" href="#contacto">Hablemos <span class="arr" aria-hidden="true">→</span></a>
-        <a class="tlink" href="#soluciones">Ver soluciones</a>
+        <a class="tlink" href="#servicios">Ver servicios</a>
       </div>
-      <p class="note">Marketing + Tecnología · Asunción, Paraguay</p>
+      <p class="note">Software + Marketing + Consultoría · Asunción, Paraguay</p>
     </div>
   </div></div>
 
   <div class="cell c1">
     <div class="top">
-      <p class="tag">soluciones</p>
+      <p class="tag">servicios</p>
       <nav aria-label="Principal">
-        <a href="#vision">Visión</a>
-        <a href="#soluciones">Soluciones</a>
-        <a href="#trabajos">Trabajos</a>
+        <a href="#enfoque">El problema</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#para-quien">Para quién</a>
         <a href="#equipo">Equipo</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -437,27 +440,27 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
     <div class="bottom">
       <div class="rot" id="rot" aria-roledescription="carrusel" aria-label="Líneas de solución">
         <div class="grp">
-          <p class="name">Tecnología</p>
-          <p class="desc">Sistemas y aplicaciones que funcionan, se prueban antes de salir y no frenan tu operación.</p>
-          <ul class="chips"><li>Desarrollo</li><li>QA</li><li>Análisis funcional</li></ul>
+          <p class="name">Software</p>
+          <p class="desc">Sitios, sistemas e integraciones con WhatsApp, pagos con QR y el proveedor de factura electrónica que ya usas.</p>
+          <ul class="chips"><li>Desarrollo</li><li>Integraciones</li><li>QA</li></ul>
         </div>
         <div class="grp">
-          <p class="name">Marketing y marca</p>
-          <p class="desc">Una marca clara y presencia en los lugares donde tus clientes te buscan.</p>
-          <ul class="chips"><li>Identidad</li><li>Redes</li><li>Posicionamiento web</li></ul>
+          <p class="name">Marketing</p>
+          <p class="desc">Estrategia, identidad visual y campañas en Meta y Google, evaluadas por las ventas que generan.</p>
+          <ul class="chips"><li>Estrategia</li><li>Identidad visual</li><li>Anuncios</li></ul>
         </div>
         <div class="grp">
-          <p class="name">[Otra línea]</p>
-          <p class="desc">[Una frase sobre lo que logra esta línea para el cliente.]</p>
-          <ul class="chips"><li>[Servicios de esta línea]</li></ul>
+          <p class="name">Consultoría</p>
+          <p class="desc">Revisamos cómo registras hoy tus ventas, pedidos y cobros, y te decimos qué herramientas te faltan para no perder datos.</p>
+          <ul class="chips"><li>Diagnóstico</li><li>Procesos</li><li>Plan</li></ul>
         </div>
       </div>
       <div class="stepper">
         <span class="count tabular" id="count" aria-hidden="true">1/3</span>
         <div class="segs">
-          <button class="seg" type="button" data-pick="0" aria-label="Ver Tecnología"><span></span></button>
-          <button class="seg" type="button" data-pick="1" aria-label="Ver Marketing y marca"><span></span></button>
-          <button class="seg" type="button" data-pick="2" aria-label="Ver la tercera línea (en preparación)"><span></span></button>
+          <button class="seg" type="button" data-pick="0" aria-label="Ver Software"><span></span></button>
+          <button class="seg" type="button" data-pick="1" aria-label="Ver Marketing"><span></span></button>
+          <button class="seg" type="button" data-pick="2" aria-label="Ver Consultoría"><span></span></button>
         </div>
         <button class="pause" type="button" id="pause" aria-pressed="false">pausar</button>
       </div>
@@ -469,8 +472,8 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
     <div class="stack">
       <p class="q">Hablemos<em>.</em></p>
       <div class="rows">
-        <a class="wa" href="#"><span>[NÚMERO WHATSAPP]</span><span class="k">whatsapp</span></a>
-        <a class="mail" href="#"><span>[CORREO]</span><span class="k">correo</span></a>
+        <a class="wa" href="#"><span>%%WHATSAPP_DISPLAY%%</span><span class="k">whatsapp</span></a>
+        <a class="mail" href="#"><span>%%CONTACT_EMAIL_LABEL%%</span><span class="k">correo</span></a>
       </div>
     </div>
   </div></div>
@@ -478,10 +481,10 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
   <div class="cell c3"><div class="in">
     <p class="tag">cómo trabajamos</p>
     <ol>
-      <li><span class="mono">01</span><span>Escuchamos</span></li>
-      <li><span class="mono">02</span><span>Diseñamos</span></li>
-      <li><span class="mono">03</span><span>Hacemos</span></li>
-      <li><span class="mono">04</span><span>Entregamos</span></li>
+      <li><span class="mono">01</span><span>Diagnóstico</span></li>
+      <li><span class="mono">02</span><span>Plan</span></li>
+      <li><span class="mono">03</span><span>Puesta en marcha</span></li>
+      <li><span class="mono">04</span><span>Medición</span></li>
     </ol>
   </div></div>
 
@@ -505,35 +508,35 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
 </section>
 
 <!-- ============ VISIÓN ============ -->
-<section class="sec vision" id="vision" aria-labelledby="h-vision">
+<section class="sec vision" id="enfoque" aria-labelledby="h-vision">
   <div class="head">
-    <p class="rail">visión</p>
-    <h2 class="statement" id="h-vision" data-words>Tu marca, tus sistemas y tu equipo tienen que crecer juntos. Lo que armamos hoy sigue funcionando cuando tu negocio sea el doble.</h2>
+    <p class="rail">el problema</p>
+    <h2 class="statement" id="h-vision" data-words>Lo que no se registra se pierde. Si no sabes cuántas consultas recibiste esta semana ni cuántas terminaron en venta, el negocio se te está escapando de las manos.</h2>
   </div>
   <div class="cols3 vision-body">
     <ul class="princ">
-      <li><p class="t"><span class="ok">[ ok ]</span>Estrategia</p><p>Antes de hacer, entendemos tu negocio y qué querés lograr.</p></li>
-      <li><p class="t"><span class="ok">[ ok ]</span>Ejecución</p><p>Cada entrega se revisa antes de salir. Nada queda a medias.</p></li>
-      <li><p class="t"><span class="ok">[ ok ]</span>Acompañamiento</p><p>Te explicamos cada decisión en simple, para que decidas con confianza.</p></li>
+      <li><p class="t"><span class="ok">[ ok ]</span>Consultas sin respuesta</p><p>Un mensaje que espera horas en WhatsApp puede terminar en una compra a otro negocio.</p></li>
+      <li><p class="t"><span class="ok">[ ok ]</span>Anuncios sin medir</p><p>Se invierte cada mes sin saber qué campaña trajo ventas y cuál no trajo ninguna.</p></li>
+      <li><p class="t"><span class="ok">[ ok ]</span>Pedidos en papel</p><p>Entre la libreta, la planilla y el sistema de facturación, los datos se repiten y algunos pedidos se pierden.</p></li>
     </ul>
     <figure class="chart" id="chart">
-      <svg viewBox="-70 -30 660 350" role="img" aria-label="Ilustración: sin plan, el esfuerzo crece al mismo ritmo que el negocio; con Log N Labs, el negocio crece y el esfuerzo se aplana.">
+      <svg viewBox="-70 -30 660 350" role="img" aria-label="Ilustración: sin registro, el esfuerzo crece al mismo ritmo que el negocio; con registro digital, el negocio crece y el esfuerzo se aplana.">
         <path d="M0 0 L0 260 L480 260" fill="none" stroke="#3A2F28" stroke-width="1.5"/>
         <g stroke="#3A2F28" stroke-width="1"><path d="M240 254 V266"/><path d="M120 256 V264"/><path d="M60 257 V263"/><path d="M30 258 V262"/></g>
         <path id="lin" fill="none" stroke="#9A8F85" stroke-width="2" stroke-dasharray="6 6"/>
         <path id="log" fill="none" stroke="#E2582A" stroke-width="3.5"/>
         <rect class="veil" x="1" y="-30" width="600" height="288" fill="#17120F"/>
         <g class="lbl" font-family="JetBrains Mono, monospace">
-          <text x="492" y="26" fill="#9A8F85" font-size="16">sin plan</text>
-          <text x="492" y="88" fill="#E2582A" font-size="16">con Log N Labs</text>
-          <text x="480" y="300" text-anchor="end" fill="#9A8F85" font-size="14">tu negocio crece →</text>
-          <text x="-14" y="6" text-anchor="end" fill="#9A8F85" font-size="14">esfuerzo</text>
+          <text x="492" y="26" fill="#9A8F85" font-size="16">sin registro</text>
+          <text x="492" y="88" fill="#E2582A" font-size="16">con registro digital</text>
+          <text x="480" y="300" text-anchor="end" fill="#9A8F85" font-size="14">clientes atendidos →</text>
+          <text x="-14" y="6" text-anchor="end" fill="#9A8F85" font-size="14">trabajo</text>
         </g>
       </svg>
       <figcaption>
         <ul class="caps">
-          <li><span class="sw lin" aria-hidden="true"></span><span>Sin plan: el esfuerzo crece al mismo ritmo que el negocio.</span></li>
-          <li><span class="sw log" aria-hidden="true"></span><span>Con Log N Labs: el negocio crece y el esfuerzo se aplana.</span></li>
+          <li><span class="sw lin" aria-hidden="true"></span><span>Sin registro: cada cliente nuevo suma el mismo trabajo manual.</span></li>
+          <li><span class="sw log" aria-hidden="true"></span><span>Con registro digital: los clientes aumentan y el trabajo crece mucho más despacio.</span></li>
         </ul>
       </figcaption>
       <table class="steps-table">
@@ -552,82 +555,82 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
 </section>
 
 <!-- ============ SOLUCIONES ============ -->
-<section class="sec sol" id="soluciones" aria-labelledby="h-soluciones">
+<section class="sec sol" id="servicios" aria-labelledby="h-soluciones">
   <div class="head">
-    <p class="rail">soluciones</p>
-    <h2 class="h2-xl" id="h-soluciones">Lo que hacemos por tu negocio.</h2>
+    <p class="rail">servicios</p>
+    <h2 class="h2-xl" id="h-soluciones">Qué hacemos.</h2>
   </div>
   <div class="grid-sol">
     <article class="half cuthost" aria-labelledby="s-tec">
-      <div class="frac"><span>1/2 · Desarrollo · QA · Análisis funcional</span><b aria-hidden="true">½</b></div>
+      <div class="frac"><span>1/2 · Desarrollo · Integraciones · QA</span><b aria-hidden="true">½</b></div>
       <div>
-        <h3 id="s-tec"><span class="slice" data-cut>Tecnología</span></h3>
-        <p class="lead">Sistemas y aplicaciones que funcionan, se prueban antes de salir y no frenan tu operación.</p>
+        <h3 id="s-tec"><span class="slice" data-cut>Software</span></h3>
+        <p class="lead">Sistemas para que cada pedido, cobro y factura quede registrado en un solo lugar, en vez de repartido entre chats, papeles y planillas.</p>
       </div>
       <ul class="cap-list">
-        <li><span>Desarrollo web y apps</span><span>Tu producto en línea, hecho para durar.</span></li>
-        <li><span>Testing y QA automatizado</span><span>Menos riesgos en producción.</span></li>
-        <li><span>Automatización de procesos</span><span>Eficiencia operativa y conectividad.</span></li>
-        <li><span>Análisis y diseño de producto</span><span>Requerimientos claros antes de programar.</span></li>
-        <li><span>Revisión de calidad / auditoría</span><span>Auditoría técnica sobre software existente.</span></li>
+        <li><span>Sitios web y catálogos</span><span>Páginas rápidas que llevan cada consulta a WhatsApp o a un formulario.</span></li>
+        <li><span>Integraciones</span><span>WhatsApp, pagos con QR y el proveedor de factura electrónica que ya usas.</span></li>
+        <li><span>Sistemas a medida</span><span>Pedidos, turnos, stock o clientes, según cómo trabaja tu negocio.</span></li>
+        <li><span>Reportes</span><span>Ventas, cobros pendientes y productos más pedidos, a la vista cuando los necesitas.</span></li>
+        <li><span>Pruebas y soporte</span><span>Probamos antes de entregar y seguimos atentos después del lanzamiento.</span></li>
       </ul>
-      <div class="foot-link"><a class="tlink" href="#" data-todo="landing tecnología">Ver Tecnología <span class="mono" aria-hidden="true">→</span></a></div>
+      <div class="foot-link"><a class="tlink" href="#" data-todo="landing software">Ver Software <span class="mono" aria-hidden="true">→</span></a></div>
     </article>
     <article class="quarter cuthost" aria-labelledby="s-mkt">
-      <div class="frac"><span>1/4 · Identidad · Redes · Posicionamiento web</span><b aria-hidden="true">¼</b></div>
+      <div class="frac"><span>1/4 · Estrategia · Identidad visual · Anuncios</span><b aria-hidden="true">¼</b></div>
       <div>
-        <h3 id="s-mkt"><span class="slice" data-cut>Marketing y marca</span></h3>
-        <p class="lead">Una marca clara y presencia en los lugares donde tus clientes te buscan.</p>
+        <h3 id="s-mkt"><span class="slice" data-cut>Marketing</span></h3>
+        <p class="lead">Campañas en Meta y Google que se evalúan por las ventas que generan, con un reporte mensual en guaraníes. La inversión publicitaria la pagas directamente a cada plataforma.</p>
       </div>
-      <div class="foot-link"><a class="tlink" href="#" data-todo="landing marketing">Ver Marketing y marca <span class="mono" aria-hidden="true">→</span></a></div>
+      <div class="foot-link"><a class="tlink" href="#" data-todo="landing marketing">Ver Marketing <span class="mono" aria-hidden="true">→</span></a></div>
     </article>
-    <article class="quarter cuthost todo" aria-labelledby="s-otra">
-      <div class="frac"><span>1/4 · [Servicios de esta línea]</span><b aria-hidden="true">¼</b></div>
+    <article class="quarter cuthost" aria-labelledby="s-otra">
+      <div class="frac"><span>1/4 · Diagnóstico · Procesos · Plan</span><b aria-hidden="true">¼</b></div>
       <div>
-        <h3 id="s-otra"><span class="slice" data-cut>[Otra línea]</span></h3>
-        <p class="lead">[Una frase sobre lo que logra esta línea para el cliente.]</p>
+        <h3 id="s-otra"><span class="slice" data-cut>Consultoría</span></h3>
+        <p class="lead">Revisamos cómo registras hoy tus ventas, pedidos y cobros, dónde se pierde información y qué herramientas necesitas. Te entregamos un plan por escrito, lo hagas con nosotros o no.</p>
       </div>
-      <div class="foot-link"><span class="ph">[Ver landing] →</span></div>
+      <div class="foot-link"><a class="tlink" href="#contacto">Pedir un diagnóstico <span class="mono" aria-hidden="true">→</span></a></div>
     </article>
   </div>
 </section>
 
 <!-- ============ TRABAJOS ============ -->
-<section class="sec work" id="trabajos" aria-labelledby="h-trabajos">
+<section class="sec work" id="para-quien" aria-labelledby="h-trabajos">
   <div class="head">
-    <p class="rail">trabajos</p>
+    <p class="rail">para quién</p>
     <div>
-      <h2 class="h2-xl" id="h-trabajos">Trabajos que nos representan.</h2>
-      <p class="sub note"><span class="ph">[Acá van los casos reales: un proyecto, un rubro, un resultado.]</span></p>
+      <h2 class="h2-xl" id="h-trabajos">Para quién trabajamos.</h2>
+      <p class="sub note">Los casos se publicarán con cifras reales y con permiso de cada cliente.</p>
     </div>
   </div>
-  <div class="grid-work" id="works" tabindex="0" aria-label="Casos (en preparación)">
+  <div class="grid-work" id="works" tabindex="0" aria-label="Tipos de cliente">
     <article class="wcard">
       <div class="wframe" aria-hidden="true">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none"><g stroke="#3A2F28" stroke-width=".5" vector-effect="non-scaling-stroke"><path d="M50 0V100" vector-effect="non-scaling-stroke"/><path d="M50 50H100" vector-effect="non-scaling-stroke"/><path d="M75 50V100" vector-effect="non-scaling-stroke"/><path d="M75 75H100" vector-effect="non-scaling-stroke"/></g></svg>
-        <span class="pend">imagen pendiente</span>
-      </div>
-      <h3>[NOMBRE DEL PROYECTO]</h3>
-      <p class="wmeta"><span>[RUBRO]</span><span>[VER CASO] →</span></p>
+              </div>
+      <h3>Tienda que vende por Instagram y WhatsApp</h3>
+      <p class="wmeta"><span>ropa · cosmética · accesorios</span></p>
+      <p class="wdesc">Los pedidos llegan por chat y se anotan a mano. Ordenamos el catálogo, medimos qué anuncio trae cada venta y conectamos el cobro con QR.</p>
     </article>
     <article class="wcard">
       <div class="wframe" aria-hidden="true">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none"><g stroke="#3A2F28"><path d="M0 50H100" vector-effect="non-scaling-stroke"/><path d="M50 50V100" vector-effect="non-scaling-stroke"/></g></svg>
-        <span class="pend">imagen pendiente</span>
-      </div>
-      <h3>[NOMBRE DEL PROYECTO]</h3>
-      <p class="wmeta"><span>[RUBRO]</span><span>[VER CASO] →</span></p>
+              </div>
+      <h3>Servicio que trabaja con turnos</h3>
+      <p class="wmeta"><span>clínicas · talleres · estética</span></p>
+      <p class="wdesc">Los turnos se agendan por WhatsApp y algunos clientes no se presentan. Organizamos la agenda, los recordatorios y las campañas por zona.</p>
     </article>
     <article class="wcard">
       <div class="wframe" aria-hidden="true">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none"><g stroke="#3A2F28"><path d="M0 50H100" vector-effect="non-scaling-stroke"/></g></svg>
-        <span class="pend">imagen pendiente</span>
-      </div>
-      <h3>[NOMBRE DEL PROYECTO]</h3>
-      <p class="wmeta"><span>[RUBRO]</span><span>[VER CASO] →</span></p>
+              </div>
+      <h3>Comercio con local y factura electrónica</h3>
+      <p class="wmeta"><span>ferretería · repuestos · alimentos</span></p>
+      <p class="wdesc">Ya emites factura electrónica, pero cargas los mismos datos dos veces. Conectamos ventas, stock y facturación para cargarlos una sola vez.</p>
     </article>
   </div>
-  <p class="swipe" aria-hidden="true">Deslizá para ver más →</p>
+  <p class="swipe" aria-hidden="true">Desliza para ver más →</p>
 </section>
 
 <!-- ============ CÓMO TRABAJAMOS (rust, full bleed) ============ -->
@@ -636,32 +639,32 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
     <p class="rail">cómo trabajamos</p>
     <div>
       <h2 class="h2-xl" id="h-proceso">Cómo trabajamos.</h2>
-      <p class="verbs">Escuchamos · Diseñamos · Hacemos · Entregamos</p>
+      <p class="verbs">Diagnóstico · Plan · Puesta en marcha · Medición</p>
     </div>
   </div>
   <ol class="steps">
     <li class="step">
       <span class="idx">i = 1</span>
-      <h3>Escuchamos</h3>
-      <div class="txt"><p>Entendemos tu negocio, qué querés lograr y con qué contás, antes de hacer nada.</p><p class="res"><span class="mono">Resultado</span><span>Un plan claro, con alcance y fechas.</span></p></div>
+      <h3>Diagnóstico</h3>
+      <div class="txt"><p>Revisamos cómo te llegan hoy los clientes, cómo cobras y cómo facturas, y dónde se pierden ventas. Dura [N] días.</p><p class="res"><span class="mono">Resultado</span><span>Un informe con lo que conviene cambiar y cuánto cuesta.</span></p></div>
       <div class="meter" aria-hidden="true"><div class="track" style="--w:100%"><div class="fillbar"></div></div><span class="mono">n</span></div>
     </li>
     <li class="step">
       <span class="idx">i = 2</span>
-      <h3>Diseñamos</h3>
-      <div class="txt"><p>Armamos la propuesta: cómo se va a ver y cómo va a funcionar, con la marca incluida si el proyecto la necesita.</p><p class="res"><span class="mono">Resultado</span><span>Una propuesta que podés ver y aprobar.</span></p></div>
+      <h3>Plan</h3>
+      <div class="txt"><p>Definimos alcance, plazos, precio y las métricas con las que se va a evaluar el trabajo.</p><p class="res"><span class="mono">Resultado</span><span>Una propuesta por escrito para aprobar.</span></p></div>
       <div class="meter" aria-hidden="true"><div class="track" style="--w:50%"><div class="fillbar"></div></div><span class="mono">n/2</span></div>
     </li>
     <li class="step">
       <span class="idx">i = 3</span>
-      <h3>Hacemos y revisamos</h3>
-      <div class="txt"><p>Construimos y revisamos cada entrega antes de que salga, para que llegue lista.</p><p class="res"><span class="mono">Resultado</span><span>Entregas probadas y documentadas.</span></p></div>
+      <h3>Puesta en marcha</h3>
+      <div class="txt"><p>Diseñamos, programamos y configuramos. Cada entrega se prueba antes de publicarse.</p><p class="res"><span class="mono">Resultado</span><span>Entregas probadas y documentadas.</span></p></div>
       <div class="meter" aria-hidden="true"><div class="track" style="--w:25%"><div class="fillbar"></div></div><span class="mono">n/4</span></div>
     </li>
     <li class="step">
       <span class="idx">i = 4</span>
-      <h3>Entregamos y acompañamos</h3>
-      <div class="txt"><p>Publicamos, te pasamos todo a tu nombre y te acompañamos en los primeros pasos.</p><p class="res"><span class="mono">Resultado</span><span>Accesos, archivos y documentación a tu nombre.</span></p></div>
+      <h3>Medición</h3>
+      <div class="txt"><p>Cada mes revisamos los números contigo y ajustamos campañas y sistemas.</p><p class="res"><span class="mono">Resultado</span><span>Un reporte mensual con el costo por venta.</span></p></div>
       <div class="meter" aria-hidden="true"><div class="track" style="--w:12.5%"><div class="fillbar"></div></div><span class="mono">n/8</span></div>
     </li>
   </ol>
@@ -672,32 +675,32 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
   <div class="head">
     <p class="rail">equipo</p>
     <div>
-      <h2 class="h2-xl" id="h-equipo">Las personas detrás de cada proyecto.</h2>
-      <p class="sub">Equipos que se complementan para cubrir tu proyecto de punta a punta.</p>
+      <h2 class="h2-xl" id="h-equipo">Quiénes hacen el trabajo.</h2>
+      <p class="sub">Un mismo equipo atiende software, marketing y consultoría, así no tienes que coordinar varios proveedores.</p>
     </div>
   </div>
   <div class="team-body">
     <div class="roles" role="tablist" aria-label="Equipos" id="roles">
-      <button class="role" role="tab" id="t0" aria-controls="p0" aria-selected="true"><span class="mono">01</span><span>Análisis y Procesos</span></button>
-      <button class="role" role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1"><span class="mono">02</span><span>Desarrollo e Ingeniería</span></button>
-      <button class="role" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><span class="mono">03</span><span>Calidad y Aseguramiento</span></button>
-      <button class="role" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><span class="mono">04</span><span>Marca y Marketing</span></button>
+      <button class="role" role="tab" id="t0" aria-controls="p0" aria-selected="true"><span class="mono">01</span><span>Análisis y procesos</span></button>
+      <button class="role" role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1"><span class="mono">02</span><span>Desarrollo</span></button>
+      <button class="role" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><span class="mono">03</span><span>Calidad</span></button>
+      <button class="role" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><span class="mono">04</span><span>Marca y marketing</span></button>
     </div>
     <div class="panel" role="tabpanel" id="p0" aria-labelledby="t0">
       <p class="verb">Entender<em>.</em></p>
-      <div><p class="rname">Análisis y Procesos</p><p class="d">Escuchamos, ordenamos cómo funciona tu negocio y definimos qué hace falta para crecer.</p></div>
+      <div><p class="rname">Análisis y procesos</p><p class="d">Relevamos cómo funciona tu negocio y dejamos por escrito qué se va a hacer antes de empezar.</p></div>
     </div>
     <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
       <p class="verb">Construir<em>.</em></p>
-      <div><p class="rname">Desarrollo e Ingeniería</p><p class="d">Armamos tus sitios, aplicaciones y conexiones entre sistemas para que funcionen hoy y mañana.</p></div>
+      <div><p class="rname">Desarrollo</p><p class="d">Programamos sitios, sistemas e integraciones con las herramientas de pago y facturación que ya se usan en Paraguay.</p></div>
     </div>
     <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
       <p class="verb">Verificar<em>.</em></p>
-      <div><p class="rname">Calidad y Aseguramiento</p><p class="d">Probamos cada entrega antes de que llegue a tus clientes, para que nada falle en el momento clave.</p></div>
+      <div><p class="rname">Calidad</p><p class="d">Probamos cada entrega antes de que llegue a tus clientes.</p></div>
     </div>
     <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
       <p class="verb sum">Entender <em>+</em> Construir <em>+</em> Verificar</p>
-      <div><p class="rname">Marca y Marketing</p><p class="d">Lo coordinan los otros tres equipos: uno define el brief, otro lo lleva al mundo digital y otro verifica el resultado antes de publicarlo.</p></div>
+      <div><p class="rname">Marca y marketing</p><p class="d">Estrategia, diseño y campañas. Análisis define el objetivo, desarrollo instala la medición y calidad revisa cada pieza antes de publicarla.</p></div>
     </div>
   </div>
   <div class="team-ctl"><button class="pause" type="button" id="teamPause" aria-pressed="false">pausar</button></div>
@@ -712,8 +715,8 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
   <div class="cols3 contact-body">
     <div class="contact-info">
       <div class="rows">
-        <a class="wa" href="#"><span>[NÚMERO WHATSAPP]</span><span class="k">whatsapp</span></a>
-        <a class="mail" href="#"><span>[CORREO]</span><span class="k">correo</span></a>
+        <a class="wa" href="#"><span>%%WHATSAPP_DISPLAY%%</span><span class="k">whatsapp</span></a>
+        <a class="mail" href="#"><span>%%CONTACT_EMAIL_LABEL%%</span><span class="k">correo</span></a>
         <div><span>Asunción, Paraguay</span><span class="k tabular">GMT−3 · <span data-clock>--:--</span></span></div>
       </div>
     </div>
@@ -724,23 +727,23 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
           <input id="f-nombre" name="nombre" type="text" autocomplete="name" aria-describedby="e-nombre">
           <span class="err" id="e-nombre" aria-live="polite"></span>
         </label>
-        <label class="field" for="f-contacto"><span class="lab">Correo o contacto</span>
+        <label class="field" for="f-contacto"><span class="lab">Correo o WhatsApp</span>
           <input id="f-contacto" name="contacto" type="text" autocomplete="email" aria-describedby="e-contacto">
           <span class="err" id="e-contacto" aria-live="polite"></span>
         </label>
       </div>
       <fieldset>
-        <legend>¿Qué te interesa?</legend>
+        <legend>¿Qué necesitas?</legend>
         <div class="needs" id="needs">
-          <button type="button" class="need" aria-pressed="false" data-area="tecnología"><span class="box" aria-hidden="true"></span>Tecnología</button>
-          <button type="button" class="need" aria-pressed="false" data-area="marketing y marca"><span class="box" aria-hidden="true"></span>Marketing y marca</button>
-          <button type="button" class="need" aria-pressed="false" data-area="[otra línea]"><span class="box" aria-hidden="true"></span>[Otra línea]</button>
-          <button type="button" class="need" aria-pressed="false" data-area="que nos orienten sobre por dónde empezar"><span class="box" aria-hidden="true"></span>Quiero que me orienten</button>
+          <button type="button" class="need" aria-pressed="false" data-area="software"><span class="box" aria-hidden="true"></span>Software</button>
+          <button type="button" class="need" aria-pressed="false" data-area="marketing"><span class="box" aria-hidden="true"></span>Marketing</button>
+          <button type="button" class="need" aria-pressed="false" data-area="consultoría"><span class="box" aria-hidden="true"></span>Consultoría</button>
+          <button type="button" class="need" aria-pressed="false" data-area="por dónde empezar"><span class="box" aria-hidden="true"></span>Todavía no lo sé</button>
         </div>
       </fieldset>
-      <label class="field" for="f-mensaje"><span class="lab">Contanos un poco más <span class="mono">opcional</span></span>
+      <label class="field" for="f-mensaje"><span class="lab">Más detalles <span class="mono">opcional</span></span>
         <textarea id="f-mensaje" name="mensaje" rows="5" aria-describedby="h-mensaje"></textarea>
-        <span class="vh" id="h-mensaje">Mensaje. Se completa solo con tus datos; podés editarlo.</span>
+        <span class="vh" id="h-mensaje">Mensaje. Se completa con tus datos y se puede editar.</span>
       </label>
       <div class="acts">
         <div><button class="btn" type="submit">Enviar consulta <span class="arr" aria-hidden="true">→</span></button></div>
@@ -759,16 +762,16 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
 <footer>
   <a class="foot-logo" href="#inicio" aria-label="Log N Labs, volver al inicio"><img src="../../logos/log-n-labs_on-ink.svg" alt="" width="1329" height="190" loading="lazy"></a>
   <div class="cols3 foot-top">
-    <p class="tagline">Marketing y tecnología en un solo equipo, para negocios que crecen.</p>
-    <p class="oks"><span><b>[ ok ]</b> tecnología</span><span><b>[ ok ]</b> marketing y marca</span><span><b>[ ok ]</b> acompañamiento</span></p>
+    <p class="tagline">Software, marketing y consultoría para pymes de Paraguay. Que no se te escape ninguna venta.</p>
+    <p class="oks"><span><b>[ ok ]</b> software</span><span><b>[ ok ]</b> marketing</span><span><b>[ ok ]</b> consultoría</span></p>
   </div>
   <div class="fcols">
-    <div><h3>Soluciones</h3><ul><li><a class="tlink" href="#soluciones">Tecnología</a></li><li><a class="tlink" href="#soluciones">Marketing y marca</a></li><li><span class="ph">[Otra línea]</span></li></ul></div>
-    <div><h3>Contacto</h3><ul><li><a class="tlink wa" href="#">[NÚMERO WHATSAPP]</a></li><li><a class="tlink mail" href="#">[CORREO]</a></li><li>Asunción, Paraguay</li></ul></div>
-    <nav aria-label="Pie de página"><h3>Navegación</h3><ul><li><a class="tlink" href="#vision">Visión</a></li><li><a class="tlink" href="#soluciones">Soluciones</a></li><li><a class="tlink" href="#trabajos">Trabajos</a></li><li><a class="tlink" href="#equipo">Equipo</a></li><li><a class="tlink" href="#contacto">Contacto</a></li></ul></nav>
+    <div><h3>Servicios</h3><ul><li><a class="tlink" href="#servicios">Software</a></li><li><a class="tlink" href="#servicios">Marketing</a></li><li><a class="tlink" href="#servicios">Consultoría</a></li></ul></div>
+    <div><h3>Contacto</h3><ul><li><a class="tlink wa" href="#">%%WHATSAPP_DISPLAY%%</a></li><li><a class="tlink mail" href="#">%%CONTACT_EMAIL_LABEL%%</a></li><li>Asunción, Paraguay</li></ul></div>
+    <nav aria-label="Pie de página"><h3>Navegación</h3><ul><li><a class="tlink" href="#enfoque">El problema</a></li><li><a class="tlink" href="#servicios">Servicios</a></li><li><a class="tlink" href="#para-quien">Para quién</a></li><li><a class="tlink" href="#equipo">Equipo</a></li><li><a class="tlink" href="#contacto">Contacto</a></li></ul></nav>
   </div>
   <div class="fbottom">
-    <span class="live">Asunción, PY · GMT-3 · Disponibles para proyectos · <b class="tabular" data-clock>--:--</b></span>
+    <span class="live">Asunción, PY · GMT-3 · Recibimos proyectos nuevos · <b class="tabular" data-clock>--:--</b></span>
     <span>© 2026 Log N Labs</span>
   </div>
 </footer>
@@ -776,13 +779,13 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
 <script>
 (function(){
   'use strict';
-  // TODO(owner): número en formato internacional sin "+" (ej. 5959XXXXXXXX) y correo real.
-  var WHATSAPP = '';
-  var EMAIL = '';
+  // Valores inyectados en el build desde config/.env (scripts/build-site.sh).
+  var WHATSAPP = '%%WHATSAPP_NUMBER%%';
+  var EMAIL = '%%CONTACT_EMAIL%%';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function waHref(msg){ return 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg); }
   function mailHref(msg){ return 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Consulta') + '&body=' + encodeURIComponent(msg); }
-  document.querySelectorAll('a.wa').forEach(function(a){ a.href = waHref('Hola, quisiéramos hablar de un proyecto.'); a.target = '_blank'; a.rel = 'noopener'; });
+  document.querySelectorAll('a.wa').forEach(function(a){ a.href = waHref('Hola, quisiera consultar sobre un proyecto.'); a.target = '_blank'; a.rel = 'noopener'; });
   document.querySelectorAll('a.mail').forEach(function(a){ a.href = mailHref(''); });
   document.querySelectorAll('[data-todo]').forEach(function(a){ a.addEventListener('click', function(e){ e.preventDefault(); }); a.title = 'Página en preparación'; });
 
@@ -902,7 +905,7 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
     });
   }, {threshold:[0, .02]}).observe(hero);
   document.getElementById('down').addEventListener('click', function(){
-    document.getElementById('vision').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
+    document.getElementById('enfoque').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
   });
 
   /* ---------- the slice: duplicate words for the cut hover ---------- */
@@ -989,7 +992,7 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
   function build(){
     var name = form.nombre.value.trim() || '[Nombre]';
     var areas = needs.filter(function(n){ return n.getAttribute('aria-pressed') === 'true'; }).map(function(n){ return n.dataset.area; });
-    return 'Hola, soy ' + name + '. Quisiéramos hablar de ' + (areas.length ? joinEs(areas) : '[tema]') + '.';
+    return 'Hola, soy ' + name + '. Quisiera consultar sobre ' + (areas.length ? joinEs(areas) : '[tema]') + '.';
   }
   function sync(){
     if (!edited) msg.value = build();
@@ -1013,7 +1016,7 @@ footer{border-top:1px solid var(--line);padding:clamp(72px,9vw,128px) var(--pad)
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var okN = setErr(form.nombre, form.nombre.value.trim() ? '' : 'Decinos tu nombre o el de tu empresa.');
-    var okC = setErr(form.contacto, form.contacto.value.trim() ? '' : 'Dejanos un correo o un número para responderte.');
+    var okC = setErr(form.contacto, form.contacto.value.trim() ? '' : 'Deja un correo o un número para responderte.');
     if (!okN){ form.nombre.focus(); return; }
     if (!okC){ form.contacto.focus(); return; }
     // TODO(owner): conectar el envío (proveedor de correo o webhook).
