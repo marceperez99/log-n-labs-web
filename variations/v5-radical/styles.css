@@ -82,7 +82,8 @@ svg{flex:none}
 .hero-side{grid-column:2;grid-row:1;align-self:end;position:relative}
 .h1-l{font-size:clamp(46px,10.2vw,184px);line-height:1;text-transform:uppercase;letter-spacing:-.035em}
 .h1-l + .h1-l{margin-top:.04em}
-.h1-que{text-transform:none;font-weight:400;padding-left:3.2em}
+.h1-que{padding-left:3.2em}
+.h1-pay{color:var(--ink)}
 .h1-l.h1-long{font-size:clamp(40px,6vw,108px)}
 .h1-l.h1-long.h1-que{padding-left:1.6em}
 .hero-side{display:grid;gap:24px}

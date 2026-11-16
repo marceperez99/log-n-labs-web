@@ -49,8 +49,8 @@ mark.todo-lg{font-family:var(--f-display);font-size:.8em;letter-spacing:-.02em;p
 .logo img{width:clamp(150px,13vw,190px);height:auto}
 .c1-body{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(18px,2.8vh,28px)}
 h1{display:flex;flex-direction:column;font:600 clamp(44px,6.3vw,108px)/1.02 var(--f-display);letter-spacing:-.04em}
-h1 .w-light{font-weight:300;font-size:clamp(24px,3.2vw,54px);letter-spacing:-.02em;line-height:1.4;color:var(--rust);padding-left:.12em}
-h1.h1-long{font-size:clamp(36px,4.6vw,76px)}
+h1.h1-long{font-size:clamp(36px,4.9vw,76px)}
+h1 .w-pay{color:var(--rust)}
 .dateline{font-size:12px;line-height:1.6;color:var(--stone-d);text-align:right}
 .ctas{display:flex;flex-wrap:wrap;gap:12px}
 .lede{font-size:clamp(18px,1.45vw,21px);line-height:1.5;max-width:34ch;color:var(--ink)}
@@ -131,8 +131,7 @@ nav[aria-label="Principal"] a:hover{background-size:100% 1px}
   .c7{position:absolute}
   .c7-in img{display:none}
   h1{font-size:clamp(44px,15vw,64px)}
-  h1 .w-light{font-size:clamp(24px,7.5vw,32px)}
-  h1.h1-long{font-size:clamp(30px,9vw,44px)}
+  h1.h1-long{font-size:clamp(30px,9.6vw,44px)}
   .dateline{display:none}
 }
 
