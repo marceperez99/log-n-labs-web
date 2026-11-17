@@ -222,7 +222,7 @@
   var solArts = Array.prototype.slice.call(solSec.querySelectorAll('.art'));
   var solCount = solSec.querySelector('.sol-count b');
   var solCap = solSec.querySelector('.sol-art-cap');
-  var solNames = ['software', 'marketing', 'consultoría'];
+  var solNames = ['consultoría', 'software', 'marketing'];
   var pinMQ = window.matchMedia('(min-width: 1024px) and (min-height: 640px)');
   var solMode = '', solIdx = -1, solOpened = [true, false, false];
 
@@ -392,9 +392,9 @@
     e.preventDefault();
     var nombre = form.elements.nombre, contacto = form.elements.contacto;
     var c = contacto.value.trim();
-    var okN = setErr(nombre, nombre.value.trim() ? '' : 'Decinos tu nombre o el de tu empresa.');
+    var okN = setErr(nombre, nombre.value.trim() ? '' : 'Escribe tu nombre o el de tu empresa.');
     var looksOk = /\S+@\S+\.\S+/.test(c) || c.replace(/\D/g, '').length >= 8;
-    var okC = setErr(contacto, !c ? 'Deja un correo o un número para responderte.' : (looksOk ? '' : 'Revisá el correo o el número: no parece completo.'));
+    var okC = setErr(contacto, !c ? 'Deja un correo o un número para responderte.' : (looksOk ? '' : 'Revisa el correo o el número: parece que falta algo.'));
     if (!okN) { nombre.focus(); return; }
     if (!okC) { contacto.focus(); return; }
     // TODO(delivery): pluggable sender (email provider or webhook). Not decided yet.
