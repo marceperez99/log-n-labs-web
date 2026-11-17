@@ -44,7 +44,12 @@ mark.todo-lg{font-family:var(--f-display);font-size:.8em;letter-spacing:-.02em;p
 .btn-line:hover{background:var(--paper)}
 
 /* ================= HERO ================= */
-.hero{position:relative;height:100vh;height:100svh;min-height:640px;overflow:hidden;background:var(--white)}
+.hero{position:relative;height:100vh;height:100svh;min-height:640px;overflow:hidden;
+  /* background from V0, static: warm Rust glow top-right over a 24px dot grid */
+  background:
+    radial-gradient(60% 50% at 80% 10%,color-mix(in srgb,var(--rust) 13%,transparent),transparent 70%),
+    radial-gradient(color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1.2px) 0 0/24px 24px,
+    var(--white)}
 .cut{position:absolute;background:var(--ink);transform-origin:0 0;transition:transform 560ms var(--ease)}
 .cut.v{width:1px;transform:scaleY(0)}
 .cut.h{height:1px;transform:scaleX(0)}
