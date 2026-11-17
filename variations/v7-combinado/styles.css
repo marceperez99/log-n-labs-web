@@ -292,6 +292,17 @@ p{text-wrap:pretty}
 .role-p::before{content:"";position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--mk);transform:scaleX(0);transform-origin:left}
 .roles:not(.manual) .role-p.on::before{animation:rprog 5s linear both}
 @keyframes rprog{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+/* role láminas: same plate as Para quién, fixed height so panels do not jump when they grow */
+.r-plate{flex:none;aspect-ratio:auto;height:clamp(140px,19vh,180px);margin-bottom:auto;background:none;border:0;color:var(--ink)}
+.r-plate .w-art{stroke:currentColor;transition:color .6s var(--out)}
+.r-plate .w-art .f{transition:fill .6s var(--out)}
+.r-plate .w-art .ac{transition:stroke .6s var(--out)}
+/* on the rust panel: light lines, dark-ember accents */
+.role-p.on .r-plate{color:var(--white)}
+.role-p.on .r-plate .w-art .s{stroke:color-mix(in srgb,var(--white) 55%,transparent)}
+.role-p.on .r-plate .w-art .f{fill:var(--ember)}
+.role-p.on .r-plate .w-art .ac{stroke:var(--ember)}
+.r-plate svg{top:14px;left:14px;width:calc(100% - 28px);height:calc(100% - 28px)}
 .rt{display:flex;flex-direction:column;justify-content:flex-end;min-height:2.5em;font:var(--t-heading);letter-spacing:var(--tr-heading)}
 .rk{display:flex;align-items:center;gap:10px;min-height:20px;margin-top:12px;font:var(--t-label);letter-spacing:var(--tr-label);color:var(--stone-d)}
 .rk i{flex:none;width:8px;height:8px;background:var(--mk)}
@@ -382,6 +393,7 @@ p{text-wrap:pretty}
   .role-p:first-child{border-top:0}
   .rt{min-height:0}
   .rk-none{display:none}
+  .r-plate{height:180px;margin-bottom:20px}
   .frac{font-size:clamp(48px,7vw,80px)}
   .foot-brand{grid-column:1/13}
   .fc1{grid-column:1/5}
