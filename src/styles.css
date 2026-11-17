@@ -181,6 +181,7 @@ p{text-wrap:pretty}
 .sec-head{grid-column:4/13;display:flex;flex-direction:column;gap:18px;margin-bottom:64px}
 .sec-sub{font:var(--t-lead);max-width:52ch;color:var(--stone-d)}
 .sec-sub.mono{font:var(--t-label);letter-spacing:var(--tr-label);color:var(--rust)}
+.board .sec-sub.mono{color:var(--rust-deep)} /* Rust on Paper is 4.4:1; small text needs 4.5 */
 .arrow-link{align-self:flex-start;font:var(--t-ui);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--rust);color:var(--rust-deep)}
 .arrow-link:hover{color:var(--rust)}
 
@@ -220,7 +221,7 @@ p{text-wrap:pretty}
 .sol-art{position:relative;display:grid;place-items:center;min-height:clamp(320px,46vh,460px);padding:28px;background:var(--paper);border:1px solid var(--line);color:var(--ink);overflow:hidden}
 .sol-art::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(var(--line) 1px,transparent 1.2px) 0 0/24px 24px}
 .sol-art-cap{position:absolute;left:16px;top:12px;font:var(--t-label);color:var(--stone-d)}
-.sol-art-cap b{font-weight:500;color:var(--rust)}
+.sol-art-cap b{font-weight:500;color:var(--rust-deep)}
 .sol-art .art{grid-area:1/1;position:relative;width:100%;max-width:420px;height:auto;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter;opacity:0;transform:translateY(10px);transition:opacity .45s var(--out),transform .6s var(--out)}
 .sol-art .art.on{opacity:1;transform:none;transition-delay:.12s}
 .sol-art .art *{vector-effect:non-scaling-stroke}
@@ -276,7 +277,7 @@ p{text-wrap:pretty}
 .pstep{position:relative;display:flex;flex-direction:column;gap:10px;transition:opacity .5s var(--out)}
 .pstep::before{content:"";position:absolute;left:calc(-1 * var(--sp) - 4px);top:4px;width:8px;height:8px;background:var(--rust)}
 .js .pstep:not(.on){opacity:.3}
-.pstep .n{font:var(--t-label);color:var(--rust)}
+.pstep .n{font:var(--t-label);color:var(--rust-deep)}
 .pstep > p{font:var(--t-body);max-width:46ch;color:var(--stone-d)}
 .pstep .result{margin-top:6px;padding:12px 16px;border:1px solid var(--line);background:var(--white);display:flex;flex-wrap:wrap;gap:4px 12px;font:var(--t-small);color:var(--ink)}
 .result .mono{font:var(--t-label);line-height:22px;letter-spacing:var(--tr-label);color:var(--stone-d)}

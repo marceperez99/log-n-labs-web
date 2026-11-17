@@ -10,7 +10,7 @@
           "src/index.html"
         ],
         "createdAt": "2026-11-17T13:56:11.754Z",
-        "reason": "Claude: #F4EFE7 is the brand White from the v3 identity the user chose as base"
+        "reason": "Brand: docs/BRAND.md:117 defines #F4EFE7 as the brand white (warm, never pure #FFF)"
       },
       {
         "rule": "cramped-padding",
@@ -29,6 +29,33 @@
         ],
         "createdAt": "2026-11-17T14:10:24.231Z",
         "reason": "Claude: detector can't resolve var() font shorthands and reads every role as 16px; computed sizes are display 37-92 / title 34-60 / heading 21-26 / body 17px"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "_site/index.html"
+        ],
+        "createdAt": "2026-11-17T22:51:02.917Z",
+        "reason": "Claude: static-file artifact on the generated build; a rendered browser scan at 1280 and 390 wide reports none"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "_site/index.html"
+        ],
+        "createdAt": "2026-11-17T22:51:02.932Z",
+        "reason": "Claude: static scan cannot resolve clamp() type tokens; rendered scan shows h2 34-60px, h3 21-26px, body 17px"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "_site/index.html"
+        ],
+        "createdAt": "2026-11-17T22:51:07.611Z",
+        "reason": "Brand: docs/BRAND.md:117 defines #F4EFE7 as the brand white (warm, never pure #FFF)"
       }
     ]
   }
