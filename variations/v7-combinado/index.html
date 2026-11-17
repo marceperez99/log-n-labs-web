@@ -1,0 +1,418 @@
+<!doctype html>
+<!--
+  V7 · Combinado — base V3 Editorial (paper journal, halving fractions, Unbounded / STIX / JetBrains Mono).
+  Swapped in from V0 Socio, restyled to V3: Servicios (accordion + plate, opens row by row on scroll),
+  Cómo trabajamos (board with sticky title and scroll-filled track), Equipo (expanding role panels).
+  El problema: statement lights up word by word on scroll (left) beside the three bullets (right); no Fig./Tabla.
+  Contacto: info left, boxed form right, in V3 Rust.
+-->
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log N Labs | Digitalización y marketing para pymes en Paraguay</title>
+<meta name="description" content="Registra cada consulta, pedido y venta de tu negocio. Campañas, identidad visual y software para pymes de Paraguay que venden por WhatsApp, redes sociales y en su local.">
+<meta property="og:title" content="Log N Labs | Digitalización y marketing para pymes en Paraguay">
+<meta property="og:description" content="Software, marketing y consultoría para pymes de Paraguay. Que no se te escape ninguna venta.">
+<meta property="og:image" content="../../logos/log-n-labs_on-white.svg">
+<meta name="theme-color" content="#F4EFE7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#enfoque">Saltar al contenido</a>
+
+<!-- ============ HERO · the screen halves itself ============ -->
+<header class="hero" id="inicio" data-step="0">
+  <div class="cuts" aria-hidden="true">
+    <span class="cut"></span><span class="cut"></span><span class="cut"></span>
+    <span class="cut"></span><span class="cut"></span><span class="cut"></span>
+  </div>
+
+  <div class="cell c1">
+    <div class="c1-top">
+      <a href="#inicio" class="logo" aria-label="Log N Labs, inicio"><img src="../../logos/log-n-labs_on-white.svg" alt="" width="182" height="26"></a>
+      <p class="dateline mono">Software + Marketing + Consultoría<br>Asunción, Paraguay</p>
+    </div>
+    <div class="c1-body">
+      <h1 class="h1-long"><span class="w-strong">Que no se te</span> <span class="w-strong">escape</span> <span class="w-pay">ninguna venta.</span></h1>
+      <p class="lede">Mensajes que quedaron sin respuesta, pedidos anotados en un papel, anuncios que nadie sabe si funcionaron. Digitalizamos tu negocio para que cada consulta y cada venta quede registrada, y sepas cuánto te costó conseguirla.</p>
+      <div class="ctas">
+        <a class="btn btn-rust" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
+        <a class="btn btn-line" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell c2">
+    <div class="c2-top">
+      <span class="tag" aria-hidden="true">1/4 · servicios</span>
+      <nav aria-label="Principal">
+        <a href="#enfoque">El problema</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#para-quien">Para quién</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="rotator" aria-roledescription="carrusel" aria-label="Servicios">
+      <div class="groups">
+        <div class="group is-on" data-i="0">
+          <p class="g-name">Software</p>
+          <p class="g-desc">Sitios, sistemas e integraciones con WhatsApp, pagos con QR y el proveedor de factura electrónica que ya usas.</p>
+          <ul class="g-items"><li>Desarrollo</li><li>Integraciones</li><li>QA</li></ul>
+        </div>
+        <div class="group" data-i="1" aria-hidden="true">
+          <p class="g-name">Marketing</p>
+          <p class="g-desc">Estrategia, identidad visual y campañas en Meta y Google, evaluadas por las ventas que generan.</p>
+          <ul class="g-items"><li>Estrategia</li><li>Identidad visual</li><li>Anuncios</li></ul>
+        </div>
+        <div class="group" data-i="2" aria-hidden="true">
+          <p class="g-name">Consultoría</p>
+          <p class="g-desc">Revisamos cómo registras hoy tus ventas, pedidos y cobros, y te decimos qué herramientas te faltan para no perder datos.</p>
+          <ul class="g-items"><li>Diagnóstico</li><li>Procesos</li><li>Plan</li></ul>
+        </div>
+      </div>
+      <div class="stepper">
+        <span class="counter" aria-live="polite"><b>1</b>/3</span>
+        <div class="bars">
+          <button type="button" aria-label="Ver Software" aria-current="true"><span><i></i></span></button>
+          <button type="button" aria-label="Ver Marketing"><span><i></i></span></button>
+          <button type="button" aria-label="Ver Consultoría"><span><i></i></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell c3">
+    <span class="tag" aria-hidden="true">1/8 · contacto</span>
+    <div>
+      <p class="cell-title">Hablemos.</p>
+      <ul class="rows">
+        <li><a class="wa" href="https://wa.me/%%WHATSAPP_NUMBER%%"><span>%%WHATSAPP_DISPLAY%%</span><span class="mono">whatsapp</span></a></li>
+        <li><a class="mail" href="mailto:%%CONTACT_EMAIL%%"><span>%%CONTACT_EMAIL_LABEL%%</span><span class="mono">correo</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cell c4">
+    <span class="tag" aria-hidden="true">1/16 · cómo trabajamos</span>
+    <ol class="mini-steps">
+      <li><span class="mono">01</span>Diagnóstico</li>
+      <li><span class="mono">02</span>Plan</li>
+      <li><span class="mono">03</span>Puesta en marcha</li>
+      <li><span class="mono">04</span>Medición</li>
+    </ol>
+  </div>
+
+  <div class="cell c5">
+    <span class="tag" aria-hidden="true">1/32</span>
+    <p class="place"><b>Asunción</b><span>Paraguay</span><span class="mono">GMT−3 · <time class="clock">--:--</time></span></p>
+  </div>
+
+  <div class="cell c6">
+    <span class="tag" aria-hidden="true">1/64</span>
+    <p class="olog">O(log n)</p>
+  </div>
+
+  <button type="button" class="cell c7" aria-label="Bajar al contenido">
+    <span class="fill" aria-hidden="true"></span>
+    <span class="c7-in" aria-hidden="true">
+      <img src="../../logos/log-n-labs_on-rust.svg" alt="" width="124" height="18">
+      <span class="scroll"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M12 3v17M5 13l7 7 7-7"/></svg>SCROLL</span>
+    </span>
+  </button>
+</header>
+
+<main>
+
+<!-- ============ 1/2 · EL PROBLEMA: statement lights up on scroll | bullets ============ -->
+<section class="sec" id="enfoque" aria-labelledby="h-vision">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>2</i></span>
+        <p class="rail-label">el problema</p>
+        <p class="note">Cada sección de esta página es la mitad de la anterior: 1/2, 1/4, 1/8… Así trabaja una búsqueda binaria, el origen de O(log n).</p>
+      </div>
+    </aside>
+    <div class="vis-left">
+      <h2 id="h-vision" class="statement fillw" data-fill>Tu marca, tus sistemas y tu equipo tienen que crecer juntos. Lo que armamos hoy sigue funcionando cuando tu negocio sea el doble.</h2>
+    </div>
+    <ul class="principles">
+      <li><span class="ok mono" aria-hidden="true">[ ok ]</span><h3>Consultas sin respuesta</h3><p>Un mensaje que espera horas en WhatsApp puede terminar en una compra a otro negocio.</p></li>
+      <li><span class="ok mono" aria-hidden="true">[ ok ]</span><h3>Anuncios sin medir</h3><p>Se invierte cada mes sin saber qué campaña trajo ventas y cuál no trajo ninguna.</p></li>
+      <li><span class="ok mono" aria-hidden="true">[ ok ]</span><h3>Pedidos en papel</h3><p>Entre la libreta, la planilla y el sistema de facturación, los datos se repiten y algunos pedidos se pierden.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 1/4 · SERVICIOS: rows open one by one as you scroll (pinned on desktop) ============ -->
+<section class="sec sol-sec" id="servicios" aria-labelledby="h-soluciones">
+  <div class="sol-pin">
+    <div class="sol-stick">
+      <div class="grid">
+        <aside class="rail">
+          <div class="rail-in">
+            <span class="frac" aria-hidden="true"><i>1</i><b></b><i>4</i></span>
+            <p class="rail-label">servicios</p>
+            <p class="sol-count mono" aria-hidden="true"><b>01</b> / 03</p>
+          </div>
+        </aside>
+        <div class="sec-head">
+          <h2 id="h-soluciones">Lo que hacemos por <b>tu negocio</b>.</h2>
+          <p class="sec-sub">Sigue bajando: cada servicio se abre a su turno. Cada uno tiene su propia página.</p>
+        </div>
+        <div class="sol-grid">
+          <ul class="sol">
+            <li class="sol-r">
+              <button type="button" class="sol-b" aria-expanded="true" aria-controls="sol-0"><span class="n mono">01</span><span>Software</span></button>
+              <div class="sol-p on" id="sol-0" role="region" aria-label="Software"><div>
+                <span class="tag mono">Desarrollo · Integraciones · QA</span>
+                <p>Sitios, sistemas e integraciones con WhatsApp, pagos con QR y el proveedor de factura electrónica que ya usas.</p>
+                <a class="arrow-link" href="#">Ver Software <span aria-hidden="true">→</span></a>
+              </div></div>
+            </li>
+            <li class="sol-r">
+              <button type="button" class="sol-b" aria-expanded="false" aria-controls="sol-1"><span class="n mono">02</span><span>Marketing</span></button>
+              <div class="sol-p" id="sol-1" role="region" aria-label="Marketing"><div>
+                <span class="tag mono">Estrategia · Identidad visual · Anuncios</span>
+                <p>Estrategia, identidad visual y campañas en Meta y Google, evaluadas por las ventas que generan.</p>
+                <a class="arrow-link" href="#">Ver Marketing <span aria-hidden="true">→</span></a>
+              </div></div>
+            </li>
+            <li class="sol-r">
+              <button type="button" class="sol-b" aria-expanded="false" aria-controls="sol-2"><span class="n mono">03</span><span>Consultoría</span></button>
+              <div class="sol-p" id="sol-2" role="region" aria-label="Consultoría"><div>
+                <span class="tag mono">Diagnóstico · Procesos · Plan</span>
+                <p>Revisamos cómo registras hoy tus ventas, pedidos y cobros, dónde se pierde información y qué herramientas necesitas. Te entregamos un plan por escrito, lo hagas con nosotros o no.</p>
+                <a class="arrow-link" href="#contacto">Pedir un diagnóstico <span aria-hidden="true">→</span></a>
+              </div></div>
+            </li>
+          </ul>
+          <div class="sol-art" aria-hidden="true">
+            <span class="sol-art-cap mono">Lámina <b>1</b> · software</span>
+            <svg class="art on" viewBox="0 0 480 360">
+              <rect x="40" y="40" width="400" height="280"/><path d="M40 84H440"/>
+              <rect class="f" x="58" y="56" width="12" height="12"/><rect x="82" y="56" width="12" height="12"/><rect x="106" y="56" width="12" height="12"/>
+              <path d="M64 120H200M64 150H170M64 180H220M64 210H150"/>
+              <path class="ac" d="M290 130L250 175L290 220M350 130L390 175L350 220"/>
+              <path d="M326 120L314 230"/>
+              <rect class="f" x="368" y="268" width="14" height="14"/><path d="M392 276l8 8 20-24"/>
+            </svg>
+            <svg class="art" viewBox="0 0 480 360">
+              <rect class="f" x="52" y="168" width="24" height="24"/>
+              <path d="M110 128C146 158 146 202 110 232"/><path d="M148 98C206 142 206 218 148 262"/><path class="ac" d="M188 68C266 126 266 234 188 292"/>
+              <rect x="296" y="60" width="132" height="76"/><rect x="296" y="150" width="132" height="76"/><rect class="f" x="296" y="240" width="132" height="60"/>
+              <path d="M310 80H380M310 100H350M310 170H390M310 190H360"/>
+            </svg>
+            <svg class="art" viewBox="0 0 480 360">
+              <rect x="120" y="60" width="240" height="240" stroke-dasharray="8 7"/>
+              <path class="ac" d="M240 140V220M200 180H280"/>
+              <rect class="f" x="346" y="286" width="28" height="28"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/8 · TRABAJOS ============ -->
+<section class="sec" id="para-quien" aria-labelledby="h-trabajos">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>8</i></span>
+        <p class="rail-label">para quién</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-trabajos">Para quién trabajamos.</h2>
+      <p class="sec-sub">Los casos se publicarán con cifras reales y con permiso de cada cliente.</p>
+    </div>
+    <ul class="works" aria-label="Tipos de cliente">
+      <li class="work">
+        <div class="w-plate" aria-hidden="true"><svg viewBox="0 0 160 100" preserveAspectRatio="none"><path d="M80 0V100M80 50H160M120 50V100M120 75H160M140 75V100" stroke="#D6CBBB" stroke-width="1" vector-effect="non-scaling-stroke" fill="none"/></svg><span class="mono">Lámina A</span></div>
+        <h3>Tienda que vende por Instagram y WhatsApp</h3>
+        <p class="mono w-meta">ropa · cosmética · accesorios</p>
+        <p class="w-desc">Los pedidos llegan por chat y se anotan a mano. Ordenamos el catálogo, medimos qué anuncio trae cada venta y conectamos el cobro con QR.</p>
+      </li>
+      <li class="work">
+        <div class="w-plate" aria-hidden="true"><svg viewBox="0 0 160 100" preserveAspectRatio="none"><path d="M80 0V100M80 50H160M120 50V100M120 75H160M140 75V100" stroke="#D6CBBB" stroke-width="1" vector-effect="non-scaling-stroke" fill="none"/></svg><span class="mono">Lámina B</span></div>
+        <h3>Servicio que trabaja con turnos</h3>
+        <p class="mono w-meta">clínicas · talleres · estética</p>
+        <p class="w-desc">Los turnos se agendan por WhatsApp y algunos clientes no se presentan. Organizamos la agenda, los recordatorios y las campañas por zona.</p>
+      </li>
+      <li class="work">
+        <div class="w-plate" aria-hidden="true"><svg viewBox="0 0 160 100" preserveAspectRatio="none"><path d="M80 0V100M80 50H160M120 50V100M120 75H160M140 75V100" stroke="#D6CBBB" stroke-width="1" vector-effect="non-scaling-stroke" fill="none"/></svg><span class="mono">Lámina C</span></div>
+        <h3>Comercio con local y factura electrónica</h3>
+        <p class="mono w-meta">ferretería · repuestos · alimentos</p>
+        <p class="w-desc">Ya emites factura electrónica, pero cargas los mismos datos dos veces. Conectamos ventas, stock y facturación para cargarlos una sola vez.</p>
+      </li>
+    </ul>
+    <p class="swipe mono" aria-hidden="true">Desliza para ver más →</p>
+  </div>
+</section>
+
+<!-- ============ 1/16 · CÓMO TRABAJAMOS (v0 board: sticky title | scroll-filled track) ============ -->
+<section class="sec" id="proceso" aria-labelledby="h-proceso">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>16</i></span>
+        <p class="rail-label">cómo trabajamos</p>
+      </div>
+    </aside>
+    <div class="board">
+      <div class="proc">
+        <div class="proc-title">
+          <h2 id="h-proceso">Cómo <b>trabajamos</b>.</h2>
+          <div class="div3" aria-hidden="true"><i></i><i></i><i></i></div>
+          <p class="sec-sub mono">Diagnóstico · Plan · Puesta en marcha · Medición</p>
+        </div>
+        <ol class="psteps" id="pasos">
+          <li class="track" aria-hidden="true"><span></span></li>
+          <li class="pstep">
+            <span class="n mono">01</span><h3><b>Diagnóstico</b></h3>
+            <p>Revisamos cómo te llegan hoy los clientes, cómo cobras y cómo facturas, y dónde se pierden ventas. Dura [N] días.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Un informe con lo que conviene cambiar y cuánto cuesta.</span></p>
+          </li>
+          <li class="pstep">
+            <span class="n mono">02</span><h3><b>Plan</b></h3>
+            <p>Definimos alcance, plazos, precio y las métricas con las que se va a evaluar el trabajo.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Una propuesta por escrito para aprobar.</span></p>
+          </li>
+          <li class="pstep">
+            <span class="n mono">03</span><h3><b>Puesta en marcha</b> y revisamos</h3>
+            <p>Diseñamos, programamos y configuramos. Cada entrega se prueba antes de publicarse.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Entregas probadas y documentadas.</span></p>
+          </li>
+          <li class="pstep">
+            <span class="n mono">04</span><h3><b>Medición</b> y acompañamos</h3>
+            <p>Cada mes revisamos los números contigo y ajustamos campañas y sistemas.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Un reporte mensual con el costo por venta.</span></p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/32 · EQUIPO (v0 expanding panels) ============ -->
+<section class="sec" id="equipo" aria-labelledby="h-equipo">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>32</i></span>
+        <p class="rail-label">equipo</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-equipo">Quiénes hacen el trabajo.</h2>
+      <p class="sec-sub">Un mismo equipo atiende software, marketing y consultoría, así no tienes que coordinar varios proveedores.</p>
+    </div>
+    <div class="roles">
+      <button type="button" class="role-p on" aria-expanded="true" aria-controls="rol-0"><span class="rt"><span>Análisis y <b>procesos</b></span></span><span class="rk mono"><i aria-hidden="true"></i>Entender</span><span class="rdesc" id="rol-0"><span><span>Relevamos cómo funciona tu negocio y dejamos por escrito qué se va a hacer antes de empezar.</span></span></span></button>
+      <button type="button" class="role-p" aria-expanded="false" aria-controls="rol-1"><span class="rt"><span><b>Desarrollo</b></span></span><span class="rk mono"><i aria-hidden="true"></i>Construir</span><span class="rdesc" id="rol-1"><span><span>Programamos sitios, sistemas e integraciones con las herramientas de pago y facturación que ya se usan en Paraguay.</span></span></span></button>
+      <button type="button" class="role-p" aria-expanded="false" aria-controls="rol-2"><span class="rt"><span><b>Calidad</b></span></span><span class="rk mono"><i aria-hidden="true"></i>Verificar</span><span class="rdesc" id="rol-2"><span><span>Probamos cada entrega antes de que llegue a tus clientes.</span></span></span></button>
+      <button type="button" class="role-p" aria-expanded="false" aria-controls="rol-3"><span class="rt"><span>Marca y <b>marketing</b></span></span><span class="rk mono rk-none" aria-hidden="true"><i></i>&nbsp;</span><span class="rdesc" id="rol-3"><span><span>Estrategia, diseño y campañas. Análisis define el objetivo, desarrollo instala la medición y calidad revisa cada pieza antes de publicarla.</span></span></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/64 · CONTACTO (info left, boxed form right) ============ -->
+<section class="sec contact" id="contacto" aria-labelledby="h-contacto">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>64</i></span>
+        <p class="rail-label">contacto</p>
+      </div>
+    </aside>
+    <div class="contact-text">
+      <h2 id="h-contacto">Hablemos.</h2>
+      <ul class="rows">
+        <li><a class="wa" href="https://wa.me/%%WHATSAPP_NUMBER%%"><span>%%WHATSAPP_DISPLAY%%</span><span class="mono">whatsapp</span></a></li>
+        <li><a class="mail" href="mailto:%%CONTACT_EMAIL%%"><span>%%CONTACT_EMAIL_LABEL%%</span><span class="mono">correo</span></a></li>
+        <li><span class="row"><span>Asunción, Paraguay</span><span class="mono">GMT−3</span></span></li>
+      </ul>
+    </div>
+    <form class="form" id="form" aria-label="Formulario de contacto" novalidate>
+      <div class="f-row">
+        <div class="field"><label for="f-nombre">Nombre o empresa</label><input id="f-nombre" name="nombre" type="text" autocomplete="organization" required aria-describedby="e-nombre"><p class="err" id="e-nombre" hidden></p></div>
+        <div class="field"><label for="f-contacto">Correo o WhatsApp</label><input id="f-contacto" name="contacto" type="text" inputmode="email" autocomplete="email" required aria-describedby="e-contacto"><p class="err" id="e-contacto" hidden></p></div>
+      </div>
+      <fieldset class="needs">
+        <legend>¿Qué necesitas?</legend>
+        <div class="chips">
+          <button type="button" aria-pressed="false" data-area="software">Software</button>
+          <button type="button" aria-pressed="false" data-area="marketing">Marketing</button>
+          <button type="button" aria-pressed="false" data-area="consultoría">Consultoría</button>
+          <button type="button" aria-pressed="false" data-area="por dónde empezar">Todavía no lo sé</button>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="f-mensaje">Más detalles <span class="opt">(opcional)</span></label>
+        <textarea id="f-mensaje" name="mensaje" rows="4" aria-describedby="h-mensaje"></textarea>
+        <p class="hint mono" id="h-mensaje">El mensaje se completa con los datos de arriba y se puede editar.</p>
+      </div>
+      <div class="f-foot">
+        <button type="submit" class="btn btn-ink btn-block">Enviar consulta</button>
+        <div class="alts">
+          <a class="act" id="send-wa" href="https://wa.me/%%WHATSAPP_NUMBER%%">Enviar por WhatsApp <span aria-hidden="true">→</span></a>
+          <a class="act" id="send-mail" href="mailto:%%CONTACT_EMAIL%%">Enviar por correo <span aria-hidden="true">→</span></a>
+          <button type="button" class="act" id="copy">Copiar mensaje <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <p class="status mono" id="status" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="grid">
+    <div class="foot-brand">
+      <a href="#inicio" class="foot-logo" aria-label="Log N Labs, inicio"><img src="../../logos/log-n-labs_on-ink.svg" alt="" width="196" height="28"></a>
+      <p class="foot-tag">Software, marketing y consultoría para pymes de Paraguay. Que no se te escape ninguna venta.</p>
+      <ul class="foot-ok mono">
+        <li><span aria-hidden="true">[ ok ]</span> software</li>
+        <li><span aria-hidden="true">[ ok ]</span> marketing</li>
+        <li><span aria-hidden="true">[ ok ]</span> consultoría</li>
+      </ul>
+    </div>
+    <nav class="foot-col fc1" aria-label="Servicios">
+      <p class="foot-h mono">Servicios</p>
+      <a href="#servicios">Software</a>
+      <a href="#servicios">Marketing</a>
+      <a href="#servicios"><span>Consultoría</span></a>
+    </nav>
+    <div class="foot-col fc2">
+      <p class="foot-h mono">Contacto</p>
+      <a class="wa" href="https://wa.me/%%WHATSAPP_NUMBER%%"><span>%%WHATSAPP_DISPLAY%%</span></a>
+      <a class="mail" href="mailto:%%CONTACT_EMAIL%%"><span>%%CONTACT_EMAIL_LABEL%%</span></a>
+      <span>Asunción, Paraguay</span>
+    </div>
+    <nav class="foot-col fc3" aria-label="Navegación">
+      <p class="foot-h mono">Navegación</p>
+      <a href="#enfoque">El problema</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#para-quien">Para quién</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="foot-bottom mono">
+      <span>Asunción, PY · GMT-3 · Recibimos proyectos nuevos · <time class="clock">--:--</time></span>
+      <span>© 2026 Log N Labs</span>
+    </div>
+    <p class="colophon mono">Compuesto en Unbounded, STIX Two Text y JetBrains Mono. 1 → 1/2 → 1/4 → 1/8 → 1/16 → 1/32 → 1/64.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
