@@ -64,7 +64,54 @@
     hero.setAttribute('data-step', String(k));
     for (var i = 0; i < 6; i++) cutEls[i].classList.toggle('on', i < k);
   }
-  function showCell(i) { cellEls[i].classList.add('on'); }
+  function showCell(i) { cellEls[i].classList.add('on'); if (i === 5) typeOlog(); }
+
+  /* ---------- 1/64 cell: types O(n²) → O(n log n) → O(log n) (from V5) ---------- */
+  var ologEl = hero.querySelector('.olog-text'), ologDone = false;
+  function typeOlog() {
+    if (ologDone || reduce || !ologEl) return;
+    ologDone = true;
+    var toks = [];
+    function draw(nColor) {
+      ologEl.innerHTML = toks.map(function (t, i) {
+        if (t === '²') return '<sup>2</sup>';
+        if (nColor && i === toks.length - 2) return '<span class="n-final" style="color:' + nColor + '">n</span>';
+        return t === ' ' ? '&nbsp;' : t;
+      }).join('');
+    }
+    function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+    function type(str) {
+      return Array.prototype.reduce.call(str, function (p, ch) {
+        return p.then(function () { toks.push(ch); draw(); return wait(118 + Math.random() * 14); });
+      }, Promise.resolve());
+    }
+    function erase(keep) {
+      if (toks.length <= keep) return Promise.resolve();
+      toks.pop(); draw();
+      return wait(70).then(function () { return erase(keep); });
+    }
+    function mix(a, b, p) {
+      return '#' + [0, 2, 4].map(function (i) {
+        var x = parseInt(a.substr(i, 2), 16), y = parseInt(b.substr(i, 2), 16);
+        return ('0' + Math.round(x + (y - x) * p).toString(16)).slice(-2);
+      }).join('');
+    }
+    draw();
+    wait(300)
+      .then(function () { return type('O(n²)'); }).then(function () { return wait(1300); })
+      .then(function () { return erase(2); })
+      .then(function () { return type('n log n)'); }).then(function () { return wait(1300); })
+      .then(function () { return erase(2); })
+      .then(function () { return type('log n)'); })
+      .then(function () {
+        var t0 = performance.now();
+        (function step() {
+          var p = Math.min(1, (performance.now() - t0) / 1400);
+          draw(mix('17120F', 'B83A0E', 1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        })();
+      });
+  }
 
   var SPEED = 700;
   function play() {
