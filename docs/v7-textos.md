@@ -26,7 +26,7 @@ _Pantalla de inicio, dividida en celdas._
 ### Celda principal
 
 - **Titular:** Que no se te escape **ninguna venta.**
-- **Bajada:** Un mensaje que nadie contestó, un pedido anotado en un papel, un anuncio que no sabes si vendió. Te ayudamos a ordenar tu negocio para que cada consulta y cada venta quede registrada, y sepas cuánto te costó conseguirla.
+- **Bajada:** Acompañamos a tu negocio en su crecimiento digital, desde el primer diagnóstico hasta los resultados.
 - **Botón principal:** Hablemos →
 - **Botón secundario:** Ver servicios
 
