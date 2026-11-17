@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "variations/v7-combinado/index.html"
+        ],
+        "createdAt": "2026-11-17T13:56:11.754Z",
+        "reason": "Claude: #F4EFE7 is the brand White from the v3 identity the user chose as base"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "variations/v7-combinado/index.html"
+        ],
+        "createdAt": "2026-11-17T13:56:11.770Z",
+        "reason": "Claude: flagged nodes are hairline-ruled editorial lists or containers with clamp()/var padding (board 24-64px, psteps padding-left var(--sp), alts 48px row); detector can't resolve those"
+      }
+    ]
+  }
+}
