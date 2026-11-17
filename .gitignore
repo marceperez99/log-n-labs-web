@@ -4,3 +4,13 @@ _site/
 .claude/settings.local.json
 variations/*/screens/
 config/.env
+
+# Screenshots and logs
+.playwright-mcp/
+Screenshot*.png
+screenshots/
+*.log
+logs/
+
+# Tool caches
+.impeccable/hook.cache.json

@@ -1,0 +1,471 @@
+<!doctype html>
+<!--
+  V7 · Combinado — base V3 Editorial (paper journal, halving fractions, Unbounded / STIX / JetBrains Mono).
+  Swapped in from V0 Socio, restyled to V3: Servicios (accordion + plate, opens row by row on scroll),
+  Cómo trabajamos (board with sticky title and scroll-filled track), Equipo (expanding role panels).
+  El problema: statement lights up word by word on scroll (left) beside the three bullets (right); no Fig./Tabla.
+  Contacto: info left, boxed form right, in V3 Rust.
+-->
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log N Labs | Digitalización y marketing para pymes en Paraguay</title>
+<meta name="description" content="Registra cada consulta, pedido y venta de tu negocio. Campañas, identidad visual y software para pymes de Paraguay que venden por WhatsApp, redes sociales y en su local.">
+<meta property="og:title" content="Log N Labs | Digitalización y marketing para pymes en Paraguay">
+<meta property="og:description" content="Software, marketing y consultoría para pymes de Paraguay. Que no se te escape ninguna venta.">
+<meta property="og:image" content="../../logos/log-n-labs_on-white.svg">
+<meta name="theme-color" content="#F4EFE7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@500&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#enfoque">Saltar al contenido</a>
+
+<!-- ============ HERO · the screen halves itself ============ -->
+<header class="hero" id="inicio" data-step="0">
+  <div class="cuts" aria-hidden="true">
+    <span class="cut"></span><span class="cut"></span><span class="cut"></span>
+    <span class="cut"></span><span class="cut"></span><span class="cut"></span>
+  </div>
+
+  <div class="cell c1">
+    <div class="c1-top">
+      <a href="#inicio" class="logo" aria-label="Log N Labs, inicio"><img src="../../logos/log-n-labs_on-white.svg" alt="" width="182" height="26"></a>
+    </div>
+    <div class="c1-body">
+      <h1 class="h1-long"><span class="w-strong">Que no se te</span> <span class="w-strong">escape</span> <span class="w-pay">ninguna venta.</span></h1>
+      <p class="lede">Un mensaje que nadie contestó, un pedido anotado en un papel, un anuncio que no sabes si vendió. Te ayudamos a ordenar tu negocio para que cada consulta y cada venta quede registrada, y sepas cuánto te costó conseguirla.</p>
+      <div class="ctas">
+        <a class="btn btn-rust" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
+        <a class="btn btn-line" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell c2">
+    <div class="c2-top">
+      <span class="tag" aria-hidden="true">1/4 · servicios</span>
+      <nav aria-label="Principal">
+        <a href="#enfoque">El problema</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#para-quien">Para quién</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="rotator" aria-roledescription="carrusel" aria-label="Servicios">
+      <div class="groups">
+        <div class="group is-on" data-i="0">
+          <p class="g-name">Software</p>
+          <p class="g-desc">Digitaliza tu operación con herramientas que te permitan tomar el control de tu negocio.</p>
+          <ul class="g-items"><li>Páginas</li><li>Sistemas</li><li>Integraciones</li></ul>
+        </div>
+        <div class="group" data-i="1" aria-hidden="true">
+          <p class="g-name">Marketing</p>
+          <p class="g-desc">Identidad visual y campañas en redes sociales para posicionarte y atraer clientes nuevos.</p>
+          <ul class="g-items"><li>Estrategia</li><li>Identidad visual</li><li>Anuncios</li></ul>
+        </div>
+        <div class="group" data-i="2" aria-hidden="true">
+          <p class="g-name">Consultoría</p>
+          <p class="g-desc">Analizamos cómo trabajas y te proponemos mejoras que te ayuden a llegar a tus objetivos de una manera más eficiente.</p>
+          <ul class="g-items"><li>Diagnóstico</li><li>Procesos</li><li>Plan</li></ul>
+        </div>
+      </div>
+      <div class="stepper">
+        <span class="counter" aria-live="polite"><b>1</b>/3</span>
+        <div class="bars">
+          <button type="button" aria-label="Ver Software" aria-current="true"><span><i></i></span></button>
+          <button type="button" aria-label="Ver Marketing"><span><i></i></span></button>
+          <button type="button" aria-label="Ver Consultoría"><span><i></i></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell c3">
+    <span class="tag" aria-hidden="true">1/8 · contacto</span>
+    <div>
+      <p class="cell-title">Hablemos.</p>
+      <ul class="rows">
+        <li><a class="wa" href="https://wa.me/%%WHATSAPP_NUMBER%%"><span>%%WHATSAPP_DISPLAY%%</span><span class="mono">whatsapp</span></a></li>
+        <li><a class="mail" href="mailto:%%CONTACT_EMAIL%%"><span>%%CONTACT_EMAIL_LABEL%%</span><span class="mono">correo</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cell c4">
+    <span class="tag" aria-hidden="true">1/16 · cómo trabajamos</span>
+    <ol class="mini-steps">
+      <li><span class="mono">01</span>Diagnóstico</li>
+      <li><span class="mono">02</span>Planificación</li>
+      <li><span class="mono">03</span>Desarrollo</li>
+      <li><span class="mono">04</span>Medición</li>
+    </ol>
+  </div>
+
+  <div class="cell c5">
+    <span class="tag" aria-hidden="true">1/32</span>
+    <p class="place"><b>Asunción</b><span>Paraguay</span></p>
+  </div>
+
+  <div class="cell c6">
+    <span class="tag" aria-hidden="true">1/64</span>
+    <p class="olog" role="img" aria-label="O de log n"><span class="olog-text" aria-hidden="true">O(log <span class="n-final">n</span>)</span><span class="caret" aria-hidden="true"></span></p>
+  </div>
+
+  <button type="button" class="cell c7" aria-label="Bajar al contenido">
+    <span class="fill" aria-hidden="true"></span>
+    <span class="c7-in" aria-hidden="true">
+      <img src="../../logos/log-n-labs_on-rust.svg" alt="" width="124" height="18">
+      <span class="scroll"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M12 3v17M5 13l7 7 7-7"/></svg>SCROLL</span>
+    </span>
+  </button>
+</header>
+
+<main>
+
+<!-- ============ 1/2 · EL PROBLEMA: statement lights up on scroll | bullets ============ -->
+<section class="sec" id="enfoque" aria-labelledby="h-vision">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>2</i></span>
+        <p class="rail-label">el problema</p>
+        <p class="note">Cada sección de esta página es la mitad de la anterior: 1/2, 1/4, 1/8… Así encuentra una computadora un dato entre millones sin perderse. De ahí viene nuestro nombre, O(log n).</p>
+      </div>
+    </aside>
+    <div class="vis-left">
+      <h2 id="h-vision" class="statement fillw" data-fill>Lo que no se registra, se pierde. Y sin datos, el negocio se maneja a ciegas.</h2>
+    </div>
+    <ul class="principles">
+      <li><span class="ok mono" aria-hidden="true">[ ok ]</span><h3>Consultas sin respuesta</h3><p>Un mensaje que espera horas en WhatsApp es un cliente que termina comprándole a otro.</p></li>
+      <li><span class="ok mono" aria-hidden="true">[ ok ]</span><h3>Anuncios sin medir</h3><p>Pagas anuncios todos los meses sin saber cuál te trajo ventas y cuál no trajo ninguna.</p></li>
+      <li><span class="ok mono" aria-hidden="true">[ ok ]</span><h3>Pedidos en papel</h3><p>Entre la libreta, la planilla y la factura, los mismos datos se cargan dos o tres veces y algunos datos se pierden.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 1/4 · SERVICIOS: rows open one by one as you scroll (pinned on desktop) ============ -->
+<section class="sec sol-sec" id="servicios" aria-labelledby="h-soluciones">
+  <div class="sol-pin">
+    <div class="sol-stick">
+      <div class="grid">
+        <aside class="rail">
+          <div class="rail-in">
+            <span class="frac" aria-hidden="true"><i>1</i><b></b><i>4</i></span>
+            <p class="rail-label">servicios</p>
+            <p class="sol-count mono" aria-hidden="true"><b>01</b> / 03</p>
+          </div>
+        </aside>
+        <div class="sec-head">
+          <h2 id="h-soluciones">Lo que hacemos por <b>tu negocio</b>.</h2>
+          <p class="sec-sub">Tres formas de ayudarte. Puedes empezar por una y sumar las otras cuando las necesites.</p>
+        </div>
+        <div class="sol-grid">
+          <ul class="sol">
+            <li class="sol-r">
+              <button type="button" class="sol-b" aria-expanded="true" aria-controls="sol-0"><span class="n mono">01</span><span>Consultoría</span></button>
+              <div class="sol-p on" id="sol-0" role="region" aria-label="Consultoría"><div>
+                <span class="tag mono">Diagnóstico · Procesos · Plan</span>
+                <p>Revisamos cómo trabajas actualmente, cuáles son los principales puntos débiles y analizamos cómo implementar soluciones tecnológicas para esos problemas. Te entregamos un plan por escrito con las herramientas que te convienen, lo hagas con nosotros o no.</p>
+                <a class="arrow-link" href="#contacto">Pedir un diagnóstico <span aria-hidden="true">→</span></a>
+              </div></div>
+            </li>
+            <li class="sol-r">
+              <button type="button" class="sol-b" aria-expanded="false" aria-controls="sol-1"><span class="n mono">02</span><span>Software</span></button>
+              <div class="sol-p" id="sol-1" role="region" aria-label="Software"><div>
+                <span class="tag mono">Páginas · Sistemas · Integraciones</span>
+                <p>Te proponemos el software que necesita tu operación. Sistemas de gestión, facturación electrónica, manejo de pedidos, etc.</p>
+                <a class="arrow-link" href="#">Ver Software <span aria-hidden="true">→</span></a>
+              </div></div>
+            </li>
+            <li class="sol-r">
+              <button type="button" class="sol-b" aria-expanded="false" aria-controls="sol-2"><span class="n mono">03</span><span>Marketing</span></button>
+              <div class="sol-p" id="sol-2" role="region" aria-label="Marketing"><div>
+                <span class="tag mono">Estrategia · Identidad visual · Anuncios</span>
+                <p>Identidad visual y campañas en redes sociales que te ayudan a posicionar tu marca y atraer posibles clientes.</p>
+                <a class="arrow-link" href="#">Ver Marketing <span aria-hidden="true">→</span></a>
+              </div></div>
+            </li>
+          </ul>
+          <div class="sol-art" aria-hidden="true">
+            <span class="sol-art-cap mono">Lámina <b>1</b> · consultoría</span>
+            <svg class="art on" viewBox="0 0 480 360">
+              <rect x="40" y="90" width="96" height="60"/><rect x="54" y="104" width="44" height="16"/><path class="s" d="M54 132H112"/>
+              <rect class="ac d" x="192" y="90" width="96" height="60"/><path class="s" d="M206 108H270M206 122H256M206 136H262"/>
+              <rect x="344" y="90" width="96" height="60"/><rect x="358" y="104" width="22" height="22"/><path class="s" d="M392 108H424M392 122H416M358 138H424"/>
+              <path d="M136 120H192M288 120H344"/>
+              <circle cx="240" cy="120" r="62"/><path d="M284 164L316 196"/>
+              <path class="ac d" d="M240 182V224"/>
+              <rect x="160" y="224" width="160" height="112"/><path d="M176 244H260"/>
+              <rect x="176" y="258" width="12" height="12"/><path d="M178 264l4 4 8-9"/><path class="s" d="M198 264H292"/>
+              <rect x="176" y="282" width="12" height="12"/><path d="M178 288l4 4 8-9"/><path class="s" d="M198 288H280"/>
+              <rect class="f" x="176" y="306" width="12" height="12"/><path class="s" d="M198 312H296"/>
+            </svg>
+            <svg class="art" viewBox="0 0 480 360">
+              <rect x="40" y="40" width="400" height="280"/><path d="M40 72H440M140 72V320"/>
+              <rect class="f" x="54" y="51" width="10" height="10"/><rect x="72" y="51" width="10" height="10"/><rect x="90" y="51" width="10" height="10"/>
+              <path class="ac" d="M56 96H120"/><path class="s" d="M56 120H110M56 144H116M56 168H104"/>
+              <rect x="160" y="92" width="140" height="128"/><path d="M160 112H300"/>
+              <path class="s" d="M160 140H300M160 168H300M160 196H300"/>
+              <path d="M172 126H240M172 154H228M172 182H236M172 210H220"/>
+              <rect class="f" x="280" y="150" width="8" height="8"/>
+              <path class="ac d" d="M288 154H316"/>
+              <rect x="316" y="92" width="108" height="128"/><path d="M316 112H424"/>
+              <path class="s" d="M328 128H396M328 144H384M328 160H400"/><path d="M328 184H412"/>
+              <path d="M384 200l7 7 16-18"/>
+              <rect x="160" y="236" width="264" height="68"/><path d="M172 292H412"/>
+              <rect x="180" y="256" width="16" height="36"/><rect x="210" y="264" width="16" height="28"/><rect x="240" y="248" width="16" height="44"/><rect x="270" y="272" width="16" height="20"/>
+              <rect x="300" y="260" width="16" height="32"/><rect class="f" x="330" y="280" width="16" height="12"/><rect x="360" y="252" width="16" height="40"/><rect x="390" y="268" width="16" height="24"/>
+            </svg>
+            <svg class="art" viewBox="0 0 480 360">
+              <rect x="28" y="140" width="72" height="80"/><circle class="f" cx="64" cy="166" r="12"/>
+              <rect class="f" x="38" y="194" width="14" height="12"/><rect class="k" x="56" y="194" width="14" height="12"/><rect x="74" y="194" width="14" height="12"/>
+              <path d="M110 128C146 158 146 202 110 232"/><path d="M148 98C206 142 206 218 148 262"/><path class="ac" d="M188 68C266 126 266 234 188 292"/>
+              <rect x="296" y="60" width="132" height="76"/><path class="s" d="M310 80H380M310 100H350"/>
+              <rect x="296" y="150" width="132" height="76"/><path class="s" d="M310 170H390M310 190H360"/>
+              <rect class="f" x="296" y="240" width="132" height="60"/><path class="w" d="M346 270l10 10 24-26"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/8 · TRABAJOS ============ -->
+<section class="sec" id="para-quien" aria-labelledby="h-trabajos">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>8</i></span>
+        <p class="rail-label">para quién</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-trabajos">Para quién trabajamos.</h2>
+      <p class="sec-sub">Negocios que ya venden, pero llevan las cuentas entre chats, papeles y planillas.</p>
+    </div>
+    <ul class="works" aria-label="Tipos de cliente">
+      <li class="work">
+        <div class="w-plate" aria-hidden="true"><svg class="w-art" viewBox="0 0 320 240">
+          <rect x="36" y="24" width="92" height="168"/><path d="M36 44H128M70 180H94"/>
+          <rect x="46" y="56" width="56" height="20"/><path class="s" d="M54 66H90"/>
+          <rect x="66" y="86" width="52" height="20"/><path class="s" d="M74 96H108"/>
+          <rect class="f" x="46" y="116" width="48" height="20"/>
+          <path class="ac d" d="M128 126H156V80H176"/>
+          <rect x="176" y="24" width="112" height="118"/><path d="M176 44H288"/>
+          <rect x="186" y="54" width="40" height="34"/><rect x="238" y="54" width="40" height="34"/>
+          <rect x="186" y="98" width="40" height="34"/><rect x="238" y="98" width="40" height="34"/>
+          <rect x="176" y="156" width="32" height="32"/>
+          <rect class="f" x="180" y="160" width="8" height="8"/><rect class="f" x="196" y="160" width="8" height="8"/><rect class="f" x="180" y="176" width="8" height="8"/><rect class="f" x="193" y="173" width="4" height="4"/><rect class="f" x="200" y="180" width="4" height="4"/>
+          <path d="M218 174l7 7 14-16"/>
+          <path d="M252 188H290"/><rect x="256" y="176" width="6" height="12"/><rect x="267" y="168" width="6" height="20"/><rect class="f" x="278" y="158" width="7" height="30"/>
+        </svg><span class="mono">Lámina A</span></div>
+        <h3>Tiendas digitales</h3>
+        <p class="mono w-meta">ropa · cosmética · accesorios</p>
+        <p class="w-desc">Los pedidos llegan por chat y se anotan a mano. Ordenamos tu catálogo, medimos qué anuncio trae cada venta y conectamos el cobro con QR.</p>
+      </li>
+      <li class="work">
+        <div class="w-plate" aria-hidden="true"><svg class="w-art" viewBox="0 0 320 240">
+          <rect x="36" y="28" width="168" height="160"/><path d="M36 52H204M70 20V36M170 20V36"/>
+          <path class="s" d="M64 52V188M92 52V188M120 52V188M148 52V188M176 52V188M36 86H204M36 120H204M36 154H204"/>
+          <path d="M42 70H58M98 70H114M154 70H170M70 104H86M126 104H142M42 138H58M98 138H114M70 172H86M126 172H142"/>
+          <rect class="f" x="96" y="91" width="20" height="24"/>
+          <rect class="d" x="152" y="125" width="20" height="24"/>
+          <path class="ac d" d="M116 103H132V80H222"/>
+          <rect x="222" y="60" width="72" height="40"/><path d="M234 100l-6 10 16-10"/>
+          <circle cx="242" cy="80" r="10"/><path d="M242 74V80H247"/><path class="s" d="M260 76H284M260 86H276"/>
+          <circle class="s" cx="258" cy="164" r="32"/><circle class="ac" cx="258" cy="164" r="20"/>
+          <path class="f" d="M258 172l-8-11a10 10 0 1 1 16 0z"/>
+        </svg><span class="mono">Lámina B</span></div>
+        <h3>Servicios con turnos</h3>
+        <p class="mono w-meta">clínicas · talleres · estética</p>
+        <p class="w-desc">Los turnos se agendan por WhatsApp y algunos clientes no aparecen. Organizamos tu agenda, enviamos recordatorios y armamos campañas por zona.</p>
+      </li>
+      <li class="work">
+        <div class="w-plate" aria-hidden="true"><svg class="w-art" viewBox="0 0 320 240">
+          <rect x="36" y="28" width="136" height="160"/><path d="M36 80H172M36 132H172"/>
+          <rect x="48" y="58" width="26" height="22"/><rect x="80" y="50" width="26" height="30"/><rect x="112" y="58" width="26" height="22"/><rect x="144" y="62" width="20" height="18"/>
+          <rect x="48" y="106" width="26" height="26"/><rect x="80" y="110" width="26" height="22"/><rect class="ac d" x="112" y="106" width="26" height="26"/><rect x="144" y="112" width="20" height="20"/>
+          <rect x="48" y="162" width="34" height="26"/><rect x="88" y="166" width="26" height="22"/><rect x="120" y="158" width="40" height="30"/>
+          <path class="ac d" d="M138 119H196"/>
+          <rect x="196" y="44" width="96" height="128"/><path d="M196 64H292"/>
+          <path class="s" d="M196 94H292M196 114H292M196 134H292M196 154H292"/>
+          <path d="M206 84H244M262 84H284M206 104H238M262 104H278M206 124H246M206 144H240M262 144H280"/>
+          <path class="ac" d="M262 124H268"/><rect class="f" x="276" y="120" width="8" height="8"/>
+        </svg><span class="mono">Lámina C</span></div>
+        <h3>Comercios físicos</h3>
+        <p class="mono w-meta">ferretería · repuestos · alimentos</p>
+        <p class="w-desc">Vendes en el mostrador, pero el stock lo llevas en una planilla o de memoria. Conectamos tus ventas con un sistema de inventario para que sepas qué tienes y qué reponer.</p>
+      </li>
+    </ul>
+    <p class="swipe mono" aria-hidden="true">Desliza para ver más →</p>
+  </div>
+</section>
+
+<!-- ============ 1/16 · CÓMO TRABAJAMOS (v0 board: sticky title | scroll-filled track) ============ -->
+<section class="sec" id="proceso" aria-labelledby="h-proceso">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>16</i></span>
+        <p class="rail-label">cómo trabajamos</p>
+      </div>
+    </aside>
+    <div class="board">
+      <div class="proc">
+        <div class="proc-title">
+          <h2 id="h-proceso">Cómo <b>trabajamos</b>.</h2>
+          <div class="div3" aria-hidden="true"><i></i><i></i><i></i></div>
+          <p class="sec-sub mono">Diagnóstico · Planificación · Desarrollo · Medición</p>
+        </div>
+        <ol class="psteps" id="pasos">
+          <li class="track" aria-hidden="true"><span></span></li>
+          <li class="pstep">
+            <span class="n mono">01</span><h3>Diagnóstico</h3>
+            <p>Vemos cómo te llegan hoy los clientes, dónde guardas su información, cómo cobras y cómo facturas, y dónde se pierden ventas.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Un informe con lo que conviene cambiar y cuánto cuesta.</span></p>
+          </li>
+          <li class="pstep">
+            <span class="n mono">02</span><h3>Planificación</h3>
+            <p>Acordamos qué vamos a hacer, en qué plazo y cómo vamos a medir si funcionó.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Una propuesta por escrito para que la apruebes.</span></p>
+          </li>
+          <li class="pstep">
+            <span class="n mono">03</span><h3>Desarrollo</h3>
+            <p>Diseñamos, programamos y configuramos. Probamos cada entrega antes de que la vean tus clientes.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Todo funcionando y explicado por escrito.</span></p>
+          </li>
+          <li class="pstep">
+            <span class="n mono">04</span><h3>Medición</h3>
+            <p>Periódicamente revisamos los números contigo. Ajustamos campañas y sistemas según lo que vendiste.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Un reporte periódico con cuánto te costó cada venta.</span></p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/32 · EQUIPO (v0 expanding panels) ============ -->
+<section class="sec" id="equipo" aria-labelledby="h-equipo">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>32</i></span>
+        <p class="rail-label">equipo</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-equipo">Quiénes hacen el trabajo.</h2>
+      <p class="sec-sub">Un mismo equipo se encarga de software, marketing y consultoría. Hablas con un solo equipo, no con tres proveedores.</p>
+    </div>
+    <div class="roles">
+      <button type="button" class="role-p on" aria-expanded="true" aria-controls="rol-0"><span class="rt"><span>Análisis y <b>procesos</b></span></span><span class="rk mono"><i aria-hidden="true"></i>Entender</span><span class="rdesc" id="rol-0"><span><span>Entendemos cómo funciona tu negocio y dejamos por escrito qué se va a hacer antes de empezar.</span></span></span></button>
+      <button type="button" class="role-p" aria-expanded="false" aria-controls="rol-1"><span class="rt"><span><b>Desarrollo</b></span></span><span class="rk mono"><i aria-hidden="true"></i>Construir</span><span class="rdesc" id="rol-1"><span><span>Programamos páginas, sistemas e integraciones con las herramientas de pago y facturación que ya se usan en Paraguay.</span></span></span></button>
+      <button type="button" class="role-p" aria-expanded="false" aria-controls="rol-2"><span class="rt"><span><b>Calidad</b></span></span><span class="rk mono"><i aria-hidden="true"></i>Verificar</span><span class="rdesc" id="rol-2"><span><span>Probamos cada entrega antes de que llegue a tus clientes.</span></span></span></button>
+      <button type="button" class="role-p" aria-expanded="false" aria-controls="rol-3"><span class="rt"><span>Marca y <b>marketing</b></span></span><span class="rk mono rk-none" aria-hidden="true"><i></i>&nbsp;</span><span class="rdesc" id="rol-3"><span><span>Estrategia, diseño y campañas, con todo el equipo detrás: se define el objetivo, se instala la medición y se revisa cada pieza antes de publicarla.</span></span></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/64 · CONTACTO (info left, boxed form right) ============ -->
+<section class="sec contact" id="contacto" aria-labelledby="h-contacto">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>64</i></span>
+        <p class="rail-label">contacto</p>
+      </div>
+    </aside>
+    <div class="contact-text">
+      <div class="contact-head">
+        <h2 id="h-contacto">Hablemos.</h2>
+        <p class="contact-lead">Cuéntanos cómo vendes hoy. Te respondemos en [plazo de respuesta] con los primeros pasos.</p>
+      </div>
+      <ul class="rows">
+        <li><a class="wa" href="https://wa.me/%%WHATSAPP_NUMBER%%"><span>%%WHATSAPP_DISPLAY%%</span><span class="mono">whatsapp</span></a></li>
+        <li><a class="mail" href="mailto:%%CONTACT_EMAIL%%"><span>%%CONTACT_EMAIL_LABEL%%</span><span class="mono">correo</span></a></li>
+        <li><span class="row"><span>Asunción, Paraguay</span><span class="mono">GMT−3</span></span></li>
+      </ul>
+    </div>
+    <form class="form" id="form" aria-label="Formulario de contacto" novalidate>
+      <div class="f-row">
+        <div class="field"><label for="f-nombre">Nombre o empresa</label><input id="f-nombre" name="nombre" type="text" autocomplete="organization" required aria-describedby="e-nombre"><p class="err" id="e-nombre" hidden></p></div>
+        <div class="field"><label for="f-contacto">Correo o WhatsApp</label><input id="f-contacto" name="contacto" type="text" inputmode="email" autocomplete="email" required aria-describedby="e-contacto"><p class="err" id="e-contacto" hidden></p></div>
+      </div>
+      <fieldset class="needs">
+        <legend>¿Qué necesitas?</legend>
+        <div class="chips">
+          <button type="button" aria-pressed="false" data-area="software">Software</button>
+          <button type="button" aria-pressed="false" data-area="marketing">Marketing</button>
+          <button type="button" aria-pressed="false" data-area="consultoría">Consultoría</button>
+          <button type="button" aria-pressed="false" data-area="por dónde empezar">Todavía no lo sé</button>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="f-mensaje">Más detalles <span class="opt">(opcional)</span></label>
+        <textarea id="f-mensaje" name="mensaje" rows="4" aria-describedby="h-mensaje"></textarea>
+        <p class="hint mono" id="h-mensaje">Armamos el mensaje con tus datos. Puedes cambiarlo antes de enviarlo.</p>
+      </div>
+      <div class="f-foot">
+        <button type="submit" class="btn btn-ink btn-block">Enviar consulta</button>
+        <div class="alts">
+          <a class="act" id="send-wa" href="https://wa.me/%%WHATSAPP_NUMBER%%">Enviar por WhatsApp <span aria-hidden="true">→</span></a>
+          <a class="act" id="send-mail" href="mailto:%%CONTACT_EMAIL%%">Enviar por correo <span aria-hidden="true">→</span></a>
+          <button type="button" class="act" id="copy">Copiar mensaje <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <p class="status mono" id="status" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="grid">
+    <div class="foot-brand">
+      <a href="#inicio" class="foot-logo" aria-label="Log N Labs, inicio"><img src="../../logos/log-n-labs_on-ink.svg" alt="" width="196" height="28"></a>
+      <p class="foot-tag">Software, marketing y consultoría para pymes de Paraguay. Que no se te escape ninguna venta.</p>
+      <ul class="foot-ok mono">
+        <li><span aria-hidden="true">[ ok ]</span> software</li>
+        <li><span aria-hidden="true">[ ok ]</span> marketing</li>
+        <li><span aria-hidden="true">[ ok ]</span> consultoría</li>
+      </ul>
+    </div>
+    <nav class="foot-col fc1" aria-label="Servicios">
+      <p class="foot-h mono">Servicios</p>
+      <a href="#servicios">Software</a>
+      <a href="#servicios">Marketing</a>
+      <a href="#servicios"><span>Consultoría</span></a>
+    </nav>
+    <div class="foot-col fc2">
+      <p class="foot-h mono">Contacto</p>
+      <a class="wa" href="https://wa.me/%%WHATSAPP_NUMBER%%"><span>%%WHATSAPP_DISPLAY%%</span></a>
+      <a class="mail" href="mailto:%%CONTACT_EMAIL%%"><span>%%CONTACT_EMAIL_LABEL%%</span></a>
+      <span>Asunción, Paraguay</span>
+    </div>
+    <nav class="foot-col fc3" aria-label="Navegación">
+      <p class="foot-h mono">Navegación</p>
+      <a href="#enfoque">El problema</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#para-quien">Para quién</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="foot-bottom mono">
+      <span>Asunción, PY · GMT-3 · Recibimos proyectos nuevos · <time class="clock">--:--</time></span>
+      <span>© 2026 Log N Labs</span>
+    </div>
+    <p class="colophon mono">Compuesto en Outfit, Instrument Sans y JetBrains Mono. 1 → 1/2 → 1/4 → 1/8 → 1/16 → 1/32 → 1/64.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
