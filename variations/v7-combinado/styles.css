@@ -225,7 +225,11 @@ p{text-wrap:pretty}
 .sol-art .art.on{opacity:1;transform:none;transition-delay:.12s}
 .sol-art .art *{vector-effect:non-scaling-stroke}
 .sol-art .art .f{fill:var(--rust);stroke:none}
-.sol-art .art .ac{stroke:var(--rust);stroke-width:2.5}
+.sol-art .art .ac{stroke:var(--rust);stroke-width:2}
+.sol-art .art .s{stroke:var(--stone)}
+.sol-art .art .d{stroke-dasharray:4 4}
+.sol-art .art .k{fill:var(--ink);stroke:none}
+.sol-art .art .w{stroke:var(--paper);stroke-width:2}
 /* pinned mode: tall track, content sticks while rows open in turn */
 .sol-sec.pinned{padding:0}
 .sol-sec.pinned .sol-pin{height:300vh;position:relative}
@@ -243,7 +247,13 @@ p{text-wrap:pretty}
 /* 1/8 trabajos — pending plates */
 .works{grid-column:4/13;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
 .work{display:flex;flex-direction:column;gap:10px}
-.w-plate{position:relative;aspect-ratio:4/3;background:var(--paper);margin-bottom:10px;display:flex;align-items:flex-end;padding:16px}
+.w-plate{position:relative;aspect-ratio:4/3;background:radial-gradient(var(--line) 1px,transparent 1.2px) 0 0/24px 24px,var(--paper);border:1px solid var(--line);margin-bottom:10px;display:flex;align-items:flex-end;padding:16px}
+.w-art{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter}
+.w-art *{vector-effect:non-scaling-stroke}
+.w-art .f{fill:var(--rust);stroke:none}
+.w-art .ac{stroke:var(--rust);stroke-width:2}
+.w-art .s{stroke:var(--stone)}
+.w-art .d{stroke-dasharray:4 4}
 .w-plate svg{position:absolute;inset:0;width:100%;height:100%}
 .w-plate span{position:relative;font:var(--t-label);color:var(--stone-d)}
 .work h3{color:var(--rust-deep)}
