@@ -1,6 +1,6 @@
 # Textos de la web · V7 Combinado
 
-Todos los textos de `variations/v7-combinado/` (17 de noviembre de 2026), en el orden en que aparecen en la página.
+Todos los textos de `src/` (17 de noviembre de 2026), en el orden en que aparecen en la página.
 
 Cómo usar este archivo:
 

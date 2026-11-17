@@ -46,15 +46,9 @@ export WHATSAPP_NUMBER WHATSAPP_DISPLAY CONTACT_EMAIL CONTACT_EMAIL_LABEL
 
 rm -rf _site
 mkdir -p _site
-cp -R variations logos _site/
-find _site/variations -type d -name screens -prune -exec rm -rf {} +
+cp -R src/. _site/
+cp -R logos _site/
 touch _site/.nojekyll
-cat > _site/index.html <<'HTML'
-<!doctype html><html lang="es-PY"><head><meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=variations/">
-<title>Log N Labs · Variaciones</title></head>
-<body><a href="variations/">Ver variaciones</a></body></html>
-HTML
 
 find _site -type f \( -name '*.html' -o -name '*.js' \) -print0 | xargs -0 perl -pi -e '
   s/%%WHATSAPP_NUMBER%%/$ENV{WHATSAPP_NUMBER}/g;
