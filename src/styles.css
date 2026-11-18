@@ -141,7 +141,8 @@ nav[aria-label="Principal"] a:hover{background-size:100% 1px}
   .cell{position:relative;overflow:visible}
   .c1,.c2{display:contents}
   .c1-top{order:1}
-  .c2-top{order:2;justify-content:flex-start;margin:-12px 0 24px}
+  /* menu shares the logo's row */
+  .hero .c2-top{position:absolute;top:28px;right:var(--pad);height:22px;align-items:center}
   .c1-body{order:3}
   .rotator{order:4}
   .c1-top .tag,.c2-top .tag{display:none}
@@ -149,15 +150,18 @@ nav[aria-label="Principal"] a:hover{background-size:100% 1px}
   .rotator{padding-top:24px;border-top:1px solid var(--ink);background:var(--white)}
   .groups{height:210px}
   .c3,.c4{display:none}
-  .c5,.c6,.c7{position:absolute !important}
+  .c5,.c6{position:absolute !important}
+  .c7{display:none}
   .c5 .tag,.c6 .tag{display:none}
   .c5,.c6{padding:16px 18px;justify-content:flex-end}
   .c6{padding-left:var(--pad)}
   .olog{justify-content:flex-start;font-size:clamp(22px,6.4vw,34px);line-height:1}
-  .c7-in img{display:none}
   h1{font-size:clamp(44px,15vw,64px)}
   h1.h1-long{font-size:clamp(30px,9.6vw,44px)}
 }
+
+/* phones: no room for the full menu beside the logo; keep the one action */
+@media (max-width:639px){nav[aria-label="Principal"] a:not([href="#contacto"]){display:none}}
 
 /* ================= EDITORIAL GRID ================= */
 .sec{padding:152px 0;border-top:1px solid var(--ink)}
