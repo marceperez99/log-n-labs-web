@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desarrollo de software para pymes en Paraguay | Log N Labs</title>
+<meta name="description" content="Implementación de software para pymes de Paraguay: sistemas a medida, integraciones y sitios web, diseñados a partir de cómo trabaja tu negocio.">
+<meta property="og:title" content="Desarrollo de software para pymes en Paraguay | Log N Labs">
+<meta property="og:description" content="Que ningún pedido se quede en un papel. Sistemas a medida, integraciones y sitios web para pymes.">
+<meta property="og:image" content="../logos/log-n-labs_on-white.svg">
+<meta name="theme-color" content="#F4EFE7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@500&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=17">
+<link rel="stylesheet" href="../landing.css?v=1">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"¿Qué tipo de software hacen?","acceptedAnswer":{"@type":"Answer","text":"El que necesite tu operación: sistemas de gestión, integraciones entre herramientas, automatizaciones y sitios web. Primero entendemos cómo trabajas y después proponemos qué implementar."}},
+{"@type":"Question","name":"¿Pueden trabajar con el sistema que ya tengo?","acceptedAnswer":{"@type":"Answer","text":"Sí. Primero lo revisamos. Si funciona, lo conectamos en lugar de reemplazarlo."}},
+{"@type":"Question","name":"¿Qué pasa si el proyecto cambia a mitad de camino?","acceptedAnswer":{"@type":"Answer","text":"Los cambios se cotizan por separado antes de hacerlos. Nada se suma al precio sin que lo apruebes."}}
+]}
+</script>
+</head>
+<body>
+<a class="skip" href="#senales">Saltar al contenido</a>
+
+<header class="top">
+  <div class="top-id">
+    <a href="../" class="logo" aria-label="Log N Labs, inicio"><img src="../logos/log-n-labs_on-white.svg" alt="" width="182" height="26"></a>
+    <p class="crumb mono"><a href="../">inicio</a> / <b>software</b></p>
+  </div>
+  <nav class="top-nav" aria-label="Secciones">
+    <a href="#senales">Señales</a>
+    <a href="#construimos">Qué construimos</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#planes">Planes</a>
+    <a href="#preguntas">Preguntas</a>
+    <a class="btn btn-rust" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ HERO · one WhatsApp order becomes one record ============ -->
+<section class="lhero" aria-labelledby="h-hero">
+  <div class="grid">
+    <div class="lh-copy">
+      <h1 id="h-hero"><span class="w-strong">Que ningún pedido</span> <span class="w-strong">se quede</span> <span class="w-pay">en un papel.</span></h1>
+      <p class="lede">Implementamos el software que necesita tu negocio: sistemas a medida, integraciones entre las herramientas que ya usas y sitios web. Lo diseñamos a partir de cómo trabajas, no al revés.</p>
+      <div class="ctas">
+        <a class="btn btn-rust" href="#contacto">Pedir un diagnóstico <span aria-hidden="true">→</span></a>
+        <a class="btn btn-line" href="#construimos">Ver qué construimos</a>
+      </div>
+      <p class="lh-note">Si una herramienta que ya existe resuelve tu problema, te la recomendamos en lugar de programarla.</p>
+    </div>
+
+    <figure class="lh-demo" aria-labelledby="rec-cap">
+      <div class="rec-board">
+        <div class="chat">
+          <p class="chat-meta mono">Mensaje de un cliente · 10:41</p>
+          <p class="bubble">Hola, ¿tienen la remera negra en talle M? Quiero 2.</p>
+        </div>
+        <span class="link-v" aria-hidden="true"></span>
+        <article class="rec" aria-label="Registro del pedido, ejemplo">
+          <header class="rec-head"><p>Pedido 0142</p><span class="mono">ejemplo</span></header>
+          <dl class="rec-fields">
+            <div><dt>Producto</dt><dd>2 × Remera negra, talle M</dd></div>
+            <div><dt>Total</dt><dd>Gs. 170.000</dd></div>
+            <div><dt>Cliente</dt><dd>Laura · cliente frecuente</dd></div>
+            <div><dt>Canal</dt><dd>Mensaje directo</dd></div>
+          </dl>
+          <ol class="rec-steps">
+            <li><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg></span><span>Pedido registrado</span><time>10:41</time></li>
+            <li><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg></span><span>Disponibilidad confirmada</span><time>10:42</time></li>
+            <li><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg></span><span>Pago confirmado</span><time>10:50</time></li>
+            <li><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg></span><span>Entrega programada para mañana</span><time>10:50</time></li>
+            <li><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg></span><span>Stock actualizado: quedan 3</span><time>10:50</time></li>
+          </ol>
+        </article>
+      </div>
+      <figcaption class="demo-cap" id="rec-cap"><span>Un mensaje, un registro. Nadie copia el pedido a mano.</span><b>datos de ejemplo</b></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 1/2 · SEÑALES ============ -->
+<section class="sec" id="senales" aria-labelledby="h-senales">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>2</i></span>
+        <p class="rail-label">señales</p>
+      </div>
+    </aside>
+    <div class="vis-left">
+      <h2 id="h-senales" class="statement fillw" data-fill>Cada dato que copias a mano es un dato que se puede perder.</h2>
+    </div>
+    <ul class="principles sq">
+      <li><h3>El mismo pedido, tres veces</h3><p>Se copia del chat a una planilla y de la planilla a otro sistema.</p></li>
+      <li><h3>Stock de memoria</h3><p>Nadie sabe cuánto queda sin contar a mano.</p></li>
+      <li><h3>Un sitio que no puedes cambiar</h3><p>Para actualizar un precio hay que llamar a alguien y esperar.</p></li>
+      <li><h3>Herramientas que no se hablan</h3><p>Cada área usa su propia herramienta y nadie tiene el dato completo.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 1/4 · QUÉ CONSTRUIMOS: laid out as halving cuts ============ -->
+<section class="sec" id="construimos" aria-labelledby="h-construimos">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>4</i></span>
+        <p class="rail-label">qué construimos</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-construimos">Lo que <b>construimos</b>.</h2>
+      <p class="sec-sub">Primero conectamos lo que ya usas. Programamos desde cero solo cuando ninguna herramienta alcanza.</p>
+    </div>
+    <div class="halves">
+      <div class="hv hv-half">
+        <p class="frac-s mono">1/2 · lo que más pedimos</p>
+        <h3>Sistemas a medida</h3>
+        <p>El sistema que tu operación necesita, diseñado a partir de cómo trabajas: gestión, pedidos, inventario, turnos o clientes.</p>
+        <ul aria-label="Ejemplos"><li>Gestión</li><li>Pedidos</li><li>Inventario</li><li>Turnos</li><li>Clientes</li></ul>
+      </div>
+      <div class="hv hv-q">
+        <p class="frac-s mono">1/4</p>
+        <h3>Sitios web</h3>
+        <p>Sitios, catálogos y formularios que puedes actualizar tú, sin depender de nadie.</p>
+      </div>
+      <div class="hv hv-q">
+        <p class="frac-s mono">1/4</p>
+        <h3>Integraciones</h3>
+        <p>Conectamos las herramientas que ya usas para que la información pase de una a otra sin copiarla a mano.</p>
+      </div>
+      <div class="hv hv-strip">
+        <h3>Calidad y auditoría</h3>
+        <p>Revisamos el software que ya tienes antes de ampliarlo o reemplazarlo, y probamos cada entrega antes de publicarla.</p>
+      </div>
+    </div>
+    <ul class="tenets" aria-label="Principios">
+      <li><h3>Lo que funciona, se conecta</h3><p>No reconstruimos lo que ya existe y anda. Si una herramienta del mercado lo resuelve, te la recomendamos.</p></li>
+      <li><h3>Queda a tu nombre</h3><p>El código, los accesos y la documentación son de tu empresa. <mark class="todo">[confirmar declaración de propiedad del código]</mark></p></li>
+      <li><h3>Se prueba antes de publicarse</h3><p>Cada entrega pasa por pruebas antes de que la vean tus clientes.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 1/8 · CÓMO TRABAJAMOS ============ -->
+<section class="sec" id="proceso" aria-labelledby="h-proceso">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>8</i></span>
+        <p class="rail-label">cómo trabajamos</p>
+      </div>
+    </aside>
+    <div class="board">
+      <div class="proc">
+        <div class="proc-title">
+          <h2 id="h-proceso">Cómo <b>trabajamos</b>.</h2>
+          <div class="div3" aria-hidden="true"><i></i><i></i><i></i></div>
+          <p class="sec-sub mono">Diagnóstico · Planificación · Desarrollo · Medición</p>
+        </div>
+        <ol class="psteps" id="pasos">
+          <li class="track" aria-hidden="true"><span></span></li>
+          <li class="pstep">
+            <span class="n mono">01</span><h3>Diagnóstico</h3>
+            <p>Vemos cómo trabaja hoy tu negocio, qué herramientas usas y dónde se repite o se pierde información.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Un informe con lo que conviene cambiar y cuánto cuesta.</span></p>
+          </li>
+          <li class="pstep">
+            <span class="n mono">02</span><h3>Planificación</h3>
+            <p>Cerramos alcance, plazo y precio antes de escribir una línea de código.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Una propuesta por escrito para que la apruebes.</span></p>
+          </li>
+          <li class="pstep">
+            <span class="n mono">03</span><h3>Desarrollo</h3>
+            <p>Construimos en entregas cortas. Cada una se prueba antes de publicarse y la ves funcionando.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Entregas funcionando y explicadas por escrito.</span></p>
+          </li>
+          <li class="pstep">
+            <span class="n mono">04</span><h3>Medición</h3>
+            <p>Revisamos contigo que el sistema se use y que los números cierren. Ajustamos lo que haga falta.</p>
+            <p class="result"><span class="mono">Resultado</span><span>Soporte y ajustes según lo que acordamos.</span></p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/16 · PLANES ============ -->
+<section class="sec" id="planes" aria-labelledby="h-planes">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>16</i></span>
+        <p class="rail-label">planes</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-planes">Cómo se <b>contrata</b>.</h2>
+      <p class="sec-sub">El precio se cierra después del diagnóstico. Sabes cuánto vas a pagar antes de empezar.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <p class="bill mono">proyecto cerrado</p>
+        <h3>Proyecto</h3>
+        <p>Alcance, plazo y precio fijos antes de empezar. Los cambios se cotizan por separado.</p>
+        <p class="price mono">Precio cerrado después del diagnóstico</p>
+        <a class="arrow-link" href="#contacto">Consultar <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="plan">
+        <p class="bill mono">mensual</p>
+        <h3>Mantenimiento</h3>
+        <p>Correcciones, actualizaciones y ajustes pequeños del sistema que construimos.</p>
+        <p class="price mono">Precio cerrado después del diagnóstico</p>
+        <a class="arrow-link" href="#contacto">Consultar <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="plan">
+        <p class="bill mono">por paquete de horas</p>
+        <h3>Soporte</h3>
+        <p>Horas para cambios y consultas cuando las necesites, sobre sistemas nuestros o los que ya tienes.</p>
+        <p class="price mono">Precio cerrado después del diagnóstico</p>
+        <a class="arrow-link" href="#contacto">Consultar <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/32 · PREGUNTAS ============ -->
+<section class="sec" id="preguntas" aria-labelledby="h-preguntas">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>32</i></span>
+        <p class="rail-label">preguntas</p>
+      </div>
+    </aside>
+    <div class="sec-head">
+      <h2 id="h-preguntas">Preguntas <b>frecuentes</b>.</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>¿Qué tipo de software hacen?<span class="pm" aria-hidden="true"></span></summary><div><p>El que necesite tu operación: sistemas de gestión, integraciones entre herramientas, automatizaciones y sitios web. Primero entendemos cómo trabajas y después proponemos qué implementar.</p></div></details>
+      <details><summary>¿Pueden trabajar con el sistema que ya tengo?<span class="pm" aria-hidden="true"></span></summary><div><p>Sí. Primero lo revisamos. Si funciona, lo conectamos en lugar de reemplazarlo.</p></div></details>
+      <details><summary>¿Qué pasa si el proyecto cambia a mitad de camino?<span class="pm" aria-hidden="true"></span></summary><div><p>Los cambios se cotizan por separado antes de hacerlos. Nada se suma al precio sin que lo apruebes.</p></div></details>
+      <details><summary>¿También hacen marketing?<span class="pm" aria-hidden="true"></span></summary><div><p>Sí. El mismo equipo arma estrategia, identidad visual y campañas en Meta y Google, y las mide con los pedidos que registra tu sistema.</p><a class="arrow-link" href="../marketing/">Ver Marketing <span aria-hidden="true">→</span></a></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1/64 · CONTACTO ============ -->
+<section class="sec contact" id="contacto" aria-labelledby="h-contacto">
+  <div class="grid">
+    <aside class="rail">
+      <div class="rail-in">
+        <span class="frac" aria-hidden="true"><i>1</i><b></b><i>64</i></span>
+        <p class="rail-label">contacto</p>
+      </div>
+    </aside>
+    <div class="contact-text">
+      <div class="contact-head">
+        <h2 id="h-contacto">Hablemos.</h2>
+        <p class="contact-lead">Cuéntanos qué tarea se repite todos los días en tu negocio. Empezamos por ahí.</p>
+      </div>
+      <ul class="rows">
+        <li><a class="wa" href="https://wa.me/%%WHATSAPP_NUMBER%%"><span>%%WHATSAPP_DISPLAY%%</span><span class="mono">whatsapp</span></a></li>
+        <li><a class="mail" href="mailto:%%CONTACT_EMAIL%%"><span>%%CONTACT_EMAIL_LABEL%%</span><span class="mono">correo</span></a></li>
+        <li><span class="row"><span>Asunción, Paraguay</span><span class="mono">GMT−3</span></span></li>
+      </ul>
+    </div>
+    <form class="form" id="form" aria-label="Formulario de contacto" data-preset="software" novalidate>
+      <div class="f-row">
+        <div class="field"><label for="f-nombre">Nombre o empresa</label><input id="f-nombre" name="nombre" type="text" autocomplete="organization" required aria-describedby="e-nombre"><p class="err" id="e-nombre" hidden></p></div>
+        <div class="field"><label for="f-contacto">Correo o WhatsApp</label><input id="f-contacto" name="contacto" type="text" inputmode="email" autocomplete="email" required aria-describedby="e-contacto"><p class="err" id="e-contacto" hidden></p></div>
+      </div>
+      <fieldset class="needs">
+        <legend>¿Qué necesitas?</legend>
+        <div class="chips">
+          <button type="button" aria-pressed="false" data-area="software">Software</button>
+          <button type="button" aria-pressed="false" data-area="marketing">Marketing</button>
+          <button type="button" aria-pressed="false" data-area="consultoría">Consultoría</button>
+          <button type="button" aria-pressed="false" data-area="por dónde empezar">Todavía no lo sé</button>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="f-mensaje">Más detalles <span class="opt">(opcional)</span></label>
+        <textarea id="f-mensaje" name="mensaje" rows="4" aria-describedby="h-mensaje"></textarea>
+        <p class="hint mono" id="h-mensaje">Armamos el mensaje con tus datos. Puedes cambiarlo antes de enviarlo.</p>
+      </div>
+      <div class="f-foot">
+        <button type="submit" class="btn btn-ink btn-block">Enviar consulta</button>
+        <div class="alts">
+          <a class="act" id="send-wa" href="https://wa.me/%%WHATSAPP_NUMBER%%">Enviar por WhatsApp <span aria-hidden="true">→</span></a>
+          <a class="act" id="send-mail" href="mailto:%%CONTACT_EMAIL%%">Enviar por correo <span aria-hidden="true">→</span></a>
+          <button type="button" class="act" id="copy">Copiar mensaje <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <p class="status mono" id="status" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="grid">
+    <div class="foot-brand">
+      <a href="../" class="foot-logo" aria-label="Log N Labs, inicio"><img src="../logos/log-n-labs_on-ink.svg" alt="" width="196" height="28"></a>
+      <p class="foot-tag">Software, marketing y consultoría para pymes de Paraguay. Que no se te escape ninguna venta.</p>
+    </div>
+    <nav class="foot-col fc1" aria-label="Servicios">
+      <p class="foot-h mono">Servicios</p>
+      <a href="./" aria-current="page">Software</a>
+      <a href="../marketing/">Marketing</a>
+      <a href="../#servicios">Consultoría</a>
+    </nav>
+    <div class="foot-col fc2">
+      <p class="foot-h mono">Contacto</p>
+      <a class="wa" href="https://wa.me/%%WHATSAPP_NUMBER%%"><span>%%WHATSAPP_DISPLAY%%</span></a>
+      <a class="mail" href="mailto:%%CONTACT_EMAIL%%"><span>%%CONTACT_EMAIL_LABEL%%</span></a>
+      <span>Asunción, Paraguay</span>
+    </div>
+    <nav class="foot-col fc3" aria-label="En esta página">
+      <p class="foot-h mono">En esta página</p>
+      <a href="#senales">Señales</a>
+      <a href="#construimos">Qué construimos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#planes">Planes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="foot-bottom mono">
+      <span>Asunción, PY · GMT-3 · Recibimos proyectos nuevos · <time class="clock">--:--</time></span>
+      <span>© 2026 Log N Labs</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Contacto rápido" inert>
+  <a class="wa dock-main" href="https://wa.me/%%WHATSAPP_NUMBER%%">Escribir por WhatsApp</a>
+  <a href="#contacto">Pedir diagnóstico</a>
+</nav>
+
+<script src="../contact.js?v=1"></script>
+<script src="../landing.js?v=1"></script>
+</body>
+</html>

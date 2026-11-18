@@ -56,6 +56,114 @@
         ],
         "createdAt": "2026-11-17T22:51:07.611Z",
         "reason": "Brand: docs/BRAND.md:117 defines #F4EFE7 as the brand white (warm, never pure #FFF)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "src/marketing/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.668Z",
+        "reason": "Claude: flagged containers are inset with clamp() padding (funnel cells, report-board, hv, board) or are hairline-ruled lists/columns, same pattern exempted on src/index.html; rendered at 1440 and 390 with no text touching an edge"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "src/marketing/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.686Z",
+        "reason": "Claude: static scan cannot resolve var() font shorthands; rendered h1 40-76px, h2 34-60px, h3 21-26px, body 17px"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "src/marketing/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.705Z",
+        "reason": "Brand: docs/BRAND.md defines #F4EFE7 as the brand white (warm, never pure #FFF)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "src/software/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.723Z",
+        "reason": "Claude: flagged containers are inset with clamp() padding (funnel cells, report-board, hv, board) or are hairline-ruled lists/columns, same pattern exempted on src/index.html; rendered at 1440 and 390 with no text touching an edge"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "src/software/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.740Z",
+        "reason": "Claude: static scan cannot resolve var() font shorthands; rendered h1 40-76px, h2 34-60px, h3 21-26px, body 17px"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "src/software/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.755Z",
+        "reason": "Brand: docs/BRAND.md defines #F4EFE7 as the brand white (warm, never pure #FFF)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "_site/marketing/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.770Z",
+        "reason": "Claude: flagged containers are inset with clamp() padding (funnel cells, report-board, hv, board) or are hairline-ruled lists/columns, same pattern exempted on src/index.html; rendered at 1440 and 390 with no text touching an edge"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "_site/marketing/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.794Z",
+        "reason": "Claude: static scan cannot resolve var() font shorthands; rendered h1 40-76px, h2 34-60px, h3 21-26px, body 17px"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "_site/marketing/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.811Z",
+        "reason": "Brand: docs/BRAND.md defines #F4EFE7 as the brand white (warm, never pure #FFF)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "_site/software/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.827Z",
+        "reason": "Claude: flagged containers are inset with clamp() padding (funnel cells, report-board, hv, board) or are hairline-ruled lists/columns, same pattern exempted on src/index.html; rendered at 1440 and 390 with no text touching an edge"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "_site/software/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.843Z",
+        "reason": "Claude: static scan cannot resolve var() font shorthands; rendered h1 40-76px, h2 34-60px, h3 21-26px, body 17px"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "_site/software/index.html"
+        ],
+        "createdAt": "2026-11-18T17:35:57.859Z",
+        "reason": "Brand: docs/BRAND.md defines #F4EFE7 as the brand white (warm, never pure #FFF)"
       }
     ]
   }
