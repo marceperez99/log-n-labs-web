@@ -60,7 +60,8 @@
       else { el.style.width = px(ln.len); el.style.height = ''; }
     });
     g.cells.forEach(function (c, i) {
-      var el = mobile ? (i === g.cells.length - 1 ? cellEls[6] : null) : cellEls[i];
+      // mobile band: O(log n) takes the half, the place the quarter, the scroll cue the last cell
+      var el = mobile ? [cellEls[5], cellEls[4], null, cellEls[6]][i] : cellEls[i];
       if (!el) return;
       var s = el.style;
       s.left = px(c.x); s.top = px(y0 + c.y); s.width = px(c.w); s.height = px(c.h);
