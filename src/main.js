@@ -35,26 +35,35 @@
   var hero = document.querySelector('.hero');
   var cutEls = Array.prototype.slice.call(hero.querySelectorAll('.cut'));
   var cellEls = ['.c1', '.c2', '.c3', '.c4', '.c5', '.c6', '.c7'].map(function (s) { return hero.querySelector(s); });
-  var mobileMQ = window.matchMedia('(max-width: 767px)');
+  // Stacked hero: phones, portrait tablets, landscape phones (same query as styles.css).
+  var mobileMQ = window.matchMedia('(max-width: 1023px), (max-height: 560px)');
 
   function px(n) { return Math.round(n) + 'px'; }
+  // Mobile: the content stacks, so the halving runs in a band at the foot of the hero
+  // (keep in sync with the hero's bottom padding in styles.css) instead of across the text.
+  var MOBILE_BAND = 176;
   function layout() {
     var mobile = mobileMQ.matches;
     cellEls.forEach(function (el) { el.style.cssText = ''; });
     var W = hero.clientWidth, H = hero.clientHeight;
-    var g = halvingCells(W, H, 6);
-    g.lines.forEach(function (ln, i) {
-      var el = cutEls[i];
+    var y0 = mobile ? H - MOBILE_BAND : 0;
+    var g = halvingCells(W, H - y0, mobile ? 3 : 6);
+    if (mobile) g.lines.unshift({ vertical: false, x: 0, y: 0, len: W });
+    cutEls.forEach(function (el, i) {
+      var ln = g.lines[i];
+      el.style.display = ln ? '' : 'none';
+      if (!ln) return;
       el.classList.toggle('v', ln.vertical);
       el.classList.toggle('h', !ln.vertical);
-      el.style.left = px(ln.x); el.style.top = px(ln.y);
+      el.style.left = px(ln.x); el.style.top = px(y0 + ln.y);
       if (ln.vertical) { el.style.height = px(ln.len); el.style.width = ''; }
       else { el.style.width = px(ln.len); el.style.height = ''; }
     });
     g.cells.forEach(function (c, i) {
-      if (mobile && i < 6) return;
-      var s = cellEls[i].style;
-      s.left = px(c.x); s.top = px(c.y); s.width = px(c.w); s.height = px(c.h);
+      var el = mobile ? (i === g.cells.length - 1 ? cellEls[6] : null) : cellEls[i];
+      if (!el) return;
+      var s = el.style;
+      s.left = px(c.x); s.top = px(y0 + c.y); s.width = px(c.w); s.height = px(c.h);
     });
   }
 
@@ -314,14 +323,20 @@
   var roleEls = Array.prototype.slice.call(rolesBox.querySelectorAll('.role-p'));
   var role = 0, roleAuto = true, rolesVisible = false;
   var wideMQ = window.matchMedia('(min-width: 1101px)');
+  var listMQ = window.matchMedia('(max-width: 1100px)'); // panels stack: plain list (styles.css)
+  // Where the panels stack they become a plain list with every description shown.
   function roleSet(i) {
     role = i;
+    var list = listMQ.matches;
     roleEls.forEach(function (el, j) {
       el.classList.toggle('on', j === i);
-      el.setAttribute('aria-expanded', String(j === i));
+      el.setAttribute('aria-expanded', String(list || j === i));
     });
   }
+  roleSet(0);
+  listMQ.addEventListener('change', function () { roleSet(role); });
   function roleTake(e) {
+    if (listMQ.matches) return;
     var b = e.target.closest ? e.target.closest('.role-p') : null;
     if (!b) return;
     var i = roleEls.indexOf(b);

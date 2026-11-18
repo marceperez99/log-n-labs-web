@@ -127,9 +127,14 @@ nav[aria-label="Principal"] a:hover{background-size:100% 1px}
 @keyframes nudge{0%,60%,100%{transform:none}30%{transform:translateY(3px)}}
 .c7:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
 
-/* mobile hero: lines as background, content stacked */
-@media (max-width:767px){
-  .hero{height:auto;min-height:100svh;display:flex;flex-direction:column;padding:28px var(--pad) 120px;gap:32px}
+/* below 1280 the five links overflow the nav cell: drop "El problema", the next section (the scroll cue covers it) */
+@media (max-width:1279px){nav[aria-label="Principal"] a[href="#enfoque"]{display:none}}
+
+/* stacked hero (phones, portrait tablets, landscape phones): halving band at the foot, content stacked.
+   Keep the query in sync with heroMQ in main.js. */
+@media (max-width:1023px),(max-height:560px){
+  /* bottom padding = the 176px halving band drawn by main.js (MOBILE_BAND) + 32px air */
+  .hero{height:auto;min-height:100svh;display:flex;flex-direction:column;padding:28px var(--pad) 208px;gap:32px}
   .cut{background:var(--line)}
   .cuts{position:absolute;inset:0;z-index:0}
   .hero > *:not(.cuts), .c1 > *, .c2 > *{position:relative;z-index:1}
@@ -141,7 +146,7 @@ nav[aria-label="Principal"] a:hover{background-size:100% 1px}
   .c1-body{order:3}
   .rotator{order:4}
   .c1-top .tag,.c2-top .tag{display:none}
-  nav[aria-label="Principal"]{flex-wrap:wrap;gap:6px 18px;font-size:14px}
+  nav[aria-label="Principal"]{gap:18px;font-size:14px}
   .rotator{padding-top:24px;border-top:1px solid var(--ink);background:var(--white)}
   .groups{height:210px}
   .c3,.c4,.c5,.c6{display:none}
@@ -390,11 +395,27 @@ p{text-wrap:pretty}
   .form{grid-column:3/13;margin-top:56px}
   .contact-text{gap:32px}
   .roles{flex-direction:column;min-height:0}
-  .role-p{border-left:0;border-top:1px solid var(--line);padding:24px;justify-content:flex-start}
+  .role-p{border-left:0;border-top:1px solid var(--line)}
   .role-p:first-child{border-top:0}
   .rt{min-height:0}
   .rk-none{display:none}
-  .r-plate{height:180px;margin-bottom:20px}
+  /* equipo: a plain list wherever the panels stack; small lámina beside the title, every description shown */
+  .role-p{display:grid;grid-template-columns:clamp(112px,16vw,144px) minmax(0,1fr);grid-template-areas:"plate title" "plate tag" "desc desc";column-gap:20px;align-content:start;padding:24px 0;cursor:default}
+  .role-p:hover:not(.on){background:transparent}
+  .role-p::before{display:none}
+  .role-p.on{background:transparent;color:var(--ink)}
+  .r-plate{grid-area:plate;width:100%;height:auto;aspect-ratio:4/3;margin:0;padding:0;align-self:center}
+  .r-plate svg{inset:0;width:100%;height:100%}
+  .role-p.on .r-plate{color:var(--ink)}
+  .role-p.on .r-plate .w-art .s{stroke:var(--stone)}
+  .role-p.on .r-plate .w-art .f{fill:var(--rust)}
+  .role-p.on .r-plate .w-art .ac{stroke:var(--rust)}
+  .rt{grid-area:title;align-self:end}
+  .rk{grid-area:tag;align-self:start;margin-top:8px}
+  .role-p.on .rk{color:var(--stone-d)}
+  .role-p:has(.rk-none) .rt{grid-row:1/3;align-self:center}
+  .rdesc,.role-p.on .rdesc{grid-area:desc;grid-template-rows:1fr;opacity:1}
+  .role-p.on{--mk:var(--rust)}
   .frac{font-size:clamp(48px,7vw,80px)}
   .foot-brand{grid-column:1/13}
   .fc1{grid-column:1/5}
