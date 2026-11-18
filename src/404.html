@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada | Log N Labs</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F4EFE7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@500&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+<!-- Served for any missing path, so every URL here is root-absolute. -->
+<link rel="stylesheet" href="/styles.css?v=17">
+<style>
+  .nf{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr auto;gap:48px;padding:var(--pad);
+    background:radial-gradient(color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1.2px) 0 0/24px 24px,var(--white)}
+  .nf-main{align-self:center;display:flex;flex-direction:column;gap:28px;max-width:720px}
+  .nf-code{font:var(--t-label);letter-spacing:var(--tr-label);color:var(--rust-deep)}
+  .nf h1{font:var(--t-title);letter-spacing:var(--tr-title);display:block}
+  .nf h1 b{font-weight:600}
+  .nf .lede{max-width:44ch;color:var(--stone-d)}
+  .nf .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .nf-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-top:16px;border-top:1px solid var(--ink);font:var(--t-label);letter-spacing:var(--tr-label);color:var(--stone-d)}
+</style>
+</head>
+<body>
+<div class="nf">
+  <header>
+    <a href="/" aria-label="Log N Labs, inicio"><img src="/logos/log-n-labs_on-white.svg" alt="" width="182" height="26"></a>
+  </header>
+
+  <main class="nf-main">
+    <p class="nf-code mono">404 · página no encontrada</p>
+    <h1>Buscamos en O(log n) y <b>esta página no está.</b></h1>
+    <p class="lede">Puede que el enlace esté mal escrito o que la página se haya movido. Desde el inicio llegas a todo lo demás.</p>
+    <div class="ctas">
+      <a class="btn btn-rust" href="/">Volver al inicio <span aria-hidden="true">→</span></a>
+      <a class="btn btn-line wa" href="https://wa.me/%%WHATSAPP_NUMBER%%">Escribir por WhatsApp</a>
+    </div>
+  </main>
+
+  <footer class="nf-foot mono">
+    <span>Asunción, PY · <time class="clock">--:--</time></span>
+    <span>© 2026 Log N Labs</span>
+  </footer>
+</div>
+<script src="/contact.js?v=1"></script>
+</body>
+</html>

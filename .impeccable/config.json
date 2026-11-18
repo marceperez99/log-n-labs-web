@@ -164,6 +164,24 @@
         ],
         "createdAt": "2026-11-18T17:35:57.859Z",
         "reason": "Brand: docs/BRAND.md defines #F4EFE7 as the brand white (warm, never pure #FFF)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "src/404.html"
+        ],
+        "createdAt": "2026-11-18T23:25:44.799Z",
+        "reason": "Brand: docs/BRAND.md defines #F4EFE7 as the brand white (warm, never pure #FFF)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "_site/404.html"
+        ],
+        "createdAt": "2026-11-18T23:25:44.817Z",
+        "reason": "Brand: docs/BRAND.md defines #F4EFE7 as the brand white (warm, never pure #FFF)"
       }
     ]
   }
