@@ -1,0 +1,47 @@
+# Publishes the Log N Labs site to Cloudflare Pages.
+#   push to main     -> production (log-n-labs.pages.dev, later the custom domain)
+#   push to a branch -> preview at <branch>.log-n-labs.pages.dev
+# Needs repository secrets CLOUDFLARE_API_TOKEN (Account > Cloudflare Pages > Edit)
+# and CLOUDFLARE_ACCOUNT_ID. Contact values come from repository variables;
+# see config/.env.example.
+name: Deploy site to Cloudflare Pages
+
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: cloudflare-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PROJECT: log-n-labs
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build site
+        env:
+          WHATSAPP_NUMBER: ${{ vars.WHATSAPP_NUMBER }}
+          WHATSAPP_DISPLAY: ${{ vars.WHATSAPP_DISPLAY }}
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+        run: bash scripts/build-site.sh
+      - name: Deploy
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: '4.86.0'
+          # Creates the project on the first run; later runs skip creation.
+          preCommands: npx wrangler pages project list | grep -qw "$PROJECT" || npx wrangler pages project create "$PROJECT" --production-branch main
+          command: pages deploy _site --project-name=${{ env.PROJECT }} --branch=${{ github.ref_name }} --commit-hash=${{ github.sha }}
+      - name: Show URL
+        run: echo "Deployed to ${{ steps.deploy.outputs.deployment-url }}" >> "$GITHUB_STEP_SUMMARY"
