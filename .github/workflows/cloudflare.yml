@@ -40,8 +40,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: '4.86.0'
-          # Creates the project on the first run; later runs skip creation.
-          preCommands: npx wrangler pages project list | grep -qw "$PROJECT" || npx wrangler pages project create "$PROJECT" --production-branch main
           command: pages deploy _site --project-name=${{ env.PROJECT }} --branch=${{ github.ref_name }} --commit-hash=${{ github.sha }}
       - name: Show URL
         run: echo "Deployed to ${{ steps.deploy.outputs.deployment-url }}" >> "$GITHUB_STEP_SUMMARY"
