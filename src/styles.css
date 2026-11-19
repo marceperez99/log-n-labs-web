@@ -49,9 +49,9 @@ mark.todo-lg{font-family:var(--f-display);font-size:.8em;letter-spacing:-.02em;p
 
 /* ================= HERO ================= */
 .hero{position:relative;height:100vh;height:100svh;min-height:640px;overflow:hidden;
-  /* background from V0, static: warm Rust glow top-right over a 24px dot grid */
+  /* static: warm Rust glow behind the headline and CTA over a 24px dot grid */
   background:
-    radial-gradient(60% 50% at 80% 10%,color-mix(in srgb,var(--rust) 13%,transparent),transparent 70%),
+    radial-gradient(55% 55% at 18% 82%,color-mix(in srgb,var(--rust) 11%,transparent),transparent 70%),
     radial-gradient(color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1.2px) 0 0/24px 24px,
     var(--white)}
 .cut{position:absolute;background:var(--ink);transform-origin:0 0;transition:transform 560ms var(--ease)}
@@ -69,83 +69,63 @@ mark.todo-lg{font-family:var(--f-display);font-size:.8em;letter-spacing:-.02em;p
 @media (max-aspect-ratio:1/1){.c1{width:100%;height:50%}}
 .tag{font:var(--t-label);letter-spacing:var(--tr-label);color:var(--stone-d)}
 
-.c1{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(28px,4.4vh,44px) var(--pad) clamp(32px,6vh,56px)}
+.c1{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(28px,4.4vh,44px) var(--pad) clamp(40px,8vh,88px)}
 .c1-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
 .logo img{width:clamp(150px,13vw,190px);height:auto}
-.c1-body{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(18px,2.8vh,28px)}
+.c1-body{display:flex;flex-direction:column;align-items:flex-start}
 h1{display:flex;flex-direction:column;font:var(--t-display);letter-spacing:var(--tr-display);text-wrap:balance}
-h1.h1-long{display:block;font-size:clamp(38px,4.8vw,76px)} /* display role, sized for the three-line headline; block + <br> so the whole headline is one LCP text block */
+/* the headline is the one big thing on the first screen; block + <br> keeps it one LCP text block */
+h1.h1-long{display:block;font-size:clamp(44px,6.4vw,96px)}
 h1 .w-pay{color:var(--rust)}
 .ctas{display:flex;flex-wrap:wrap;gap:12px}
 .lede{font:var(--t-lead);max-width:34ch;color:var(--ink)}
+.c1-body .lede{margin-top:clamp(20px,3vh,28px);max-width:32ch;color:var(--stone-d)}
+.c1-body .ctas{margin-top:clamp(32px,5.4vh,52px);align-items:center;column-gap:28px;row-gap:16px}
+/* the page's one action: the only solid rust mass in the first viewport */
+.btn-hero{min-height:64px;padding:0 40px;font-size:18px;box-shadow:0 14px 28px -14px color-mix(in srgb,var(--rust) 70%,transparent);transition:background-color .2s,box-shadow .3s var(--out),transform .3s var(--out)}
+.btn-hero span{transition:transform .3s var(--out)}
+.btn-hero:hover{box-shadow:0 18px 32px -14px color-mix(in srgb,var(--rust) 80%,transparent);transform:translateY(-1px)}
+.btn-hero:hover span{transform:translateX(4px)}
+.btn-hero:active{transform:none}
+.alt-link{font:var(--t-ui);color:var(--ink);text-decoration:underline;text-decoration-color:var(--stone);text-underline-offset:.3em;transition:text-decoration-color .2s}
+.alt-link:hover{text-decoration-color:var(--ink)}
 
-.c2{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,4vh,36px) clamp(24px,3.3vw,48px) clamp(24px,4.4vh,40px)}
-.c2-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
-.c2-top .tag,.c2-top nav a{white-space:nowrap}
-nav[aria-label="Principal"]{display:flex;gap:clamp(14px,1.4vw,22px);font:var(--t-ui)}
-nav[aria-label="Principal"] a{text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .3s var(--out)}
-nav[aria-label="Principal"] a:hover{background-size:100% 1px}
-.rotator{display:flex;flex-direction:column;gap:clamp(14px,2.6vh,26px)}
-.groups{position:relative;height:clamp(150px,22vh,200px)}
-.group{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(16px);transition:opacity 450ms var(--out),transform 650ms var(--out);pointer-events:none}
-.group.is-on{opacity:1;transform:none;transition-delay:180ms;pointer-events:auto}
-.group.is-out{opacity:0;transform:translateY(-16px);transition-delay:0ms}
-.g-name{font:var(--t-title);font-weight:600;letter-spacing:var(--tr-title)}
-.g-desc{font:var(--t-body);max-width:40ch}
-.g-items{display:flex;flex-wrap:wrap;gap:6px 0;font:var(--t-label);color:var(--stone-d);padding-top:4px}
-.g-items li{padding:6px 12px 6px 0;margin-right:12px;border-right:1px solid var(--line)}
-.g-items li:last-child{border-right:0}
-.stepper{display:flex;align-items:center;gap:20px}
-.counter{font:var(--t-label);color:var(--stone-d);min-width:2.6em}
-.counter b{font-weight:500;color:var(--ink)}
-.bars{flex:1;display:flex;gap:8px}
-.bars button{flex:1;height:32px;padding:0;border:0;background:none;cursor:pointer;display:flex;align-items:center}
-.bars button > span{position:relative;display:block;width:100%;height:2px;background:var(--line);overflow:hidden}
-.bars button i{position:absolute;inset:0;background:var(--rust);transform:scaleX(0);transform-origin:0 50%}
-.bars button[aria-current="true"] i{transform:scaleX(1);transition:transform var(--hold,4500ms) linear}
-.bars button.done i{transform:scaleX(1)}
-.reduce .bars button[aria-current="true"] i{transition:none}
-
-.c3{display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:clamp(20px,3.4vh,32px) clamp(20px,2.2vw,32px)}
-.cell-title{font:var(--t-heading);letter-spacing:var(--tr-heading);margin-bottom:clamp(12px,2.4vh,22px)}
 .rows{border-top:1px solid var(--line)}
 .rows a,.rows .row{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px;padding:12px 0;font:var(--t-small);border-bottom:1px solid var(--line);text-decoration:none}
 .rows a:hover span:first-child{text-decoration:underline}
 .rows .mono{font:var(--t-label);color:var(--stone-d)}
 
-.c4{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(16px,2.8vh,26px) clamp(18px,2vw,28px)}
-.mini-steps{display:flex;flex-direction:column;gap:4px;font:var(--t-ui)}
-.mini-steps li{display:flex;gap:12px;align-items:baseline}
-.mini-steps .mono{font:var(--t-label);color:var(--stone-d)}
-.c5{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(12px,2.2vh,20px)}
-.place{display:flex;flex-direction:column;gap:2px;font:var(--t-small)}
-.place b{font:var(--t-ui);font-family:var(--f-display);font-weight:600}
-.c6{display:flex;flex-direction:column;justify-content:space-between;padding:12px 16px}
-.olog{display:flex;align-items:flex-end;justify-content:center;white-space:nowrap;font:500 clamp(14px,1.2vw,17px)/1.4 var(--f-mono);color:var(--ink)}
-.olog sup{font-size:.6em;vertical-align:.7em;line-height:0}
-.olog .n-final{color:var(--rust)}
-.caret{display:inline-block;width:2px;height:1em;margin:0 0 .2em .12em;background:var(--rust);animation:blink 1.06s steps(1,end) infinite}
-@keyframes blink{50%{opacity:0}}
-.c7{border:0;padding:0;background:none;cursor:pointer;color:var(--white)}
-.c7 .fill{position:absolute;inset:0;background:var(--rust);transform:scaleY(0);transform-origin:50% 0;transition:transform 600ms var(--ease)}
+/* right half: the halving drawn as a quiet figure; only the fractions label it */
+.c2{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,4vh,36px) clamp(24px,3.3vw,48px) clamp(20px,3vh,28px)}
+.c2-top{display:flex;justify-content:flex-end;align-items:flex-start;gap:16px}
+.c2-top nav a{white-space:nowrap}
+nav[aria-label="Principal"]{display:flex;gap:clamp(14px,1.4vw,22px);font:var(--t-ui)}
+nav[aria-label="Principal"] a{text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .3s var(--out)}
+nav[aria-label="Principal"] a:hover{background-size:100% 1px}
+.c3,.c4,.c5,.c6{display:flex;align-items:flex-end;padding:clamp(12px,2vh,20px) clamp(12px,1.4vw,20px)}
+.hero .cut + .cut{background:color-mix(in srgb,var(--ink) 38%,transparent)}
+.c7{border:0;padding:0;background:none;cursor:pointer;color:var(--rust)}
+.c7 .fill{position:absolute;inset:0;background:color-mix(in srgb,var(--rust) 14%,var(--white));transform:scaleY(0);transform-origin:50% 0;transition:transform 600ms var(--ease),background-color .25s}
 .hero[data-step="7"] .c7 .fill{transform:none}
-.c7-in{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:100%;opacity:0;transition:opacity 400ms 350ms var(--out)}
+.c7-in{position:relative;display:flex;align-items:center;justify-content:center;height:100%;opacity:0;transition:opacity 400ms 350ms var(--out),color .25s}
 .hero[data-step="7"] .c7-in{opacity:1}
-.c7-in img{width:124px}
-.scroll{display:flex;align-items:center;gap:6px;font:var(--t-label);letter-spacing:.08em}
-.scroll svg{animation:nudge 1.8s var(--out) infinite}
+.c7-in svg{animation:nudge 1.8s var(--out) infinite}
+.c7:hover .fill{background:var(--rust)}
+.c7:hover{color:var(--white)}
 @keyframes nudge{0%,60%,100%{transform:none}30%{transform:translateY(3px)}}
 .c7:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
+.reduce .c7-in svg{animation:none}
 
-/* below 1280 the five links overflow the nav cell: drop "El problema", the next section (the scroll cue covers it) */
+/* below 1280 the five links overflow the nav cell: drop "El problema", the next section */
 @media (max-width:1279px){nav[aria-label="Principal"] a[href="#enfoque"]{display:none}}
 
 /* stacked hero (phones, portrait tablets, landscape phones): halving band at the foot, content stacked.
    Keep the query in sync with heroMQ in main.js. */
 @media (max-width:1023px),(max-height:560px){
   /* bottom padding = the 176px halving band drawn by main.js (MOBILE_BAND) + 32px air */
-  .hero{height:auto;min-height:100svh;display:flex;flex-direction:column;padding:28px var(--pad) 208px;gap:32px}
+  .hero{height:auto;min-height:100svh;display:flex;flex-direction:column;padding:28px var(--pad) 208px}
   .cut{background:var(--line)}
+  .hero .cut + .cut{background:var(--line)}
   .cuts{position:absolute;inset:0;z-index:0}
   .hero > *:not(.cuts), .c1 > *, .c2 > *{position:relative;z-index:1}
   .cell{position:relative;overflow:visible}
@@ -153,21 +133,23 @@ nav[aria-label="Principal"] a:hover{background-size:100% 1px}
   .c1-top{order:1}
   /* menu shares the logo's row */
   .hero .c2-top{position:absolute;top:28px;right:var(--pad);height:22px;align-items:center}
-  .c1-body{order:3}
-  .rotator{order:4}
-  .c1-top .tag,.c2-top .tag{display:none}
+  .c1-body{order:3;margin-block:auto;padding-top:48px}
+  .c2 > .tag,.c5 .tag,.c6 .tag{display:none}
+  /* glow sits behind the CTA in the stacked layout */
+  .hero{background:
+    radial-gradient(70% 40% at 30% 58%,color-mix(in srgb,var(--rust) 11%,transparent),transparent 70%),
+    radial-gradient(color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1.2px) 0 0/24px 24px,
+    var(--white)}
   nav[aria-label="Principal"]{gap:18px;font-size:14px}
-  .rotator{padding-top:24px;border-top:1px solid var(--ink);background:var(--white)}
-  .groups{height:210px}
-  .c3,.c4{display:none}
+  .c3,.c4,.c7{display:none}
   .c5,.c6{position:absolute !important}
-  .c7{display:none}
-  .c5 .tag,.c6 .tag{display:none}
-  .c5,.c6{padding:16px 18px;justify-content:flex-end}
-  .c6{padding-left:var(--pad)}
-  .olog{justify-content:flex-start;font-size:clamp(22px,6.4vw,34px);line-height:1}
   h1{font-size:clamp(44px,15vw,64px)}
-  h1.h1-long{font-size:clamp(30px,9.6vw,44px)}
+  h1.h1-long{font-size:clamp(40px,12.4vw,64px)}
+}
+@media (max-width:639px){
+  .c1-body .ctas{flex-direction:column;align-items:stretch;width:100%}
+  .btn-hero{width:100%}
+  .alt-link{align-self:center}
 }
 
 /* phones: no room for the full menu beside the logo; keep the one action */

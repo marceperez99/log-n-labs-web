@@ -1,4 +1,4 @@
-/* Log N Labs · V7 Combinado — hero halving, rotator, scroll fill, servicios, proceso, equipo (contact.js: links, clock, form) */
+/* Log N Labs · V7 Combinado — hero halving, scroll fill, servicios, proceso, equipo (contact.js: links, clock, form) */
 (function () {
   'use strict';
   var doc = document.documentElement;
@@ -54,7 +54,7 @@
       else { el.style.width = px(ln.len); el.style.height = ''; }
     });
     g.cells.forEach(function (c, i) {
-      // mobile band: O(log n) takes the half, the place the quarter; the smallest cells stay empty
+      // mobile band: only the two largest band cells are placed; they carry no content
       var el = mobile ? [cellEls[5], cellEls[4]][i] : cellEls[i];
       if (!el) return;
       var s = el.style;
@@ -69,61 +69,13 @@
     hero.setAttribute('data-step', String(k));
     for (var i = 0; i < 6; i++) cutEls[i].classList.toggle('on', i < k);
   }
-  function showCell(i) { cellEls[i].classList.add('on'); if (i === 5) typeOlog(); }
-
-  /* ---------- 1/64 cell: types O(n²) → O(n log n) → O(log n) (from V5) ---------- */
-  var ologEl = hero.querySelector('.olog-text'), ologDone = false;
-  function typeOlog() {
-    if (ologDone || reduce || !ologEl) return;
-    ologDone = true;
-    var toks = [];
-    function draw(nColor) {
-      ologEl.innerHTML = toks.map(function (t, i) {
-        if (t === '²') return '<sup>2</sup>';
-        if (nColor && i === toks.length - 2) return '<span class="n-final" style="color:' + nColor + '">n</span>';
-        return t === ' ' ? '&nbsp;' : t;
-      }).join('');
-    }
-    function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
-    function type(str) {
-      return Array.prototype.reduce.call(str, function (p, ch) {
-        return p.then(function () { toks.push(ch); draw(); return wait(118 + Math.random() * 14); });
-      }, Promise.resolve());
-    }
-    function erase(keep) {
-      if (toks.length <= keep) return Promise.resolve();
-      toks.pop(); draw();
-      return wait(70).then(function () { return erase(keep); });
-    }
-    function mix(a, b, p) {
-      return '#' + [0, 2, 4].map(function (i) {
-        var x = parseInt(a.substr(i, 2), 16), y = parseInt(b.substr(i, 2), 16);
-        return ('0' + Math.round(x + (y - x) * p).toString(16)).slice(-2);
-      }).join('');
-    }
-    draw();
-    wait(300)
-      .then(function () { return type('O(n²)'); }).then(function () { return wait(1300); })
-      .then(function () { return erase(2); })
-      .then(function () { return type('n log n)'); }).then(function () { return wait(1300); })
-      .then(function () { return erase(2); })
-      .then(function () { return type('log n)'); })
-      .then(function () {
-        var t0 = performance.now();
-        (function step() {
-          var p = Math.min(1, (performance.now() - t0) / 1400);
-          draw(mix('17120F', 'B83A0E', 1 - Math.pow(1 - p, 3)));
-          if (p < 1) requestAnimationFrame(step);
-        })();
-      });
-  }
+  function showCell(i) { cellEls[i].classList.add('on'); }
 
   var SPEED = 700;
   function play() {
     if (reduce) {
       setStep(7);
       for (var i = 0; i < 6; i++) showCell(i);
-      startRotation(0, true);
       return;
     }
     for (var k = 1; k <= 7; k++) {
@@ -134,50 +86,6 @@
         }, 600 + (k - 1) * SPEED));
       })(k);
     }
-    timers.push(setTimeout(function () { rotStarted = true; if (heroVisible) startRotation(0); }, 600 + SPEED + Math.round(SPEED * 0.45)));
-  }
-
-  /* ---------- services rotator ---------- */
-  var HOLD = 4500;
-  var groups = Array.prototype.slice.call(hero.querySelectorAll('.group'));
-  var barBtns = Array.prototype.slice.call(hero.querySelectorAll('.bars button'));
-  var counter = hero.querySelector('.counter b');
-  var cat = 0, rotT = null, rotStarted = false, heroVisible = true;
-  hero.style.setProperty('--hold', HOLD + 'ms');
-
-  function render(i) {
-    groups.forEach(function (g, j) {
-      var was = g.classList.contains('is-on');
-      g.classList.toggle('is-on', j === i);
-      g.classList.toggle('is-out', was && j !== i);
-      if (j === i) g.removeAttribute('aria-hidden'); else g.setAttribute('aria-hidden', 'true');
-    });
-    barBtns.forEach(function (b, j) {
-      b.classList.toggle('done', j < i);
-      if (j === i) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
-    });
-    counter.textContent = String(i + 1);
-  }
-  function startRotation(i, noAuto) {
-    clearTimeout(rotT);
-    cat = i;
-    // restart the fill: clear current, force reflow, set again
-    barBtns.forEach(function (b) { b.removeAttribute('aria-current'); });
-    void hero.offsetWidth;
-    render(i);
-    if (reduce || noAuto) return;
-    rotT = setTimeout(function () { startRotation((i + 1) % 3); }, HOLD);
-  }
-  barBtns.forEach(function (b, j) {
-    b.addEventListener('click', function () { rotStarted = true; startRotation(j); });
-  });
-
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries) {
-      heroVisible = entries[0].isIntersecting;
-      if (!rotStarted || reduce) return;
-      if (heroVisible) startRotation(cat); else clearTimeout(rotT);
-    }, { threshold: 0.15 }).observe(hero);
   }
 
   cellEls[6].addEventListener('click', function () {

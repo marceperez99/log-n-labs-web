@@ -29,7 +29,7 @@
 <meta name="theme-color" content="#F4EFE7">
 <link rel="preload" href="fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=21">
+<link rel="stylesheet" href="styles.css?v=22">
 <script src="analytics.js?v=2" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -54,7 +54,7 @@
 <body>
 <a class="skip" href="#enfoque">Saltar al contenido</a>
 
-<!-- ============ HERO · the screen halves itself ============ -->
+<!-- ============ HERO · one message, one action; the halving is the figure, not a second page ============ -->
 <header class="hero" id="inicio" data-step="0">
   <div class="cuts" aria-hidden="true">
     <span class="cut"></span><span class="cut"></span><span class="cut"></span>
@@ -69,15 +69,14 @@
       <h1 class="h1-long"><span class="w-strong">Que no se te</span><br><span class="w-strong">escape</span><br><span class="w-pay">ninguna venta.</span></h1>
       <p class="lede">Acompañamos a tu negocio en su crecimiento digital, desde el primer diagnóstico hasta los resultados.</p>
       <div class="ctas">
-        <a class="btn btn-rust" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
-        <a class="btn btn-line" href="#servicios">Ver servicios</a>
+        <a class="btn btn-rust btn-hero" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
+        <a class="alt-link" href="https://wa.me/%%WHATSAPP_NUMBER%%">o escríbenos por WhatsApp</a>
       </div>
     </div>
   </div>
 
   <div class="cell c2">
     <div class="c2-top">
-      <span class="tag" aria-hidden="true">1/4 · servicios</span>
       <nav aria-label="Principal">
         <a href="#enfoque">El problema</a>
         <a href="#servicios">Servicios</a>
@@ -86,71 +85,17 @@
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
-    <div class="rotator" aria-roledescription="carrusel" aria-label="Servicios">
-      <div class="groups">
-        <div class="group is-on" data-i="0">
-          <p class="g-name">Software</p>
-          <p class="g-desc">Digitaliza tu operación con herramientas que te permitan tomar el control de tu negocio.</p>
-          <ul class="g-items"><li>Páginas</li><li>Sistemas</li><li>Integraciones</li></ul>
-        </div>
-        <div class="group" data-i="1" aria-hidden="true">
-          <p class="g-name">Marketing</p>
-          <p class="g-desc">Identidad visual y campañas en redes sociales para posicionarte y atraer clientes nuevos.</p>
-          <ul class="g-items"><li>Estrategia</li><li>Identidad visual</li><li>Anuncios</li></ul>
-        </div>
-        <div class="group" data-i="2" aria-hidden="true">
-          <p class="g-name">Consultoría</p>
-          <p class="g-desc">Analizamos cómo trabajas y te proponemos mejoras que te ayuden a llegar a tus objetivos de una manera más eficiente.</p>
-          <ul class="g-items"><li>Diagnóstico</li><li>Procesos</li><li>Plan</li></ul>
-        </div>
-      </div>
-      <div class="stepper">
-        <span class="counter" aria-live="polite"><b>1</b>/3</span>
-        <div class="bars">
-          <button type="button" aria-label="Ver Software" aria-current="true"><span><i></i></span></button>
-          <button type="button" aria-label="Ver Marketing"><span><i></i></span></button>
-          <button type="button" aria-label="Ver Consultoría"><span><i></i></span></button>
-        </div>
-      </div>
-    </div>
+    <span class="tag" aria-hidden="true">1/4</span>
   </div>
-
-  <div class="cell c3">
-    <span class="tag" aria-hidden="true">1/8 · contacto</span>
-    <div>
-      <p class="cell-title">Hablemos.</p>
-      <ul class="rows">
-        <li><a class="wa" href="https://wa.me/%%WHATSAPP_NUMBER%%"><span>%%WHATSAPP_DISPLAY%%</span><span class="mono">whatsapp</span></a></li>
-        <li><a class="mail" href="mailto:%%CONTACT_EMAIL%%"><span>%%CONTACT_EMAIL_LABEL%%</span><span class="mono">correo</span></a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="cell c4">
-    <span class="tag" aria-hidden="true">1/16 · cómo trabajamos</span>
-    <ol class="mini-steps">
-      <li><span class="mono">01</span>Diagnóstico</li>
-      <li><span class="mono">02</span>Planificación</li>
-      <li><span class="mono">03</span>Desarrollo</li>
-      <li><span class="mono">04</span>Medición</li>
-    </ol>
-  </div>
-
-  <div class="cell c5">
-    <span class="tag" aria-hidden="true">1/32</span>
-    <p class="place"><b>Asunción</b><span>Paraguay</span></p>
-  </div>
-
-  <div class="cell c6">
-    <span class="tag" aria-hidden="true">1/64</span>
-    <p class="olog" role="img" aria-label="O de log n"><span class="olog-text" aria-hidden="true">O(log <span class="n-final">n</span>)</span><span class="caret" aria-hidden="true"></span></p>
-  </div>
+  <div class="cell c3" aria-hidden="true"><span class="tag">1/8</span></div>
+  <div class="cell c4" aria-hidden="true"><span class="tag">1/16</span></div>
+  <div class="cell c5" aria-hidden="true"><span class="tag">1/32</span></div>
+  <div class="cell c6" aria-hidden="true"><span class="tag">1/64</span></div>
 
   <button type="button" class="cell c7" aria-label="Bajar al contenido">
     <span class="fill" aria-hidden="true"></span>
     <span class="c7-in" aria-hidden="true">
-      <img src="logos/log-n-labs_on-rust.svg" alt="" width="124" height="18">
-      <span class="scroll"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M12 3v17M5 13l7 7 7-7"/></svg>SCROLL</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M12 3v17M5 13l7 7 7-7"/></svg>
     </span>
   </button>
 </header>
@@ -492,6 +437,6 @@
 </footer>
 
 <script src="contact.js?v=2"></script>
-<script src="main.js?v=14"></script>
+<script src="main.js?v=15"></script>
 </body>
 </html>
