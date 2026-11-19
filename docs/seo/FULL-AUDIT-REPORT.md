@@ -1,21 +1,21 @@
 # SEO Audit — Log N Labs
 
 Round 3: 2026-11-19, after the SEO changes on branch `seo-improvements`, verified on the preview at `https://seo-improvements.log-n-labs.pages.dev`. Production gets the same score once the branch is merged to `main`.
-History: 38 (domain down) → 56 (domain fixed) → 80 (SEO foundations) → **83** (self-hosted fonts, security headers).
+History: 38 (domain down) → 56 (domain fixed) → 80 (SEO foundations) → 83 (self-hosted fonts, security headers) → **85** (factura electrónica expertise on /software/).
 
-## Overall score: 83 / 100 — Good
+## Overall score: 85 / 100 — Good
 
 | Category | Weight | Before | Now | Note |
 |---|---|---|---|---|
 | Technical SEO | 25% | 55 | 95 | Canonicals, sitemap, robots, pages.dev noindex, 301s; HSTS, CSP frame-ancestors, X-Frame-Options, Permissions-Policy, COOP |
-| Content quality / E-E-A-T | 20% | 50 | 55 | Visible placeholders removed; still no named people or proof |
-| On-page SEO | 15% | 80 | 80 | Titles/H1 fine; home description now 59 chars (owner's choice, short) |
+| Content quality / E-E-A-T | 20% | 50 | 62 | Placeholders removed; Paraguay-specific expertise (WhatsApp, QR, factura electrónica / DNIT) on /software/; still no named people or proof |
+| On-page SEO | 15% | 80 | 82 | Titles/H1 fine; /software/ now covers "factura electrónica" queries; home description 59 chars (owner's choice, short) |
 | Schema | 15% | 25 | 90 | ProfessionalService, WebSite, Service, BreadcrumbList, FAQPage |
 | Performance (CWV) | 10% | 55 | 90 (Likely) | LCP = H1 at first paint, CLS 0; fonts self-hosted + preloaded (84 KB, immutable cache), only styles.css render-blocking; preview warm FCP 156 ms |
 | Images | 10% | 85 | 95 | Explicit width/height; logo links named via aria-label; OG PNG 100 KB |
 | AI search readiness (GEO) | 5% | 40 | 85 | llms.txt, entity schema, crawlers allowed |
 
-Weighted: 23.75 + 11 + 12 + 13.5 + 9 + 9.5 + 4.25 = **83**
+Weighted: 23.75 + 12.4 + 12.3 + 13.5 + 9 + 9.5 + 4.25 = **84.7 ≈ 85**
 
 ## What changed (verified on the preview)
 | Item | Evidence |
@@ -36,7 +36,7 @@ Weighted: 23.75 + 11 + 12 + 13.5 + 9 + 9.5 + 4.25 = **83**
 ## Remaining gap to 90+
 Everything left needs content or actions only the owner can provide:
 
-1. **E-E-A-T (content quality 55 → 85, +6 pts):**
+1. **E-E-A-T (content quality 62 → 85, +4.6 pts):**
    - Name the team members (one-line background, LinkedIn) and add `Person` schema.
    - Add 2–3 results or testimonials, which can be anonymized.
    - Add `sameAs` links to social profiles and a Google Business Profile.
