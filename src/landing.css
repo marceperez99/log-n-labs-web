@@ -9,22 +9,24 @@
 .crumb a:hover{color:var(--ink);text-decoration:underline}
 .crumb b{font-weight:500;color:var(--rust-deep)}
 .top-nav{display:flex;align-items:center;gap:clamp(14px,1.6vw,26px);font:var(--t-ui)}
-.top-nav a:not(.btn){text-decoration:none;white-space:nowrap;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .3s var(--out)}
-.top-nav a:not(.btn):hover{background-size:100% 1px}
-.top-nav .btn{min-height:44px;padding:0 20px}
-@media (max-width:1100px){.top-nav a:not(.btn){display:none}}
+/* three quiet links; the hero CTA is the page's one action */
+.top-nav a{text-decoration:none;white-space:nowrap;color:var(--stone-d);background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .3s var(--out),color .2s}
+.top-nav a:hover{color:var(--ink);background-size:100% 1px}
+@media (max-width:767px){.top-nav{display:none}}
 @media (max-width:479px){.crumb{display:none}}
 
 /* ---------- hero: copy | demonstration ---------- */
 .lhero{position:relative;padding:clamp(48px,8vh,96px) 0 clamp(56px,9vh,104px);
   background:
-    radial-gradient(60% 50% at 80% 10%,color-mix(in srgb,var(--rust) 11%,transparent),transparent 70%),
+    radial-gradient(50% 55% at 16% 72%,color-mix(in srgb,var(--rust) 11%,transparent),transparent 70%),
     radial-gradient(color-mix(in srgb,var(--ink) 14%,transparent) 1px,transparent 1.2px) 0 0/24px 24px,
     var(--white)}
 .lhero .grid{align-items:center;row-gap:56px}
 .lh-copy{grid-column:1/6;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(20px,3vh,28px)}
-.lh-copy h1{font-size:clamp(40px,4.6vw,76px)}
-.lh-copy .lede{max-width:38ch}
+.lh-copy h1{font-size:clamp(40px,5vw,84px)}
+.lh-copy .lede{max-width:38ch;color:var(--stone-d)}
+.lh-copy .ctas{margin-top:clamp(12px,2.4vh,24px);align-items:center;column-gap:28px;row-gap:16px}
+.lh-copy .lh-note{margin-top:clamp(12px,2.4vh,24px)}
 .lh-note{display:flex;gap:10px;align-items:baseline;max-width:44ch;padding-top:18px;border-top:1px solid var(--line);font:var(--t-small);color:var(--stone-d)}
 .lh-note::before{content:"";flex:none;width:8px;height:8px;background:var(--rust);transform:translateY(-1px)}
 .lh-demo{grid-column:7/13}
@@ -32,7 +34,11 @@
 .demo-cap b{font-weight:500;color:var(--rust-deep);white-space:nowrap}
 @media (max-width:1023px){
   .lh-copy,.lh-demo{grid-column:1/13}
-  .lh-copy h1{font-size:clamp(34px,8.4vw,56px)}
+  .lh-copy h1{font-size:clamp(36px,10vw,60px)}
+}
+@media (max-width:639px){
+  .lh-copy .ctas{flex-direction:column;align-items:stretch;width:100%}
+  .lh-copy .alt-link{align-self:center}
 }
 
 /* marketing demo: the audience halves five times, Todo el mercado → Su cliente */
