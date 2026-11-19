@@ -95,20 +95,52 @@ h1 .w-pay{color:var(--rust)}
 .rows a:hover span:first-child{text-decoration:underline}
 .rows .mono{font:var(--t-label);color:var(--stone-d)}
 
-/* right half: the halving drawn as a quiet figure; only the fractions label it */
-.c2{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,4vh,36px) clamp(24px,3.3vw,48px) clamp(20px,3vh,28px)}
-.c2-top{display:flex;justify-content:flex-end;align-items:flex-start;gap:16px}
-.c2-top nav a{white-space:nowrap}
-nav[aria-label="Principal"]{display:flex;gap:clamp(14px,1.4vw,22px);font:var(--t-ui)}
-nav[aria-label="Principal"] a{text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .3s var(--out)}
-nav[aria-label="Principal"] a:hover{background-size:100% 1px}
-.c3,.c4,.c5,.c6{display:flex;align-items:flex-end;padding:clamp(12px,2vh,20px) clamp(12px,1.4vw,20px)}
+/* menu: three links in the logo row; Contacto is the CTA, El problema is the next screen */
+.c1-top{align-items:center}
+nav[aria-label="Principal"]{display:flex;gap:clamp(16px,1.8vw,28px);font:var(--t-ui)}
+nav[aria-label="Principal"] a{white-space:nowrap;text-decoration:none;color:var(--stone-d);background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .3s var(--out),color .2s}
+nav[aria-label="Principal"] a:hover{color:var(--ink);background-size:100% 1px}
+
+/* 1/4: the services, one at a time; the rest of the halving is a quiet labelled figure */
+.c2{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,4vh,36px) clamp(24px,3.3vw,48px) clamp(20px,3.4vh,32px)}
+.rotator{display:flex;flex-direction:column;gap:clamp(14px,2.6vh,26px)}
+.groups{position:relative;height:clamp(150px,22vh,200px)}
+.group{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(16px);transition:opacity 450ms var(--out),transform 650ms var(--out);pointer-events:none}
+.group.is-on{opacity:1;transform:none;transition-delay:180ms;pointer-events:auto}
+.group.is-out{opacity:0;transform:translateY(-16px);transition-delay:0ms}
+/* second level: clearly under the h1 */
+.g-name{font:600 clamp(26px,2.4vw,40px)/1.1 var(--f-display);letter-spacing:-.02em}
+.g-desc{font:var(--t-body);max-width:40ch}
+.g-items{display:flex;flex-wrap:wrap;gap:6px 0;font:var(--t-label);color:var(--stone-d);padding-top:4px}
+.g-items li{padding:6px 12px 6px 0;margin-right:12px;border-right:1px solid var(--line)}
+.g-items li:last-child{border-right:0}
+.stepper{display:flex;align-items:center;gap:20px}
+.counter{font:var(--t-label);color:var(--stone-d);min-width:2.6em}
+.counter b{font-weight:500;color:var(--ink)}
+.bars{flex:1;display:flex;gap:8px}
+.bars button{flex:1;height:32px;padding:0;border:0;background:none;cursor:pointer;display:flex;align-items:center}
+.bars button > span{position:relative;display:block;width:100%;height:2px;background:var(--line);overflow:hidden}
+.bars button i{position:absolute;inset:0;background:var(--rust);transform:scaleX(0);transform-origin:0 50%}
+.bars button[aria-current="true"] i{transform:scaleX(1);transition:transform var(--hold,4500ms) linear}
+.bars button.done i{transform:scaleX(1)}
+.reduce .bars button[aria-current="true"] i{transition:none}
+
+.c3,.c4,.c5{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:clamp(12px,2vh,20px) clamp(12px,1.4vw,20px)}
+.c5{justify-content:flex-end}
+.c3{padding:clamp(20px,3.4vh,32px) clamp(20px,2.2vw,32px)}
+/* 1/8: the four steps, large enough to read as a sequence */
+.mini-steps{display:flex;flex-direction:column;gap:clamp(6px,1.2vh,12px);font:500 clamp(18px,1.5vw,24px)/1.25 var(--f-display);letter-spacing:-.01em}
+.mini-steps li{display:flex;gap:14px;align-items:baseline}
+.mini-steps .mono{font:var(--t-label);color:var(--stone-d)}
+/* 1/16: contact rows, compact */
+.c4 .rows{align-self:stretch}
+.c4 .rows a{min-height:44px;padding:8px 0;font-size:14px}
 .hero .cut + .cut{background:color-mix(in srgb,var(--ink) 38%,transparent)}
 .c7{border:0;padding:0;background:none;cursor:pointer;color:var(--rust)}
 .c7 .fill{position:absolute;inset:0;background:color-mix(in srgb,var(--rust) 14%,var(--white));transform:scaleY(0);transform-origin:50% 0;transition:transform 600ms var(--ease),background-color .25s}
-.hero[data-step="7"] .c7 .fill{transform:none}
+.hero[data-step="6"] .c7 .fill{transform:none}
 .c7-in{position:relative;display:flex;align-items:center;justify-content:center;height:100%;opacity:0;transition:opacity 400ms 350ms var(--out),color .25s}
-.hero[data-step="7"] .c7-in{opacity:1}
+.hero[data-step="6"] .c7-in{opacity:1}
 .c7-in svg{animation:nudge 1.8s var(--out) infinite}
 .c7:hover .fill{background:var(--rust)}
 .c7:hover{color:var(--white)}
@@ -116,8 +148,6 @@ nav[aria-label="Principal"] a:hover{background-size:100% 1px}
 .c7:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
 .reduce .c7-in svg{animation:none}
 
-/* below 1280 the five links overflow the nav cell: drop "El problema", the next section */
-@media (max-width:1279px){nav[aria-label="Principal"] a[href="#enfoque"]{display:none}}
 
 /* stacked hero (phones, portrait tablets, landscape phones): halving band at the foot, content stacked.
    Keep the query in sync with heroMQ in main.js. */
@@ -131,29 +161,27 @@ nav[aria-label="Principal"] a:hover{background-size:100% 1px}
   .cell{position:relative;overflow:visible}
   .c1,.c2{display:contents}
   .c1-top{order:1}
-  /* menu shares the logo's row */
-  .hero .c2-top{position:absolute;top:28px;right:var(--pad);height:22px;align-items:center}
   .c1-body{order:3;margin-block:auto;padding-top:48px}
-  .c2 > .tag,.c5 .tag,.c6 .tag{display:none}
+  .rotator{order:4;margin-top:48px;padding-top:24px;border-top:1px solid var(--ink)}
+  .groups{height:184px}
+  .c2 > .tag{display:none}
   /* glow sits behind the CTA in the stacked layout */
   .hero{background:
     radial-gradient(70% 40% at 30% 58%,color-mix(in srgb,var(--rust) 11%,transparent),transparent 70%),
     radial-gradient(color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1.2px) 0 0/24px 24px,
     var(--white)}
   nav[aria-label="Principal"]{gap:18px;font-size:14px}
-  .c3,.c4,.c7{display:none}
-  .c5,.c6{position:absolute !important}
+  .c3,.c4,.c5,.c7{display:none}
   h1{font-size:clamp(44px,15vw,64px)}
   h1.h1-long{font-size:clamp(40px,12.4vw,64px)}
 }
 @media (max-width:639px){
+  nav[aria-label="Principal"] a:not([href="#servicios"]){display:none}
   .c1-body .ctas{flex-direction:column;align-items:stretch;width:100%}
   .btn-hero{width:100%}
   .alt-link{align-self:center}
 }
 
-/* phones: no room for the full menu beside the logo; keep the one action */
-@media (max-width:639px){nav[aria-label="Principal"] a:not([href="#contacto"]){display:none}}
 
 /* ================= EDITORIAL GRID ================= */
 .sec{padding:152px 0;border-top:1px solid var(--ink)}
