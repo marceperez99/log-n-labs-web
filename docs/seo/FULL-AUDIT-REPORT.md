@@ -1,9 +1,9 @@
 # SEO Audit — Log N Labs
 
 Round 3: 2026-11-19, after the SEO changes on branch `seo-improvements`, verified on the preview at `https://seo-improvements.log-n-labs.pages.dev`. Production gets the same score once the branch is merged to `main`.
-History: 38 (domain down) → 56 (domain fixed) → 80 (SEO foundations) → 83 (self-hosted fonts, security headers) → 85 (factura electrónica expertise on /software/) → **86** (Instagram linked via `sameAs` and a visible `rel="me"` footer link on all pages).
+History: 38 (domain down) → 56 (domain fixed) → 80 (SEO foundations) → 83 (self-hosted fonts, security headers) → 85 (factura electrónica expertise on /software/) → 86 (Instagram linked via `sameAs` and a visible `rel="me"` footer link on all pages) → **87** (PageSpeed Insights on production confirms performance 100).
 
-## Overall score: 86 / 100 — Good
+## Overall score: 87 / 100 — Good
 
 | Category | Weight | Before | Now | Note |
 |---|---|---|---|---|
@@ -11,11 +11,11 @@ History: 38 (domain down) → 56 (domain fixed) → 80 (SEO foundations) → 83 
 | Content quality / E-E-A-T | 20% | 50 | 66 | Placeholders removed; Paraguay-specific expertise (WhatsApp, QR, factura electrónica / DNIT) on /software/; Instagram linked (schema + footer); still no named people or proof |
 | On-page SEO | 15% | 80 | 82 | Titles/H1 fine; /software/ now covers "factura electrónica" queries; home description 59 chars (owner's choice, short) |
 | Schema | 15% | 25 | 93 | sameAs → Instagram; ProfessionalService, WebSite, Service, BreadcrumbList, FAQPage |
-| Performance (CWV) | 10% | 55 | 90 (Likely) | LCP = H1 at first paint, CLS 0; fonts self-hosted + preloaded (84 KB, immutable cache), only styles.css render-blocking; preview warm FCP 156 ms |
+| Performance (CWV) | 10% | 55 | 100 (Confirmed) | PageSpeed Insights mobile on production (2026-11-19): Performance 100, FCP 0.9 s, LCP 0.9 s, TBT 70 ms, CLS 0. Lighthouse also: Accessibility 96, Best Practices 100, SEO 100 |
 | Images | 10% | 85 | 95 | Explicit width/height; logo links named via aria-label; OG PNG 100 KB |
 | AI search readiness (GEO) | 5% | 40 | 88 | llms.txt, entity schema, crawlers allowed |
 
-Weighted: 23.75 + 13.2 + 12.3 + 13.95 + 9 + 9.5 + 4.4 = **86.1 ≈ 86** (Schema 93 and GEO 88 with `sameAs`)
+Weighted: 23.75 + 13.2 + 12.3 + 13.95 + 10 + 9.5 + 4.4 = **87.1 ≈ 87** (Schema 93 and GEO 88 with `sameAs`)
 
 ## What changed (verified on the preview)
 | Item | Evidence |
@@ -48,7 +48,5 @@ Everything left needs content or actions only the owner can provide:
    - Optionally add a Bulk Redirect pages.dev → apex.
 
 ## Environment limitations
-- **PageSpeed Insights API:** daily quota exhausted (shared no-key quota).
-- **Local Lighthouse via npx:** blocked by the session permission policy.
-- **Measurement method:** LCP and CLS were measured with PerformanceObserver in local Chrome against a local build. That's lab data with no network throttling, so the performance confidence is "Likely".
+- **Performance:** now confirmed by the owner's PageSpeed Insights run on production (mobile, lab data). No CrUX field data yet; it appears once the site has enough real traffic.
 - **Off-site data:** none from Search Console or backlinks.
