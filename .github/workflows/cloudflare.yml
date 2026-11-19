@@ -32,6 +32,7 @@ jobs:
           WHATSAPP_NUMBER: ${{ vars.WHATSAPP_NUMBER }}
           WHATSAPP_DISPLAY: ${{ vars.WHATSAPP_DISPLAY }}
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          GOOGLE_TAG_ID: ${{ vars.GOOGLE_TAG_ID }}
         run: bash scripts/build-site.sh
       - name: Deploy
         id: deploy

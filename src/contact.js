@@ -74,6 +74,11 @@
     var okC = setErr(contacto, !c ? 'Deja un correo o un número para responderte.' : (looksOk ? '' : 'Revisa el correo o el número: parece que falta algo.'));
     if (!okN) { nombre.focus(); return; }
     if (!okC) { contacto.focus(); return; }
+    if (window.lnlTrack) {
+      var areas = chips.filter(function (b) { return b.getAttribute('aria-pressed') === 'true'; })
+        .map(function (b) { return b.getAttribute('data-area'); });
+      window.lnlTrack('contact_form_submit', { form_areas: areas.join(',') });
+    }
     // TODO(delivery): pluggable sender (email provider or webhook). Not decided yet.
     status.textContent = 'Prototipo: la consulta todavía no se envía.';
   });
