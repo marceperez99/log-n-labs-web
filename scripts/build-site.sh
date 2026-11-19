@@ -8,6 +8,7 @@
 #   WHATSAPP_DISPLAY  optional. How the number is shown; derived from the number if empty
 #   CONTACT_EMAIL     optional. Until it is set, the pages show "[CORREO]"
 #   GOOGLE_TAG_ID     optional. GTM container (GTM-XXXXXXX) or GA4 ID (G-XXXXXXXXXX); off when empty
+#   SITE_URL          optional. Absolute origin for share links/images (default https://log-n-labs.pages.dev)
 #
 # Local preview:  bash scripts/build-site.sh && python3 -m http.server -d _site 8000
 set -euo pipefail
@@ -26,6 +27,8 @@ WHATSAPP_NUMBER="${WHATSAPP_NUMBER:-}"
 WHATSAPP_DISPLAY="${WHATSAPP_DISPLAY:-}"
 CONTACT_EMAIL="${CONTACT_EMAIL:-}"
 GOOGLE_TAG_ID="${GOOGLE_TAG_ID:-}"
+SITE_URL="${SITE_URL:-https://log-n-labs.pages.dev}"
+SITE_URL="${SITE_URL%/}"
 
 if [[ ! "$WHATSAPP_NUMBER" =~ ^[0-9]{8,15}$ ]]; then
   echo "WHATSAPP_NUMBER must be digits only, in international format (got: '${WHATSAPP_NUMBER}')" >&2
@@ -47,8 +50,12 @@ if [[ -n "$GOOGLE_TAG_ID" && ! "$GOOGLE_TAG_ID" =~ ^(GTM|G)-[A-Z0-9]{4,20}$ ]]; 
   echo "GOOGLE_TAG_ID must look like GTM-XXXXXXX or G-XXXXXXXXXX" >&2
   exit 1
 fi
+if [[ ! "$SITE_URL" =~ ^https://[A-Za-z0-9.-]+$ ]]; then
+  echo "SITE_URL must be an https origin with no path, like https://lognlabs.com.py" >&2
+  exit 1
+fi
 CONTACT_EMAIL_LABEL="${CONTACT_EMAIL:-[CORREO]}"
-export WHATSAPP_NUMBER WHATSAPP_DISPLAY CONTACT_EMAIL CONTACT_EMAIL_LABEL GOOGLE_TAG_ID
+export WHATSAPP_NUMBER WHATSAPP_DISPLAY CONTACT_EMAIL CONTACT_EMAIL_LABEL GOOGLE_TAG_ID SITE_URL
 
 rm -rf _site
 mkdir -p _site
@@ -61,6 +68,7 @@ find _site -type f \( -name '*.html' -o -name '*.js' \) -print0 | xargs -0 perl 
   s/%%CONTACT_EMAIL_LABEL%%/$ENV{CONTACT_EMAIL_LABEL}/g;
   s/%%CONTACT_EMAIL%%/$ENV{CONTACT_EMAIL}/g;
   s/%%GOOGLE_TAG_ID%%/$ENV{GOOGLE_TAG_ID}/g;
+  s/%%SITE_URL%%/$ENV{SITE_URL}/g;
 '
 
 if grep -rlE '%%[A-Z_]+%%' _site >/dev/null; then
@@ -68,4 +76,4 @@ if grep -rlE '%%[A-Z_]+%%' _site >/dev/null; then
   grep -rlE '%%[A-Z_]+%%' _site >&2
   exit 1
 fi
-echo "Built _site/ (WhatsApp ${WHATSAPP_DISPLAY}, email ${CONTACT_EMAIL_LABEL}, Google tag ${GOOGLE_TAG_ID:-off})"
+echo "Built _site/ (WhatsApp ${WHATSAPP_DISPLAY}, email ${CONTACT_EMAIL_LABEL}, Google tag ${GOOGLE_TAG_ID:-off}, site ${SITE_URL})"
