@@ -1,30 +1,29 @@
 # SEO Action Plan — Log N Labs
 
-Updated 2026-11-19, after the deployment fix. Ordered by impact; evidence is in `FULL-AUDIT-REPORT.md`.
+Updated 2026-11-19 (round 3, score 80). Evidence is in `FULL-AUDIT-REPORT.md`.
 
 ## Done
-- ~~Point `lognlabs.com.py` / `www` at Cloudflare Pages~~ (200; www and http 301 to the apex)
-- ~~Set `SITE_URL`~~ (`og:url` / `og:image` now use `https://lognlabs.com.py`)
+- ~~Domain → Cloudflare Pages; www/http 301; `SITE_URL`~~
+- ~~Canonicals, robots.txt, sitemap.xml, llms.txt~~ (branch `seo-improvements`)
+- ~~HSTS + noindex on pages.dev hosts (`src/_headers`)~~
+- ~~ProfessionalService / WebSite / Service / BreadcrumbList schema; FAQPage synced~~
+- ~~Hero H1 paints at first paint; analytics deferred; contrast fix; placeholders removed~~
 
-## P0 — Now
-1. **Add `rel="canonical"`** (`%%SITE_URL%%`-based) to the 3 pages.
-2. **Stop pages.dev competing with the real domain:**
-   - Bulk Redirect `log-n-labs.pages.dev/*` → `https://lognlabs.com.py/$1` (301).
-   - Add `src/_headers` with `X-Robots-Tag: noindex` for `https://:project.pages.dev/*` (this covers branch previews).
-3. **Add `src/sitemap.xml` and `src/robots.txt`** (with a `Sitemap:` line).
-4. **Google Search Console:** verify the domain, submit the sitemap and request indexing of `/`, `/software/` and `/marketing/`.
+## P0 — Owner
+1. Review the preview at https://seo-improvements.log-n-labs.pages.dev and merge `seo-improvements` into `main`.
+2. Google Search Console: verify `lognlabs.com.py` (DNS TXT), submit `https://lognlabs.com.py/sitemap.xml`, and request indexing of the 3 URLs.
+3. Create a Google Business Profile for Asunción.
 
-## P1 — This week
-5. Enable HSTS and "Always Use HTTPS" in Cloudflare.
-6. Add `ProfessionalService` + `WebSite` JSON-LD to `/`, and `Service` + `BreadcrumbList` to the subpages.
-7. Create a Google Business Profile (Asunción) and link it and your social profiles through `sameAs`.
+## P1 — Needs owner content (the gap to 90)
+4. Team: names, one-line backgrounds, LinkedIn. Then add `Person` schema and `sameAs`.
+5. Proof: 2–3 results or testimonials (anonymized is fine).
+6. Optional: extend the home meta description toward ~150 chars.
 
-## P2 — This month
-8. Let the hero H1 paint without `main.js`. Add `defer` to `analytics.js`. Trim the fonts. Measure in pagespeed.web.dev, targeting LCP < 2.5 s, INP < 200 ms and CLS < 0.1.
-9. Trim the home meta description to about 150 chars.
-10. E-E-A-T: named team members, 2–3 case studies and testimonials.
-11. Add `/llms.txt`.
+## P2 — Technical polish
+7. Self-host or preload the display fonts.
+8. Optional: Bulk Redirect `log-n-labs.pages.dev/*` → `https://lognlabs.com.py/$1`.
+9. Re-run pagespeed.web.dev on production after the merge.
 
 ## P3 — Ongoing
-12. Add vertical/service pages and a case-study index, plus one useful guide per quarter.
-13. Review Search Console coverage and queries monthly.
+10. Add case-study and vertical pages from real projects, and one guide per quarter.
+11. Review Search Console monthly.
