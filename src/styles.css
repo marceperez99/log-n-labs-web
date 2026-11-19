@@ -181,7 +181,6 @@ nav[aria-label="Principal"] a:hover{background-size:100% 1px}
 .rail{grid-column:1/4;grid-row:1/span 4}
 .rail-in{position:sticky;top:32px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
 .rail-label{font:var(--t-label);letter-spacing:var(--tr-label);color:var(--stone-d)}
-.note{font:var(--t-small);color:var(--stone-d);max-width:28ch;padding-top:14px;border-top:1px solid var(--line)}
 
 /* cut fraction — the slash is a halving cut */
 .frac{display:inline-flex;height:1.42em;font:300 clamp(56px,7.2vw,120px)/.82 var(--f-display);letter-spacing:-.04em;color:var(--ink);font-variant-numeric:lining-nums}
@@ -440,7 +439,6 @@ p{text-wrap:pretty}
 @media (max-width:767px){
   .rail{grid-column:1/13;grid-row:auto;margin-bottom:28px}
   .rail-in{position:static;flex-direction:row;align-items:flex-end;gap:16px;flex-wrap:wrap}
-  .note{flex-basis:100%;max-width:none;padding-top:12px}
   .frac{font-size:56px}
   .sec-head,.vis-left,.principles,.sol-grid,.works,.board,.roles,.contact-text,.form{grid-column:1/13}
   .sec-head{margin-bottom:40px}
