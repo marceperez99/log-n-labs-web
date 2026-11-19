@@ -62,7 +62,7 @@ mark.todo-lg{font-family:var(--f-display);font-size:.8em;letter-spacing:-.02em;p
 .js .hero:not(.laid) .cell:not(.c1){visibility:hidden} /* until main.js layout() places the cells */
 .cell > *, .cell .c1-body > *{transition:opacity 500ms var(--out),transform 700ms var(--out)}
 /* .c1 (logo, headline, CTAs) paints immediately for LCP; the other cells fade in with the halving */
-.js .hero .cell:not(.c1):not(.c7):not(.on) > *{opacity:0;transform:translateY(12px)}
+.js .hero .cell:not(.c1):not(.on) > *{opacity:0;transform:translateY(12px)}
 /* .c1's first-cut geometry before main.js runs (layout() then sets the same values inline):
    landscape → left half, portrait → top half (halvingCells cuts the longer side) */
 .c1{left:0;top:0;width:50%;height:100%}
@@ -126,32 +126,15 @@ nav[aria-label="Principal"] a:hover{color:var(--ink);background-size:100% 1px}
 .reduce .bars button[aria-current="true"] i{transition:none}
 
 .c3,.c4{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:clamp(12px,2vh,20px) clamp(12px,1.4vw,20px)}
-.c3{padding:clamp(20px,3.4vh,32px) clamp(20px,2.2vw,32px)}
+.c3,.c4{padding:clamp(20px,3.4vh,32px) clamp(20px,2.2vw,32px)}
 /* 1/8: the four steps, large enough to read as a sequence */
 .mini-steps{display:flex;flex-direction:column;gap:clamp(6px,1.2vh,12px);font:500 clamp(18px,1.5vw,24px)/1.25 var(--f-display);letter-spacing:-.01em}
 .mini-steps li{display:flex;gap:14px;align-items:baseline}
 .mini-steps .mono{font:var(--t-label);color:var(--stone-d)}
 /* 1/16: contact rows, compact */
 .c4 .rows{align-self:stretch}
-.c4 .rows a{min-height:44px;padding:8px 0;font-size:14px}
+.c4 .rows a,.c4 .rows .row{min-height:44px;padding:8px 0;font-size:14px}
 .hero .cut + .cut{background:color-mix(in srgb,var(--ink) 38%,transparent)}
-.c7{border:0;padding:0;background:none;cursor:pointer;color:var(--rust)}
-.c7 .fill{position:absolute;inset:0;background:color-mix(in srgb,var(--rust) 14%,var(--white));transform:scaleY(0);transform-origin:50% 0;transition:transform 600ms var(--ease),background-color .25s}
-.hero[data-step="5"] .c7 .fill{transform:none}
-.c7-in{position:relative;display:flex;align-items:center;justify-content:center;height:100%;opacity:0;transition:opacity 400ms 350ms var(--out),color .25s}
-.hero[data-step="5"] .c7-in{opacity:1}
-/* place sits in the bottom-right corner of the last cell */
-.c7-in .place{position:absolute;right:clamp(14px,1.6vw,24px);bottom:clamp(12px,2vh,20px);display:flex;flex-direction:column;align-items:flex-end;gap:2px;font:var(--t-small);color:color-mix(in srgb,var(--ink) 75%,transparent);text-align:right;transition:color .25s}
-.c7-in .place b{font:var(--t-ui);font-family:var(--f-display);font-weight:600;color:var(--ink);transition:color .25s}
-.c7:hover .place,.c7:hover .place b{color:var(--white)}
-.c7-in svg{animation:nudge 1.8s var(--out) infinite}
-.c7:hover .fill{background:var(--rust)}
-.c7:hover{color:var(--white)}
-@keyframes nudge{0%,60%,100%{transform:none}30%{transform:translateY(3px)}}
-.c7:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
-.reduce .c7-in svg{animation:none}
-
-
 /* stacked hero (phones, portrait tablets, landscape phones): halving band at the foot, content stacked.
    Keep the query in sync with heroMQ in main.js. */
 @media (max-width:1023px),(max-height:560px){
@@ -173,7 +156,7 @@ nav[aria-label="Principal"] a:hover{color:var(--ink);background-size:100% 1px}
     radial-gradient(color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1.2px) 0 0/24px 24px,
     var(--white)}
   nav[aria-label="Principal"]{gap:18px;font-size:14px}
-  .c3,.c4,.c7{display:none}
+  .c3,.c4{display:none}
   h1{font-size:clamp(44px,15vw,64px)}
   h1.h1-long{font-size:clamp(40px,12.4vw,64px)}
 }
