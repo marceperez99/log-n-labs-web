@@ -6,7 +6,7 @@ Un mismo equipo se encarga de software, marketing y consultoría. Trabajamos en 
 
 ## Servicios
 
-- [Software](%%SITE_URL%%/software/): sistemas a medida (gestión, pedidos, inventario, turnos, clientes), integraciones entre herramientas, sitios web, y calidad y auditoría de software existente.
+- [Software](%%SITE_URL%%/software/): sistemas a medida (gestión, pedidos, inventario, turnos, clientes), integraciones con WhatsApp, pagos con QR o link y el proveedor de factura electrónica (habilitado por la DNIT), sitios web, y calidad y auditoría de software existente.
 - [Marketing](%%SITE_URL%%/marketing/): estrategia, identidad visual y campañas en Meta y Google, con un reporte mensual de cuánto costó cada venta. La inversión publicitaria la paga el cliente directo a Meta o Google.
 - [Consultoría](%%SITE_URL%%/#servicios): revisión de cómo trabaja el negocio y un plan por escrito con las mejoras a implementar.
 
