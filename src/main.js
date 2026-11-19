@@ -60,6 +60,7 @@
       var s = el.style;
       s.left = px(c.x); s.top = px(y0 + c.y); s.width = px(c.w); s.height = px(c.h);
     });
+    hero.classList.add('laid');
   }
 
   var step = 0, timers = [];

@@ -55,6 +55,7 @@ mark.todo-lg{font-family:var(--f-display);font-size:.8em;letter-spacing:-.02em;p
 .cut.h{height:1px;transform:scaleX(0)}
 .cut.on{transform:none}
 .cell{position:absolute;overflow:hidden}
+.js .hero:not(.laid) .cell{visibility:hidden} /* until main.js layout() places the cells */
 .cell > *, .cell .c1-body > *{transition:opacity 500ms var(--out),transform 700ms var(--out)}
 .js .hero .cell:not(.c7):not(.on) > *{opacity:0;transform:translateY(12px)}
 .tag{font:var(--t-label);letter-spacing:var(--tr-label);color:var(--stone-d)}
