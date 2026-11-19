@@ -138,11 +138,9 @@ nav[aria-label="Principal"] a:hover{color:var(--ink);background-size:100% 1px}
 /* stacked hero (phones, portrait tablets, landscape phones): halving band at the foot, content stacked.
    Keep the query in sync with heroMQ in main.js. */
 @media (max-width:1023px),(max-height:560px){
-  /* bottom padding = the 176px halving band drawn by main.js (MOBILE_BAND) + 32px air */
-  .hero{height:auto;min-height:100svh;display:flex;flex-direction:column;padding:28px var(--pad) 208px}
-  .cut{background:var(--line)}
-  .hero .cut + .cut{background:var(--line)}
-  .cuts{position:absolute;inset:0;z-index:0}
+  /* no halving figure when stacked: content only */
+  .hero{height:auto;min-height:100svh;display:flex;flex-direction:column;padding:28px var(--pad) 56px}
+  .cuts{display:none}
   .hero > *:not(.cuts), .c1 > *, .c2 > *{position:relative;z-index:1}
   .cell{position:relative;overflow:visible}
   .c1,.c2{display:contents}

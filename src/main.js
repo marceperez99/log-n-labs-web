@@ -33,32 +33,25 @@
   var mobileMQ = window.matchMedia('(max-width: 1023px), (max-height: 560px)');
 
   function px(n) { return Math.round(n) + 'px'; }
-  // Mobile: the content stacks, so the halving runs in a band at the foot of the hero
-  // (keep in sync with the hero's bottom padding in styles.css) instead of across the text.
-  var MOBILE_BAND = 176;
+  // Stacked (mobile) hero: no halving figure; the content flows on its own.
   function layout() {
     var mobile = mobileMQ.matches;
     cellEls.forEach(function (el) { el.style.cssText = ''; });
     var W = hero.clientWidth, H = hero.clientHeight;
-    var y0 = mobile ? H - MOBILE_BAND : 0;
-    var g = halvingCells(W, H - y0, 3);
-    if (mobile) g.lines.unshift({ vertical: false, x: 0, y: 0, len: W });
+    var g = halvingCells(W, H, 3);
     cutEls.forEach(function (el, i) {
-      var ln = g.lines[i];
+      var ln = mobile ? null : g.lines[i];
       el.style.display = ln ? '' : 'none';
       if (!ln) return;
       el.classList.toggle('v', ln.vertical);
       el.classList.toggle('h', !ln.vertical);
-      el.style.left = px(ln.x); el.style.top = px(y0 + ln.y);
+      el.style.left = px(ln.x); el.style.top = px(ln.y);
       if (ln.vertical) { el.style.height = px(ln.len); el.style.width = ''; }
       else { el.style.width = px(ln.len); el.style.height = ''; }
     });
-    g.cells.forEach(function (c, i) {
-      // mobile band: lines only; the cells stay out of it
-      var el = mobile ? null : cellEls[i];
-      if (!el) return;
-      var s = el.style;
-      s.left = px(c.x); s.top = px(y0 + c.y); s.width = px(c.w); s.height = px(c.h);
+    if (!mobile) g.cells.forEach(function (c, i) {
+      var s = cellEls[i].style;
+      s.left = px(c.x); s.top = px(c.y); s.width = px(c.w); s.height = px(c.h);
     });
     hero.classList.add('laid');
   }
