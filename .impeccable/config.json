@@ -182,6 +182,12 @@
         ],
         "createdAt": "2026-11-18T23:25:44.817Z",
         "reason": "Brand: docs/BRAND.md defines #F4EFE7 as the brand white (warm, never pure #FFF)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "instrument sans",
+        "createdAt": "2026-11-19T15:01:33.139Z",
+        "reason": "Existing V7 typeface (docs/v7-textos.md), on the site since f079f2c; it was only re-flagged because the self-hosted @font-face rules moved into styles.css"
       }
     ]
   }
