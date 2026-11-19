@@ -21,3 +21,4 @@ Un mismo equipo se encarga de software, marketing y consultoría. Trabajamos en 
 - WhatsApp: https://wa.me/%%WHATSAPP_NUMBER%%
 - Correo: %%CONTACT_EMAIL%%
 - Ubicación: Asunción, Paraguay (GMT−3)
+- Instagram: https://www.instagram.com/lognlabs/
