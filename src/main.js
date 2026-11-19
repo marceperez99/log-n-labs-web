@@ -28,7 +28,7 @@
 
   var hero = document.querySelector('.hero');
   var cutEls = Array.prototype.slice.call(hero.querySelectorAll('.cut'));
-  var cellEls = ['.c1', '.c2', '.c3', '.c4', '.c5', '.c7'].map(function (s) { return hero.querySelector(s); });
+  var cellEls = ['.c1', '.c2', '.c3', '.c4', '.c7'].map(function (s) { return hero.querySelector(s); });
   // Stacked hero: phones, portrait tablets, landscape phones (same query as styles.css).
   var mobileMQ = window.matchMedia('(max-width: 1023px), (max-height: 560px)');
 
@@ -41,7 +41,7 @@
     cellEls.forEach(function (el) { el.style.cssText = ''; });
     var W = hero.clientWidth, H = hero.clientHeight;
     var y0 = mobile ? H - MOBILE_BAND : 0;
-    var g = halvingCells(W, H - y0, mobile ? 3 : 5);
+    var g = halvingCells(W, H - y0, mobile ? 3 : 4);
     if (mobile) g.lines.unshift({ vertical: false, x: 0, y: 0, len: W });
     cutEls.forEach(function (el, i) {
       var ln = g.lines[i];
@@ -74,16 +74,16 @@
   var SPEED = 700;
   function play() {
     if (reduce) {
-      setStep(6);
-      for (var i = 0; i < 5; i++) showCell(i);
+      setStep(5);
+      for (var i = 0; i < 4; i++) showCell(i);
       startRotation(0, true);
       return;
     }
-    for (var k = 1; k <= 6; k++) {
+    for (var k = 1; k <= 5; k++) {
       (function (k) {
         timers.push(setTimeout(function () {
           setStep(k);
-          if (k <= 5) timers.push(setTimeout(function () { showCell(k - 1); }, Math.round(SPEED * 0.45)));
+          if (k <= 4) timers.push(setTimeout(function () { showCell(k - 1); }, Math.round(SPEED * 0.45)));
         }, 600 + (k - 1) * SPEED));
       })(k);
     }
@@ -133,7 +133,7 @@
     }, { threshold: 0.15 }).observe(hero);
   }
 
-  cellEls[5].addEventListener('click', function () {
+  cellEls[4].addEventListener('click', function () {
     document.getElementById('enfoque').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
   });
 

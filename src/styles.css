@@ -102,7 +102,7 @@ nav[aria-label="Principal"] a{white-space:nowrap;text-decoration:none;color:var(
 nav[aria-label="Principal"] a:hover{color:var(--ink);background-size:100% 1px}
 
 /* 1/4: the services, one at a time; the rest of the halving is a quiet labelled figure */
-.c2{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,4vh,36px) clamp(24px,3.3vw,48px) clamp(20px,3.4vh,32px)}
+.c2{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(24px,4vh,36px) clamp(24px,3.3vw,48px) clamp(20px,3.4vh,32px)}
 .rotator{display:flex;flex-direction:column;gap:clamp(14px,2.6vh,26px)}
 .groups{position:relative;height:clamp(150px,22vh,200px)}
 .group{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(16px);transition:opacity 450ms var(--out),transform 650ms var(--out);pointer-events:none}
@@ -125,8 +125,7 @@ nav[aria-label="Principal"] a:hover{color:var(--ink);background-size:100% 1px}
 .bars button.done i{transform:scaleX(1)}
 .reduce .bars button[aria-current="true"] i{transition:none}
 
-.c3,.c4,.c5{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:clamp(12px,2vh,20px) clamp(12px,1.4vw,20px)}
-.c5{justify-content:flex-end}
+.c3,.c4{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:clamp(12px,2vh,20px) clamp(12px,1.4vw,20px)}
 .c3{padding:clamp(20px,3.4vh,32px) clamp(20px,2.2vw,32px)}
 /* 1/8: the four steps, large enough to read as a sequence */
 .mini-steps{display:flex;flex-direction:column;gap:clamp(6px,1.2vh,12px);font:500 clamp(18px,1.5vw,24px)/1.25 var(--f-display);letter-spacing:-.01em}
@@ -138,9 +137,10 @@ nav[aria-label="Principal"] a:hover{color:var(--ink);background-size:100% 1px}
 .hero .cut + .cut{background:color-mix(in srgb,var(--ink) 38%,transparent)}
 .c7{border:0;padding:0;background:none;cursor:pointer;color:var(--rust)}
 .c7 .fill{position:absolute;inset:0;background:color-mix(in srgb,var(--rust) 14%,var(--white));transform:scaleY(0);transform-origin:50% 0;transition:transform 600ms var(--ease),background-color .25s}
-.hero[data-step="6"] .c7 .fill{transform:none}
+.hero[data-step="5"] .c7 .fill{transform:none}
 .c7-in{position:relative;display:flex;align-items:center;justify-content:center;height:100%;opacity:0;transition:opacity 400ms 350ms var(--out),color .25s}
-.hero[data-step="6"] .c7-in{opacity:1}
+.hero[data-step="5"] .c7-in{opacity:1}
+.c7-in .scroll{display:flex;align-items:center;gap:8px;font:var(--t-label);letter-spacing:.08em}
 .c7-in svg{animation:nudge 1.8s var(--out) infinite}
 .c7:hover .fill{background:var(--rust)}
 .c7:hover{color:var(--white)}
@@ -164,14 +164,13 @@ nav[aria-label="Principal"] a:hover{color:var(--ink);background-size:100% 1px}
   .c1-body{order:3;margin-block:auto;padding-top:48px}
   .rotator{order:4;margin-top:48px;padding-top:24px;border-top:1px solid var(--ink)}
   .groups{height:184px}
-  .c2 > .tag{display:none}
   /* glow sits behind the CTA in the stacked layout */
   .hero{background:
     radial-gradient(70% 40% at 30% 58%,color-mix(in srgb,var(--rust) 11%,transparent),transparent 70%),
     radial-gradient(color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1.2px) 0 0/24px 24px,
     var(--white)}
   nav[aria-label="Principal"]{gap:18px;font-size:14px}
-  .c3,.c4,.c5,.c7{display:none}
+  .c3,.c4,.c7{display:none}
   h1{font-size:clamp(44px,15vw,64px)}
   h1.h1-long{font-size:clamp(40px,12.4vw,64px)}
 }
