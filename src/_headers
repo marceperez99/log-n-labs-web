@@ -1,0 +1,9 @@
+# Cloudflare Pages response headers.
+/*
+  Strict-Transport-Security: max-age=31536000
+
+# pages.dev hosts (production alias and branch previews) duplicate the real domain: keep them out of search.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex

@@ -6,6 +6,7 @@
 <script>document.documentElement.classList.add('js')</script>
 <title>Desarrollo de software para pymes en Paraguay | Log N Labs</title>
 <meta name="description" content="Implementación de software para pymes de Paraguay: sistemas a medida, integraciones y sitios web, diseñados a partir de cómo trabaja tu negocio.">
+<link rel="canonical" href="%%SITE_URL%%/software/">
 <meta property="og:title" content="Desarrollo de software para pymes en Paraguay | Log N Labs">
 <meta property="og:description" content="Que ningún pedido se quede en un papel. Sistemas a medida, integraciones y sitios web para pymes.">
 <meta property="og:type" content="website">
@@ -22,14 +23,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@500&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=18">
+<link rel="stylesheet" href="../styles.css?v=19">
 <link rel="stylesheet" href="../landing.css?v=1">
-<script src="../analytics.js?v=2"></script>
+<script src="../analytics.js?v=2" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","@id":"%%SITE_URL%%/software/#service","name":"Desarrollo de software para pymes","serviceType":"Desarrollo de software a medida",
+"description":"Sistemas a medida, integraciones entre las herramientas que ya usas y sitios web para pymes de Paraguay, diseñados a partir de cómo trabaja tu negocio.",
+"url":"%%SITE_URL%%/software/","areaServed":{"@type":"Country","name":"Paraguay"},"provider":{"@id":"%%SITE_URL%%/#org","@type":"ProfessionalService","name":"Log N Labs","url":"%%SITE_URL%%/"}},
+{"@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Inicio","item":"%%SITE_URL%%/"},
+{"@type":"ListItem","position":2,"name":"Software","item":"%%SITE_URL%%/software/"}]}
+]}
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"¿Qué tipo de software hacen?","acceptedAnswer":{"@type":"Answer","text":"El que necesite tu operación: sistemas de gestión, integraciones entre herramientas, automatizaciones y sitios web. Primero entendemos cómo trabajas y después proponemos qué implementar."}},
 {"@type":"Question","name":"¿Pueden trabajar con el sistema que ya tengo?","acceptedAnswer":{"@type":"Answer","text":"Sí. Primero lo revisamos. Si funciona, lo conectamos en lugar de reemplazarlo."}},
-{"@type":"Question","name":"¿Qué pasa si el proyecto cambia a mitad de camino?","acceptedAnswer":{"@type":"Answer","text":"Los cambios se cotizan por separado antes de hacerlos. Nada se suma al precio sin que lo apruebes."}}
+{"@type":"Question","name":"¿Qué pasa si el proyecto cambia a mitad de camino?","acceptedAnswer":{"@type":"Answer","text":"Los cambios se cotizan por separado antes de hacerlos. Nada se suma al precio sin que lo apruebes."}},
+{"@type":"Question","name":"¿También hacen marketing?","acceptedAnswer":{"@type":"Answer","text":"Sí. El mismo equipo arma estrategia, identidad visual y campañas en Meta y Google, y las mide con los pedidos que registra tu sistema."}}
 ]}
 </script>
 </head>
@@ -153,7 +165,7 @@
     </div>
     <ul class="tenets" aria-label="Principios">
       <li><h3>Lo que funciona, se conecta</h3><p>No reconstruimos lo que ya existe y anda. Si una herramienta del mercado lo resuelve, te la recomendamos.</p></li>
-      <li><h3>Queda a tu nombre</h3><p>El código, los accesos y la documentación son de tu empresa. <mark class="todo">[confirmar declaración de propiedad del código]</mark></p></li>
+      <li><h3>Queda a tu nombre</h3><p>El código, los accesos y la documentación son de tu empresa.</p></li>
       <li><h3>Se prueba antes de publicarse</h3><p>Cada entrega pasa por pruebas antes de que la vean tus clientes.</p></li>
     </ul>
   </div>

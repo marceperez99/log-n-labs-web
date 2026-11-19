@@ -1,0 +1,23 @@
+# Log N Labs
+
+> Software, marketing y consultoría para pymes de Paraguay que venden por WhatsApp, redes sociales y en su local. Con sede en Asunción. Lema: "Que no se te escape ninguna venta."
+
+Un mismo equipo se encarga de software, marketing y consultoría. Trabajamos en cuatro pasos: diagnóstico, planificación, desarrollo y medición. El precio se cierra después del diagnóstico.
+
+## Servicios
+
+- [Software](%%SITE_URL%%/software/): sistemas a medida (gestión, pedidos, inventario, turnos, clientes), integraciones entre herramientas, sitios web, y calidad y auditoría de software existente.
+- [Marketing](%%SITE_URL%%/marketing/): estrategia, identidad visual y campañas en Meta y Google, con un reporte mensual de cuánto costó cada venta. La inversión publicitaria la paga el cliente directo a Meta o Google.
+- [Consultoría](%%SITE_URL%%/#servicios): revisión de cómo trabaja el negocio y un plan por escrito con las mejoras a implementar.
+
+## Para quién
+
+- Tiendas digitales (ropa, cosmética, accesorios)
+- Servicios con turnos (clínicas, talleres, estética)
+- Comercios físicos (ferretería, repuestos, alimentos)
+
+## Contacto
+
+- WhatsApp: https://wa.me/%%WHATSAPP_NUMBER%%
+- Correo: %%CONTACT_EMAIL%%
+- Ubicación: Asunción, Paraguay (GMT−3)

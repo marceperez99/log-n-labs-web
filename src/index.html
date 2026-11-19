@@ -12,7 +12,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
 <title>Log N Labs | Digitalización y marketing para pymes en Paraguay</title>
-<meta name="description" content="Registra cada consulta, pedido y venta de tu negocio. Campañas, identidad visual y software para pymes de Paraguay que venden por WhatsApp, redes sociales y en su local.">
+<meta name="description" content="Software, marketing y consultoría para empresas paraguayas">
+<link rel="canonical" href="%%SITE_URL%%/">
 <meta property="og:title" content="Log N Labs | Digitalización y marketing para pymes en Paraguay">
 <meta property="og:description" content="Software, marketing y consultoría para pymes de Paraguay. Que no se te escape ninguna venta.">
 <meta property="og:type" content="website">
@@ -29,8 +30,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@500&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=18">
-<script src="analytics.js?v=2"></script>
+<link rel="stylesheet" href="styles.css?v=19">
+<script src="analytics.js?v=2" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"ProfessionalService","@id":"%%SITE_URL%%/#org","name":"Log N Labs","alternateName":"Log N Labs Paraguay","url":"%%SITE_URL%%/",
+"logo":{"@type":"ImageObject","url":"%%SITE_URL%%/logos/log-n-labs_on-white.svg"},"image":"%%SITE_URL%%/og-image.png",
+"description":"Software, marketing y consultoría para pymes de Paraguay que venden por WhatsApp, redes sociales y en su local.",
+"slogan":"Que no se te escape ninguna venta.",
+"address":{"@type":"PostalAddress","addressLocality":"Asunción","addressCountry":"PY"},
+"areaServed":{"@type":"Country","name":"Paraguay"},
+"telephone":"+%%WHATSAPP_NUMBER%%","email":"%%CONTACT_EMAIL%%",
+"contactPoint":{"@type":"ContactPoint","contactType":"sales","telephone":"+%%WHATSAPP_NUMBER%%","email":"%%CONTACT_EMAIL%%","availableLanguage":"es","url":"https://wa.me/%%WHATSAPP_NUMBER%%"},
+"knowsLanguage":"es",
+"hasOfferCatalog":{"@type":"OfferCatalog","name":"Servicios","itemListElement":[
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Consultoría","description":"Diagnóstico de cómo trabaja tu negocio y un plan por escrito con las mejoras a implementar."}},
+{"@type":"Offer","itemOffered":{"@id":"%%SITE_URL%%/software/#service"}},
+{"@type":"Offer","itemOffered":{"@id":"%%SITE_URL%%/marketing/#service"}}]}},
+{"@type":"WebSite","@id":"%%SITE_URL%%/#website","url":"%%SITE_URL%%/","name":"Log N Labs","inLanguage":"es-PY","publisher":{"@id":"%%SITE_URL%%/#org"}}
+]}
+</script>
 </head>
 <body>
 <a class="skip" href="#enfoque">Saltar al contenido</a>
@@ -47,7 +66,7 @@
       <a href="#inicio" class="logo" aria-label="Log N Labs, inicio"><img src="logos/log-n-labs_on-white.svg" alt="" width="182" height="26"></a>
     </div>
     <div class="c1-body">
-      <h1 class="h1-long"><span class="w-strong">Que no se te</span> <span class="w-strong">escape</span> <span class="w-pay">ninguna venta.</span></h1>
+      <h1 class="h1-long"><span class="w-strong">Que no se te</span><br><span class="w-strong">escape</span><br><span class="w-pay">ninguna venta.</span></h1>
       <p class="lede">Acompañamos a tu negocio en su crecimiento digital, desde el primer diagnóstico hasta los resultados.</p>
       <div class="ctas">
         <a class="btn btn-rust" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
@@ -396,7 +415,7 @@
     <div class="contact-text">
       <div class="contact-head">
         <h2 id="h-contacto">Hablemos.</h2>
-        <p class="contact-lead">Cuéntanos cómo vendes hoy. Te respondemos en [plazo de respuesta] con los primeros pasos.</p>
+        <p class="contact-lead">Cuéntanos cómo vendes hoy. Te respondemos con los primeros pasos.</p>
       </div>
       <ul class="rows">
         <li><a class="wa" href="https://wa.me/%%WHATSAPP_NUMBER%%"><span>%%WHATSAPP_DISPLAY%%</span><span class="mono">whatsapp</span></a></li>

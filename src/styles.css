@@ -55,9 +55,14 @@ mark.todo-lg{font-family:var(--f-display);font-size:.8em;letter-spacing:-.02em;p
 .cut.h{height:1px;transform:scaleX(0)}
 .cut.on{transform:none}
 .cell{position:absolute;overflow:hidden}
-.js .hero:not(.laid) .cell{visibility:hidden} /* until main.js layout() places the cells */
+.js .hero:not(.laid) .cell:not(.c1){visibility:hidden} /* until main.js layout() places the cells */
 .cell > *, .cell .c1-body > *{transition:opacity 500ms var(--out),transform 700ms var(--out)}
-.js .hero .cell:not(.c7):not(.on) > *{opacity:0;transform:translateY(12px)}
+/* .c1 (logo, headline, CTAs) paints immediately for LCP; the other cells fade in with the halving */
+.js .hero .cell:not(.c1):not(.c7):not(.on) > *{opacity:0;transform:translateY(12px)}
+/* .c1's first-cut geometry before main.js runs (layout() then sets the same values inline):
+   landscape → left half, portrait → top half (halvingCells cuts the longer side) */
+.c1{left:0;top:0;width:50%;height:100%}
+@media (max-aspect-ratio:1/1){.c1{width:100%;height:50%}}
 .tag{font:var(--t-label);letter-spacing:var(--tr-label);color:var(--stone-d)}
 
 .c1{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(28px,4.4vh,44px) var(--pad) clamp(32px,6vh,56px)}
@@ -65,7 +70,7 @@ mark.todo-lg{font-family:var(--f-display);font-size:.8em;letter-spacing:-.02em;p
 .logo img{width:clamp(150px,13vw,190px);height:auto}
 .c1-body{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(18px,2.8vh,28px)}
 h1{display:flex;flex-direction:column;font:var(--t-display);letter-spacing:var(--tr-display);text-wrap:balance}
-h1.h1-long{font-size:clamp(38px,4.8vw,76px)} /* display role, sized for the three-line headline */
+h1.h1-long{display:block;font-size:clamp(38px,4.8vw,76px)} /* display role, sized for the three-line headline; block + <br> so the whole headline is one LCP text block */
 h1 .w-pay{color:var(--rust)}
 .ctas{display:flex;flex-wrap:wrap;gap:12px}
 .lede{font:var(--t-lead);max-width:34ch;color:var(--ink)}
@@ -201,7 +206,7 @@ p{text-wrap:pretty}
 /* 1/2 el problema — statement (lights up on scroll) | bullets */
 .vis-left{grid-column:4/9;align-self:start;position:sticky;top:clamp(48px,14vh,140px)}
 .statement{font:var(--t-title);letter-spacing:var(--tr-title);max-width:20ch}
-.fillw .w{color:#857A70;transition:color .35s var(--out)}
+.fillw .w{color:#75695F;transition:color .35s var(--out)}
 .fillw .w.lit{color:var(--ink)}
 .principles{grid-column:9/13;display:flex;flex-direction:column;border-top:1px solid var(--ink)}
 .principles li{padding:24px 0 28px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px;transition:opacity 600ms var(--out),transform 700ms var(--out)}
@@ -217,7 +222,7 @@ p{text-wrap:pretty}
 .sol-grid{grid-column:4/13;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(32px,4vw,64px);align-items:start}
 .sol{border-top:1px solid var(--ink)}
 .sol-r{border-bottom:1px solid var(--line)}
-.sol-b{display:flex;width:100%;align-items:baseline;gap:18px;background:none;border:0;padding:clamp(14px,2.2vh,22px) 0;cursor:pointer;text-align:left;color:#857A70;font:var(--t-feature);letter-spacing:var(--tr-feature);transition:color .4s var(--out)}
+.sol-b{display:flex;width:100%;align-items:baseline;gap:18px;background:none;border:0;padding:clamp(14px,2.2vh,22px) 0;cursor:pointer;text-align:left;color:#75695F;font:var(--t-feature);letter-spacing:var(--tr-feature);transition:color .4s var(--out)}
 .sol-b:hover,.sol-b[aria-expanded="true"]{color:var(--ink)}
 .sol-b .n{flex:none;font:var(--t-label);letter-spacing:0;color:inherit;transform:translateY(-1.6em)}
 .sol-b[aria-expanded="true"] .n{color:var(--rust)}

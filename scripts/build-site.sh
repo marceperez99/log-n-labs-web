@@ -62,7 +62,7 @@ mkdir -p _site
 cp -R src/. _site/
 cp -R logos _site/
 
-find _site -type f \( -name '*.html' -o -name '*.js' \) -print0 | xargs -0 perl -pi -e '
+find _site -type f \( -name '*.html' -o -name '*.js' -o -name '*.txt' -o -name '*.xml' \) -print0 | xargs -0 perl -pi -e '
   s/%%WHATSAPP_NUMBER%%/$ENV{WHATSAPP_NUMBER}/g;
   s/%%WHATSAPP_DISPLAY%%/$ENV{WHATSAPP_DISPLAY}/g;
   s/%%CONTACT_EMAIL_LABEL%%/$ENV{CONTACT_EMAIL_LABEL}/g;
