@@ -48,7 +48,6 @@ rm -rf _site
 mkdir -p _site
 cp -R src/. _site/
 cp -R logos _site/
-touch _site/.nojekyll
 
 find _site -type f \( -name '*.html' -o -name '*.js' \) -print0 | xargs -0 perl -pi -e '
   s/%%WHATSAPP_NUMBER%%/$ENV{WHATSAPP_NUMBER}/g;

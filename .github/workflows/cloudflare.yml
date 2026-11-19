@@ -1,5 +1,5 @@
 # Publishes the Log N Labs site to Cloudflare Pages.
-#   push to main     -> production (log-n-labs.pages.dev, later the custom domain)
+#   push to main     -> production (https://lognlabs.com.py)
 #   push to a branch -> preview at <branch>.log-n-labs.pages.dev
 # Needs repository secrets CLOUDFLARE_API_TOKEN (Account > Cloudflare Pages > Edit)
 # and CLOUDFLARE_ACCOUNT_ID. Contact values come from repository variables;

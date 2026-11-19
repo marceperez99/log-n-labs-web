@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML, CSS and vanilla JS in `src/`, built by `scripts/build-site.sh` into `_site/` and deployed to GitHub Pages. Contact values (WhatsApp, email) are injected at build time.
+Static HTML, CSS and vanilla JS in `src/`, built by `scripts/build-site.sh` into `_site/` and deployed to Cloudflare Pages by `.github/workflows/cloudflare.yml` (production: https://lognlabs.com.py). Contact values (WhatsApp, email) are injected at build time.
 
 ## What it is
 
