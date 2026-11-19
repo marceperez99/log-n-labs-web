@@ -140,7 +140,10 @@ nav[aria-label="Principal"] a:hover{color:var(--ink);background-size:100% 1px}
 .hero[data-step="5"] .c7 .fill{transform:none}
 .c7-in{position:relative;display:flex;align-items:center;justify-content:center;height:100%;opacity:0;transition:opacity 400ms 350ms var(--out),color .25s}
 .hero[data-step="5"] .c7-in{opacity:1}
-.c7-in .scroll{display:flex;align-items:center;gap:8px;font:var(--t-label);letter-spacing:.08em}
+/* place sits in the bottom-right corner of the last cell */
+.c7-in .place{position:absolute;right:clamp(14px,1.6vw,24px);bottom:clamp(12px,2vh,20px);display:flex;flex-direction:column;align-items:flex-end;gap:2px;font:var(--t-small);color:color-mix(in srgb,var(--ink) 75%,transparent);text-align:right;transition:color .25s}
+.c7-in .place b{font:var(--t-ui);font-family:var(--f-display);font-weight:600;color:var(--ink);transition:color .25s}
+.c7:hover .place,.c7:hover .place b{color:var(--white)}
 .c7-in svg{animation:nudge 1.8s var(--out) infinite}
 .c7:hover .fill{background:var(--rust)}
 .c7:hover{color:var(--white)}
