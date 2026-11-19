@@ -1,21 +1,21 @@
 # SEO Audit — Log N Labs
 
 Round 3: 2026-11-19, after the SEO changes on branch `seo-improvements`, verified on the preview at `https://seo-improvements.log-n-labs.pages.dev`. Production gets the same score once the branch is merged to `main`.
-History: 38 (domain down) → 56 (domain fixed) → **80**.
+History: 38 (domain down) → 56 (domain fixed) → 80 (SEO foundations) → **83** (self-hosted fonts, security headers).
 
-## Overall score: 80 / 100 — Good
+## Overall score: 83 / 100 — Good
 
 | Category | Weight | Before | Now | Note |
 |---|---|---|---|---|
-| Technical SEO | 25% | 55 | 90 | Canonicals, sitemap, robots, HSTS, pages.dev noindex, 301s |
+| Technical SEO | 25% | 55 | 95 | Canonicals, sitemap, robots, pages.dev noindex, 301s; HSTS, CSP frame-ancestors, X-Frame-Options, Permissions-Policy, COOP |
 | Content quality / E-E-A-T | 20% | 50 | 55 | Visible placeholders removed; still no named people or proof |
 | On-page SEO | 15% | 80 | 80 | Titles/H1 fine; home description now 59 chars (owner's choice, short) |
 | Schema | 15% | 25 | 90 | ProfessionalService, WebSite, Service, BreadcrumbList, FAQPage |
-| Performance (CWV) | 10% | 55 | 80 (Likely) | LCP = H1 at first paint, CLS 0 (local Chrome); fonts still render-blocking |
-| Images | 10% | 85 | 90 | Alt text everywhere; logo SVG; OG PNG 100 KB |
+| Performance (CWV) | 10% | 55 | 90 (Likely) | LCP = H1 at first paint, CLS 0; fonts self-hosted + preloaded (84 KB, immutable cache), only styles.css render-blocking; preview warm FCP 156 ms |
+| Images | 10% | 85 | 95 | Explicit width/height; logo links named via aria-label; OG PNG 100 KB |
 | AI search readiness (GEO) | 5% | 40 | 85 | llms.txt, entity schema, crawlers allowed |
 
-Weighted: 22.5 + 11 + 12 + 13.5 + 8 + 9 + 4.25 = **80.25**
+Weighted: 23.75 + 11 + 12 + 13.5 + 9 + 9.5 + 4.25 = **83**
 
 ## What changed (verified on the preview)
 | Item | Evidence |
@@ -41,7 +41,7 @@ Everything left needs content or actions only the owner can provide:
    - Add 2–3 results or testimonials, which can be anonymized.
    - Add `sameAs` links to social profiles and a Google Business Profile.
 2. **Meta description (on-page 80 → 90, +1.5 pts):** 59 chars is below the ~120–155 sweet spot, so Google may rewrite the snippet. Consider adding a second clause.
-3. **Fonts (performance 80 → 90, +1 pt):** self-host or preload the two display fonts instead of the render-blocking Google Fonts CSS.
+3. ~~Fonts~~: done, self-hosted.
 4. **Off-page (not scored, high impact):**
    - Verify Search Console and submit the sitemap.
    - Create a Google Business Profile (Asunción).
